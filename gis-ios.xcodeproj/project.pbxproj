@@ -13,6 +13,7 @@
 		295D1FE4200C4C1F00787E2C /* gis_ios.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 295D1FE2200C4C1F00787E2C /* gis_ios.xcdatamodeld */; };
 		295D1FE6200C4C1F00787E2C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 295D1FE5200C4C1F00787E2C /* Assets.xcassets */; };
 		295D1FE9200C4C1F00787E2C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 295D1FE7200C4C1F00787E2C /* LaunchScreen.storyboard */; };
+		2A7370D8768170C43588DDD0 /* Pods_gis_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EBA9EE16F0F86FE41332501 /* Pods_gis_ios.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,9 @@
 		295D1FE5200C4C1F00787E2C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		295D1FE8200C4C1F00787E2C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		295D1FEA200C4C1F00787E2C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3EBA9EE16F0F86FE41332501 /* Pods_gis_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_gis_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6DEF805261AC1EFDE370746D /* Pods-gis-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gis-ios.release.xcconfig"; path = "Pods/Target Support Files/Pods-gis-ios/Pods-gis-ios.release.xcconfig"; sourceTree = "<group>"; };
+		B84B3A8249ED09F0C38D8763 /* Pods-gis-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gis-ios.debug.xcconfig"; path = "Pods/Target Support Files/Pods-gis-ios/Pods-gis-ios.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +35,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A7370D8768170C43588DDD0 /* Pods_gis_ios.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		134C4E0C034652EE6D7B4797 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B84B3A8249ED09F0C38D8763 /* Pods-gis-ios.debug.xcconfig */,
+				6DEF805261AC1EFDE370746D /* Pods-gis-ios.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		295D1FCF200C4C1F00787E2C = {
 			isa = PBXGroup;
 			children = (
 				295D1FDA200C4C1F00787E2C /* gis-ios */,
 				295D1FD9200C4C1F00787E2C /* Products */,
+				134C4E0C034652EE6D7B4797 /* Pods */,
+				7196560DAC87AF20DF1576D2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +72,55 @@
 		295D1FDA200C4C1F00787E2C /* gis-ios */ = {
 			isa = PBXGroup;
 			children = (
-				295D1FDB200C4C1F00787E2C /* AppDelegate.swift */,
-				295D1FDD200C4C1F00787E2C /* ViewController.swift */,
-				295D1FDF200C4C1F00787E2C /* Main.storyboard */,
-				295D1FE5200C4C1F00787E2C /* Assets.xcassets */,
-				295D1FE7200C4C1F00787E2C /* LaunchScreen.storyboard */,
+				295D1FF0200C52D800787E2C /* Storyboard */,
+				295D1FF1200C530500787E2C /* Classes */,
+				295D1FF2200C531600787E2C /* Extension */,
+				295D1FF3200C531E00787E2C /* SupportFiles */,
 				295D1FEA200C4C1F00787E2C /* Info.plist */,
 				295D1FE2200C4C1F00787E2C /* gis_ios.xcdatamodeld */,
 			);
 			path = "gis-ios";
+			sourceTree = "<group>";
+		};
+		295D1FF0200C52D800787E2C /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				295D1FDF200C4C1F00787E2C /* Main.storyboard */,
+				295D1FE7200C4C1F00787E2C /* LaunchScreen.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		295D1FF1200C530500787E2C /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				295D1FDD200C4C1F00787E2C /* ViewController.swift */,
+				295D1FDB200C4C1F00787E2C /* AppDelegate.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		295D1FF2200C531600787E2C /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		295D1FF3200C531E00787E2C /* SupportFiles */ = {
+			isa = PBXGroup;
+			children = (
+				295D1FE5200C4C1F00787E2C /* Assets.xcassets */,
+			);
+			path = SupportFiles;
+			sourceTree = "<group>";
+		};
+		7196560DAC87AF20DF1576D2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3EBA9EE16F0F86FE41332501 /* Pods_gis_ios.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +130,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 295D1FED200C4C1F00787E2C /* Build configuration list for PBXNativeTarget "gis-ios" */;
 			buildPhases = (
+				3A66D7B050D56F2B7B3F5F0F /* [CP] Check Pods Manifest.lock */,
 				295D1FD4200C4C1F00787E2C /* Sources */,
 				295D1FD5200C4C1F00787E2C /* Frameworks */,
 				295D1FD6200C4C1F00787E2C /* Resources */,
+				FD4C288039F9DC3AE37A919C /* [CP] Embed Pods Frameworks */,
+				8A68987C3F4B34C70E0C009F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -133,6 +192,57 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3A66D7B050D56F2B7B3F5F0F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-gis-ios-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8A68987C3F4B34C70E0C009F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-gis-ios/Pods-gis-ios-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FD4C288039F9DC3AE37A919C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-gis-ios/Pods-gis-ios-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		295D1FD4200C4C1F00787E2C /* Sources */ = {
@@ -276,9 +386,11 @@
 		};
 		295D1FEE200C4C1F00787E2C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B84B3A8249ED09F0C38D8763 /* Pods-gis-ios.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4PW9TJ8V43;
 				INFOPLIST_FILE = "gis-ios/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "tech.riseplus.gis-ios";
@@ -290,9 +402,11 @@
 		};
 		295D1FEF200C4C1F00787E2C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6DEF805261AC1EFDE370746D /* Pods-gis-ios.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4PW9TJ8V43;
 				INFOPLIST_FILE = "gis-ios/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "tech.riseplus.gis-ios";
