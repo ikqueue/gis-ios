@@ -8,23 +8,53 @@
 
 /* Begin PBXBuildFile section */
 		295D1FDC200C4C1F00787E2C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 295D1FDB200C4C1F00787E2C /* AppDelegate.swift */; };
-		295D1FDE200C4C1F00787E2C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 295D1FDD200C4C1F00787E2C /* ViewController.swift */; };
+		295D1FDE200C4C1F00787E2C /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 295D1FDD200C4C1F00787E2C /* MapViewController.swift */; };
 		295D1FE1200C4C1F00787E2C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 295D1FDF200C4C1F00787E2C /* Main.storyboard */; };
 		295D1FE4200C4C1F00787E2C /* gis_ios.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 295D1FE2200C4C1F00787E2C /* gis_ios.xcdatamodeld */; };
 		295D1FE6200C4C1F00787E2C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 295D1FE5200C4C1F00787E2C /* Assets.xcassets */; };
 		295D1FE9200C4C1F00787E2C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 295D1FE7200C4C1F00787E2C /* LaunchScreen.storyboard */; };
+		29805E63200C56F9009DE52B /* ThaiSansNeue_Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 29805E61200C56F8009DE52B /* ThaiSansNeue_Bold.ttf */; };
+		29805E64200C56F9009DE52B /* ThaiSansNeue_Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 29805E62200C56F9009DE52B /* ThaiSansNeue_Regular.ttf */; };
+		29805E66200C57BB009DE52B /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29805E65200C57BB009DE52B /* UIColor.swift */; };
+		29805E6B200C601C009DE52B /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29805E6A200C601C009DE52B /* UIViewController.swift */; };
+		29805E6D200C7B86009DE52B /* ExtensionMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29805E6C200C7B86009DE52B /* ExtensionMenu.swift */; };
+		29805E72200C7D10009DE52B /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29805E71200C7D10009DE52B /* MenuController.swift */; };
+		29805E76200C7DA9009DE52B /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29805E74200C7DA9009DE52B /* MenuCell.swift */; };
+		29805E77200C7DA9009DE52B /* MenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 29805E75200C7DA9009DE52B /* MenuCell.xib */; };
+		29805E79200C7EC9009DE52B /* UICollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29805E78200C7EC9009DE52B /* UICollectionView.swift */; };
+		29805E7B200C9CD2009DE52B /* Knowledge.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29805E7A200C9CD2009DE52B /* Knowledge.storyboard */; };
+		29805E7D200C9E09009DE52B /* KnowledgeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29805E7C200C9E09009DE52B /* KnowledgeController.swift */; };
+		29805E81200CAA02009DE52B /* KnowledgeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29805E7F200CAA02009DE52B /* KnowledgeCell.swift */; };
+		29805E82200CAA02009DE52B /* KnowledgeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 29805E80200CAA02009DE52B /* KnowledgeCell.xib */; };
+		29805E84200CACF2009DE52B /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29805E83200CACF2009DE52B /* UIFont.swift */; };
+		29805E86200CAF28009DE52B /* UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29805E85200CAF28009DE52B /* UITableView.swift */; };
 		2A7370D8768170C43588DDD0 /* Pods_gis_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EBA9EE16F0F86FE41332501 /* Pods_gis_ios.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		295D1FD8200C4C1F00787E2C /* gis-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "gis-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		295D1FDB200C4C1F00787E2C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		295D1FDD200C4C1F00787E2C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		295D1FDD200C4C1F00787E2C /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		295D1FE0200C4C1F00787E2C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		295D1FE3200C4C1F00787E2C /* gis_ios.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = gis_ios.xcdatamodel; sourceTree = "<group>"; };
 		295D1FE5200C4C1F00787E2C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		295D1FE8200C4C1F00787E2C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		295D1FEA200C4C1F00787E2C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		29805E61200C56F8009DE52B /* ThaiSansNeue_Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ThaiSansNeue_Bold.ttf; sourceTree = "<group>"; };
+		29805E62200C56F9009DE52B /* ThaiSansNeue_Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ThaiSansNeue_Regular.ttf; sourceTree = "<group>"; };
+		29805E65200C57BB009DE52B /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		29805E6A200C601C009DE52B /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		29805E6C200C7B86009DE52B /* ExtensionMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionMenu.swift; sourceTree = "<group>"; };
+		29805E71200C7D10009DE52B /* MenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuController.swift; sourceTree = "<group>"; };
+		29805E74200C7DA9009DE52B /* MenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
+		29805E75200C7DA9009DE52B /* MenuCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuCell.xib; sourceTree = "<group>"; };
+		29805E78200C7EC9009DE52B /* UICollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionView.swift; sourceTree = "<group>"; };
+		29805E7A200C9CD2009DE52B /* Knowledge.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Knowledge.storyboard; sourceTree = "<group>"; };
+		29805E7C200C9E09009DE52B /* KnowledgeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KnowledgeController.swift; sourceTree = "<group>"; };
+		29805E7F200CAA02009DE52B /* KnowledgeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KnowledgeCell.swift; sourceTree = "<group>"; };
+		29805E80200CAA02009DE52B /* KnowledgeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KnowledgeCell.xib; sourceTree = "<group>"; };
+		29805E83200CACF2009DE52B /* UIFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFont.swift; sourceTree = "<group>"; };
+		29805E85200CAF28009DE52B /* UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableView.swift; sourceTree = "<group>"; };
 		3EBA9EE16F0F86FE41332501 /* Pods_gis_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_gis_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DEF805261AC1EFDE370746D /* Pods-gis-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gis-ios.release.xcconfig"; path = "Pods/Target Support Files/Pods-gis-ios/Pods-gis-ios.release.xcconfig"; sourceTree = "<group>"; };
 		B84B3A8249ED09F0C38D8763 /* Pods-gis-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gis-ios.debug.xcconfig"; path = "Pods/Target Support Files/Pods-gis-ios/Pods-gis-ios.debug.xcconfig"; sourceTree = "<group>"; };
@@ -86,6 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				295D1FDF200C4C1F00787E2C /* Main.storyboard */,
+				29805E7A200C9CD2009DE52B /* Knowledge.storyboard */,
 				295D1FE7200C4C1F00787E2C /* LaunchScreen.storyboard */,
 			);
 			path = Storyboard;
@@ -94,7 +125,10 @@
 		295D1FF1200C530500787E2C /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				295D1FDD200C4C1F00787E2C /* ViewController.swift */,
+				29805E70200C7CE5009DE52B /* Menu */,
+				29805E67200C5F01009DE52B /* Maps */,
+				29805E68200C5F2E009DE52B /* Knowledges */,
+				29805E69200C5F36009DE52B /* Downloads */,
 				295D1FDB200C4C1F00787E2C /* AppDelegate.swift */,
 			);
 			path = Classes;
@@ -103,6 +137,11 @@
 		295D1FF2200C531600787E2C /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				29805E65200C57BB009DE52B /* UIColor.swift */,
+				29805E6A200C601C009DE52B /* UIViewController.swift */,
+				29805E78200C7EC9009DE52B /* UICollectionView.swift */,
+				29805E83200CACF2009DE52B /* UIFont.swift */,
+				29805E85200CAF28009DE52B /* UITableView.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -110,9 +149,71 @@
 		295D1FF3200C531E00787E2C /* SupportFiles */ = {
 			isa = PBXGroup;
 			children = (
+				29805E60200C56F8009DE52B /* Font */,
 				295D1FE5200C4C1F00787E2C /* Assets.xcassets */,
 			);
 			path = SupportFiles;
+			sourceTree = "<group>";
+		};
+		29805E60200C56F8009DE52B /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				29805E61200C56F8009DE52B /* ThaiSansNeue_Bold.ttf */,
+				29805E62200C56F9009DE52B /* ThaiSansNeue_Regular.ttf */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
+		29805E67200C5F01009DE52B /* Maps */ = {
+			isa = PBXGroup;
+			children = (
+				295D1FDD200C4C1F00787E2C /* MapViewController.swift */,
+			);
+			path = Maps;
+			sourceTree = "<group>";
+		};
+		29805E68200C5F2E009DE52B /* Knowledges */ = {
+			isa = PBXGroup;
+			children = (
+				29805E7E200CA9DC009DE52B /* Item */,
+				29805E7C200C9E09009DE52B /* KnowledgeController.swift */,
+			);
+			path = Knowledges;
+			sourceTree = "<group>";
+		};
+		29805E69200C5F36009DE52B /* Downloads */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Downloads;
+			sourceTree = "<group>";
+		};
+		29805E70200C7CE5009DE52B /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				29805E73200C7D82009DE52B /* Item */,
+				29805E71200C7D10009DE52B /* MenuController.swift */,
+				29805E6C200C7B86009DE52B /* ExtensionMenu.swift */,
+			);
+			path = Menu;
+			sourceTree = "<group>";
+		};
+		29805E73200C7D82009DE52B /* Item */ = {
+			isa = PBXGroup;
+			children = (
+				29805E74200C7DA9009DE52B /* MenuCell.swift */,
+				29805E75200C7DA9009DE52B /* MenuCell.xib */,
+			);
+			path = Item;
+			sourceTree = "<group>";
+		};
+		29805E7E200CA9DC009DE52B /* Item */ = {
+			isa = PBXGroup;
+			children = (
+				29805E7F200CAA02009DE52B /* KnowledgeCell.swift */,
+				29805E80200CAA02009DE52B /* KnowledgeCell.xib */,
+			);
+			path = Item;
 			sourceTree = "<group>";
 		};
 		7196560DAC87AF20DF1576D2 /* Frameworks */ = {
@@ -185,7 +286,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				29805E77200C7DA9009DE52B /* MenuCell.xib in Resources */,
+				29805E64200C56F9009DE52B /* ThaiSansNeue_Regular.ttf in Resources */,
+				29805E82200CAA02009DE52B /* KnowledgeCell.xib in Resources */,
 				295D1FE9200C4C1F00787E2C /* LaunchScreen.storyboard in Resources */,
+				29805E7B200C9CD2009DE52B /* Knowledge.storyboard in Resources */,
+				29805E63200C56F9009DE52B /* ThaiSansNeue_Bold.ttf in Resources */,
 				295D1FE6200C4C1F00787E2C /* Assets.xcassets in Resources */,
 				295D1FE1200C4C1F00787E2C /* Main.storyboard in Resources */,
 			);
@@ -218,9 +324,13 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-gis-ios/Pods-gis-ios-resources.sh",
+				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
+				"${PODS_ROOT}/GooglePlaces/Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -233,9 +343,12 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-gis-ios/Pods-gis-ios-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SwiftHEXColors/SwiftHEXColors.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftHEXColors.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -250,8 +363,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				295D1FE4200C4C1F00787E2C /* gis_ios.xcdatamodeld in Sources */,
-				295D1FDE200C4C1F00787E2C /* ViewController.swift in Sources */,
+				29805E72200C7D10009DE52B /* MenuController.swift in Sources */,
+				29805E81200CAA02009DE52B /* KnowledgeCell.swift in Sources */,
+				29805E66200C57BB009DE52B /* UIColor.swift in Sources */,
+				29805E79200C7EC9009DE52B /* UICollectionView.swift in Sources */,
+				295D1FDE200C4C1F00787E2C /* MapViewController.swift in Sources */,
 				295D1FDC200C4C1F00787E2C /* AppDelegate.swift in Sources */,
+				29805E6D200C7B86009DE52B /* ExtensionMenu.swift in Sources */,
+				29805E84200CACF2009DE52B /* UIFont.swift in Sources */,
+				29805E76200C7DA9009DE52B /* MenuCell.swift in Sources */,
+				29805E86200CAF28009DE52B /* UITableView.swift in Sources */,
+				29805E7D200C9E09009DE52B /* KnowledgeController.swift in Sources */,
+				29805E6B200C601C009DE52B /* UIViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
