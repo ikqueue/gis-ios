@@ -1,0 +1,342 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		295D1FDC200C4C1F00787E2C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 295D1FDB200C4C1F00787E2C /* AppDelegate.swift */; };
+		295D1FDE200C4C1F00787E2C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 295D1FDD200C4C1F00787E2C /* ViewController.swift */; };
+		295D1FE1200C4C1F00787E2C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 295D1FDF200C4C1F00787E2C /* Main.storyboard */; };
+		295D1FE4200C4C1F00787E2C /* gis_ios.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 295D1FE2200C4C1F00787E2C /* gis_ios.xcdatamodeld */; };
+		295D1FE6200C4C1F00787E2C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 295D1FE5200C4C1F00787E2C /* Assets.xcassets */; };
+		295D1FE9200C4C1F00787E2C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 295D1FE7200C4C1F00787E2C /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		295D1FD8200C4C1F00787E2C /* gis-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "gis-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		295D1FDB200C4C1F00787E2C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		295D1FDD200C4C1F00787E2C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		295D1FE0200C4C1F00787E2C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		295D1FE3200C4C1F00787E2C /* gis_ios.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = gis_ios.xcdatamodel; sourceTree = "<group>"; };
+		295D1FE5200C4C1F00787E2C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		295D1FE8200C4C1F00787E2C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		295D1FEA200C4C1F00787E2C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		295D1FD5200C4C1F00787E2C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		295D1FCF200C4C1F00787E2C = {
+			isa = PBXGroup;
+			children = (
+				295D1FDA200C4C1F00787E2C /* gis-ios */,
+				295D1FD9200C4C1F00787E2C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		295D1FD9200C4C1F00787E2C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				295D1FD8200C4C1F00787E2C /* gis-ios.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		295D1FDA200C4C1F00787E2C /* gis-ios */ = {
+			isa = PBXGroup;
+			children = (
+				295D1FDB200C4C1F00787E2C /* AppDelegate.swift */,
+				295D1FDD200C4C1F00787E2C /* ViewController.swift */,
+				295D1FDF200C4C1F00787E2C /* Main.storyboard */,
+				295D1FE5200C4C1F00787E2C /* Assets.xcassets */,
+				295D1FE7200C4C1F00787E2C /* LaunchScreen.storyboard */,
+				295D1FEA200C4C1F00787E2C /* Info.plist */,
+				295D1FE2200C4C1F00787E2C /* gis_ios.xcdatamodeld */,
+			);
+			path = "gis-ios";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		295D1FD7200C4C1F00787E2C /* gis-ios */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 295D1FED200C4C1F00787E2C /* Build configuration list for PBXNativeTarget "gis-ios" */;
+			buildPhases = (
+				295D1FD4200C4C1F00787E2C /* Sources */,
+				295D1FD5200C4C1F00787E2C /* Frameworks */,
+				295D1FD6200C4C1F00787E2C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "gis-ios";
+			productName = "gis-ios";
+			productReference = 295D1FD8200C4C1F00787E2C /* gis-ios.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		295D1FD0200C4C1F00787E2C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = Riseplus;
+				TargetAttributes = {
+					295D1FD7200C4C1F00787E2C = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 295D1FD3200C4C1F00787E2C /* Build configuration list for PBXProject "gis-ios" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 295D1FCF200C4C1F00787E2C;
+			productRefGroup = 295D1FD9200C4C1F00787E2C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				295D1FD7200C4C1F00787E2C /* gis-ios */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		295D1FD6200C4C1F00787E2C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				295D1FE9200C4C1F00787E2C /* LaunchScreen.storyboard in Resources */,
+				295D1FE6200C4C1F00787E2C /* Assets.xcassets in Resources */,
+				295D1FE1200C4C1F00787E2C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		295D1FD4200C4C1F00787E2C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				295D1FE4200C4C1F00787E2C /* gis_ios.xcdatamodeld in Sources */,
+				295D1FDE200C4C1F00787E2C /* ViewController.swift in Sources */,
+				295D1FDC200C4C1F00787E2C /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		295D1FDF200C4C1F00787E2C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				295D1FE0200C4C1F00787E2C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		295D1FE7200C4C1F00787E2C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				295D1FE8200C4C1F00787E2C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		295D1FEB200C4C1F00787E2C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		295D1FEC200C4C1F00787E2C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		295D1FEE200C4C1F00787E2C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "gis-ios/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "tech.riseplus.gis-ios";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		295D1FEF200C4C1F00787E2C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "gis-ios/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "tech.riseplus.gis-ios";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		295D1FD3200C4C1F00787E2C /* Build configuration list for PBXProject "gis-ios" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				295D1FEB200C4C1F00787E2C /* Debug */,
+				295D1FEC200C4C1F00787E2C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		295D1FED200C4C1F00787E2C /* Build configuration list for PBXNativeTarget "gis-ios" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				295D1FEE200C4C1F00787E2C /* Debug */,
+				295D1FEF200C4C1F00787E2C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		295D1FE2200C4C1F00787E2C /* gis_ios.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				295D1FE3200C4C1F00787E2C /* gis_ios.xcdatamodel */,
+			);
+			currentVersion = 295D1FE3200C4C1F00787E2C /* gis_ios.xcdatamodel */;
+			path = gis_ios.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 295D1FD0200C4C1F00787E2C /* Project object */;
+}
