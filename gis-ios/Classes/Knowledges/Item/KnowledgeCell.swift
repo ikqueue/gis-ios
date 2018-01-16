@@ -32,15 +32,15 @@ class KnowledgeCell: UITableViewCell {
         scaleView.backgroundColor = UIColor.success()
         
         scaleText.text = "S1"
-        scaleText.font.setFont(font: "ThaiSansNeue-Bold", size: 70.0)
+        scaleText.font = UIFont.setFont(font: "ThaiSansNeue-Regular", size: 100.0)
         scaleText.textColor = UIColor.white
         
         header.text = "เหมาะสมมากที่สุด"
-        header.font.setFont(font: "ThaiSansNeue-Regular", size: 30.0)
+        header.font = UIFont.setFont(font: "ThaiSansNeue-Regular", size: 30.0)
         header.textColor = UIColor.normalText()
         
         detail.text = "ระดับที่แนะนำให้ปลูกมากที่สุด"
-        detail.font.setFont(font: "ThaiSansNeue-Regular", size: 20.0)
+        detail.font = UIFont.setFont(font: "ThaiSansNeue-Regular", size: 20.0)
         detail.textColor = UIColor.subtitle()
     }
     

@@ -10,25 +10,29 @@ import UIKit
 
 extension UIViewController {
     
-    public func setUpNavigationBar(barTint: UIColor, tint: UIColor, titleTextAt: UIColor) -> Void {
+    public func setUpNavigationBar(barTint: UIColor, tint: UIColor, titleTextAt: UIColor, showTitle: Bool, title: String?) -> Void {
         navigationController?.navigationBar.shadowImage = UIImage()
         navigationController?.navigationBar.barTintColor = barTint
         navigationController?.navigationBar.tintColor = tint
         navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: titleTextAt]
         
-        
+        if showTitle {
+            setNavigationTitle(title: title, color: tint)
+        }else {
+            setNavigationTitle(title: title, color: UIColor.clear)
+        }
+
+    }
+    
+    func setNavigationTitle(title: String?, color: UIColor) -> Void {
         
         let navLabel = UILabel()
-        
-        let navTitle = NSMutableAttributedString(string: "GIS ONLINE", attributes:[
-            NSAttributedStringKey.foregroundColor: tint,
-            NSAttributedStringKey.font: UIFont(name: "ThaiSansNeue-Bold", size: 30.0) ?? 0])
+        let navTitle = NSMutableAttributedString(string: title!, attributes:[
+            NSAttributedStringKey.foregroundColor: color,
+            NSAttributedStringKey.font: UIFont.setFont(font: "ThaiSansNeue-Bold", size: 30.0)])
         
         navLabel.attributedText = navTitle
         self.navigationItem.titleView = navLabel
-        
-        
-        
     }
     
     public func addLeftBarButtonWithImage(_ buttonImage: UIImage, selector: Selector?=nil) {
@@ -61,8 +65,5 @@ extension UIViewController {
         
         navigationItem.rightBarButtonItem = barButton
     }
-    
-    @objc func myLocation() {
-        
-    }
+
 }

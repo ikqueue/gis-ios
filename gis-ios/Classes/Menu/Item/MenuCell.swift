@@ -19,13 +19,14 @@ class MenuCell: UICollectionViewCell {
     }
     
     func configureView() -> Void {
-        layer.cornerRadius = 2.0
-        layer.borderWidth = 1.0
+        layer.cornerRadius = 5.0
+        layer.borderWidth = 0.5
         layer.borderColor = UIColor.lightGray.cgColor
         
         logo.contentMode = .center
         
         textTItle.textColor = UIColor.normalText()
+        textTItle.font = UIFont.setFont(font: "ThaiSansNeue-Regular", size: 20.0)
     }
 
 }

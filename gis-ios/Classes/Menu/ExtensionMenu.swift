@@ -49,16 +49,17 @@ extension MenuController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         switch indexPath.row {
         case 0:
-            navigationController?.popViewController(animated: true)
-            dismiss(animated: true, completion: nil)
+            
+            self.didPresentNavigationView(identifier: "Main", first: checkView.firstView, second: nil, third: nil)
+
         case 1:
             
-            if let vc = UIStoryboard(name: "Knowledge", bundle: nil).instantiateViewController(withIdentifier: "Knowledge") as? UINavigationController {
-                present(vc, animated: true, completion: nil)
-            }
+            self.didPresentNavigationView(identifier: "Knowledge", first: nil, second: checkView.secondView, third: nil)
             
         case 2:
-            print(indexPath.row)
+            
+            self.didPresentNavigationView(identifier: "Download", first: nil, second: nil, third: checkView.thirdView)
+            
         default:
             print(indexPath)
         }

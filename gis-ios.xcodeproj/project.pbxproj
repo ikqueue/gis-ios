@@ -28,6 +28,11 @@
 		29805E82200CAA02009DE52B /* KnowledgeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 29805E80200CAA02009DE52B /* KnowledgeCell.xib */; };
 		29805E84200CACF2009DE52B /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29805E83200CACF2009DE52B /* UIFont.swift */; };
 		29805E86200CAF28009DE52B /* UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29805E85200CAF28009DE52B /* UITableView.swift */; };
+		298AFF5A200DDF5E008C0229 /* Download.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 298AFF59200DDF5E008C0229 /* Download.storyboard */; };
+		298AFF5C200DE59E008C0229 /* DownloadController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 298AFF5B200DE59E008C0229 /* DownloadController.swift */; };
+		298AFF60200DEF0F008C0229 /* DownloadCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 298AFF5E200DEF0F008C0229 /* DownloadCell.swift */; };
+		298AFF61200DEF0F008C0229 /* DownloadCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 298AFF5F200DEF0F008C0229 /* DownloadCell.xib */; };
+		298AFF63200DF728008C0229 /* DownloadDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 298AFF62200DF728008C0229 /* DownloadDetailController.swift */; };
 		2A7370D8768170C43588DDD0 /* Pods_gis_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EBA9EE16F0F86FE41332501 /* Pods_gis_ios.framework */; };
 /* End PBXBuildFile section */
 
@@ -55,6 +60,11 @@
 		29805E80200CAA02009DE52B /* KnowledgeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KnowledgeCell.xib; sourceTree = "<group>"; };
 		29805E83200CACF2009DE52B /* UIFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFont.swift; sourceTree = "<group>"; };
 		29805E85200CAF28009DE52B /* UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableView.swift; sourceTree = "<group>"; };
+		298AFF59200DDF5E008C0229 /* Download.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Download.storyboard; sourceTree = "<group>"; };
+		298AFF5B200DE59E008C0229 /* DownloadController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadController.swift; sourceTree = "<group>"; };
+		298AFF5E200DEF0F008C0229 /* DownloadCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadCell.swift; sourceTree = "<group>"; };
+		298AFF5F200DEF0F008C0229 /* DownloadCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DownloadCell.xib; sourceTree = "<group>"; };
+		298AFF62200DF728008C0229 /* DownloadDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadDetailController.swift; sourceTree = "<group>"; };
 		3EBA9EE16F0F86FE41332501 /* Pods_gis_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_gis_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DEF805261AC1EFDE370746D /* Pods-gis-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gis-ios.release.xcconfig"; path = "Pods/Target Support Files/Pods-gis-ios/Pods-gis-ios.release.xcconfig"; sourceTree = "<group>"; };
 		B84B3A8249ED09F0C38D8763 /* Pods-gis-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gis-ios.debug.xcconfig"; path = "Pods/Target Support Files/Pods-gis-ios/Pods-gis-ios.debug.xcconfig"; sourceTree = "<group>"; };
@@ -117,6 +127,7 @@
 			children = (
 				295D1FDF200C4C1F00787E2C /* Main.storyboard */,
 				29805E7A200C9CD2009DE52B /* Knowledge.storyboard */,
+				298AFF59200DDF5E008C0229 /* Download.storyboard */,
 				295D1FE7200C4C1F00787E2C /* LaunchScreen.storyboard */,
 			);
 			path = Storyboard;
@@ -184,6 +195,9 @@
 		29805E69200C5F36009DE52B /* Downloads */ = {
 			isa = PBXGroup;
 			children = (
+				298AFF5D200DEEEE008C0229 /* Item */,
+				298AFF5B200DE59E008C0229 /* DownloadController.swift */,
+				298AFF62200DF728008C0229 /* DownloadDetailController.swift */,
 			);
 			path = Downloads;
 			sourceTree = "<group>";
@@ -212,6 +226,15 @@
 			children = (
 				29805E7F200CAA02009DE52B /* KnowledgeCell.swift */,
 				29805E80200CAA02009DE52B /* KnowledgeCell.xib */,
+			);
+			path = Item;
+			sourceTree = "<group>";
+		};
+		298AFF5D200DEEEE008C0229 /* Item */ = {
+			isa = PBXGroup;
+			children = (
+				298AFF5E200DEF0F008C0229 /* DownloadCell.swift */,
+				298AFF5F200DEF0F008C0229 /* DownloadCell.xib */,
 			);
 			path = Item;
 			sourceTree = "<group>";
@@ -290,8 +313,10 @@
 				29805E64200C56F9009DE52B /* ThaiSansNeue_Regular.ttf in Resources */,
 				29805E82200CAA02009DE52B /* KnowledgeCell.xib in Resources */,
 				295D1FE9200C4C1F00787E2C /* LaunchScreen.storyboard in Resources */,
+				298AFF5A200DDF5E008C0229 /* Download.storyboard in Resources */,
 				29805E7B200C9CD2009DE52B /* Knowledge.storyboard in Resources */,
 				29805E63200C56F9009DE52B /* ThaiSansNeue_Bold.ttf in Resources */,
+				298AFF61200DEF0F008C0229 /* DownloadCell.xib in Resources */,
 				295D1FE6200C4C1F00787E2C /* Assets.xcassets in Resources */,
 				295D1FE1200C4C1F00787E2C /* Main.storyboard in Resources */,
 			);
@@ -369,6 +394,9 @@
 				29805E79200C7EC9009DE52B /* UICollectionView.swift in Sources */,
 				295D1FDE200C4C1F00787E2C /* MapViewController.swift in Sources */,
 				295D1FDC200C4C1F00787E2C /* AppDelegate.swift in Sources */,
+				298AFF5C200DE59E008C0229 /* DownloadController.swift in Sources */,
+				298AFF63200DF728008C0229 /* DownloadDetailController.swift in Sources */,
+				298AFF60200DEF0F008C0229 /* DownloadCell.swift in Sources */,
 				29805E6D200C7B86009DE52B /* ExtensionMenu.swift in Sources */,
 				29805E84200CACF2009DE52B /* UIFont.swift in Sources */,
 				29805E76200C7DA9009DE52B /* MenuCell.swift in Sources */,

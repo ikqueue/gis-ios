@@ -10,7 +10,7 @@ import UIKit
 
 extension UIFont {
     
-    public func setFont(font: String!, size: CGFloat!) -> UIFont {
+    class func setFont(font: String!, size: CGFloat!) -> UIFont {
         return UIFont(name: font, size: size)!
     }
     
