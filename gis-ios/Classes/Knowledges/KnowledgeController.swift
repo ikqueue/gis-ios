@@ -8,20 +8,31 @@
 
 import UIKit
 
-class KnowledgeController: MenuController {
+class KnowledgeController: UIViewController {
 
+    @IBOutlet weak var menuView: UIView!
+    @IBOutlet weak var blurView: UIVisualEffectView!
+    @IBOutlet weak var menuCollectionview: UICollectionView!
     @IBOutlet weak var tableVIEW: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setUpNavigationBar()
+        
         setUpTableView()
         
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        
+        setUpNavigationCleanColor(isTranslucent: true, backgroundColor: .clear)
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
+        
+        
         if let window = UIApplication.shared.delegate?.window {
             if var viewController = window?.rootViewController {
                 if(viewController is UINavigationController){
@@ -31,15 +42,6 @@ class KnowledgeController: MenuController {
             }
         }
     }
-    
-    func setUpNavigationBar() -> Void {
-        
-        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
-        navigationController?.navigationBar.shadowImage = UIImage()
-        navigationController?.navigationBar.isTranslucent = true
-        navigationController?.view.backgroundColor = .clear
-    }
-    
     
     func setUpTableView() -> Void {
         tableVIEW.registerTableViewCell(nib: "KnowledgeCell", identifier: "KnowledgeCell")
@@ -67,6 +69,6 @@ extension KnowledgeController: UITableViewDataSource {
 
 extension KnowledgeController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print(indexPath.row)
+        performSegue(withIdentifier: "detail", sender: nil)
     }
 }

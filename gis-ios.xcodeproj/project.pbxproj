@@ -13,6 +13,9 @@
 		295D1FE4200C4C1F00787E2C /* gis_ios.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 295D1FE2200C4C1F00787E2C /* gis_ios.xcdatamodeld */; };
 		295D1FE6200C4C1F00787E2C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 295D1FE5200C4C1F00787E2C /* Assets.xcassets */; };
 		295D1FE9200C4C1F00787E2C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 295D1FE7200C4C1F00787E2C /* LaunchScreen.storyboard */; };
+		297DDB882011925F005A26BE /* XMSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297DDB872011925F005A26BE /* XMSegmentedControl.swift */; };
+		297DDB8B201192C3005A26BE /* KnowledgeDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297DDB8A201192C3005A26BE /* KnowledgeDetailController.swift */; };
+		297DDB8D2011E120005A26BE /* SimpleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297DDB8C2011E120005A26BE /* SimpleController.swift */; };
 		29805E63200C56F9009DE52B /* ThaiSansNeue_Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 29805E61200C56F8009DE52B /* ThaiSansNeue_Bold.ttf */; };
 		29805E64200C56F9009DE52B /* ThaiSansNeue_Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 29805E62200C56F9009DE52B /* ThaiSansNeue_Regular.ttf */; };
 		29805E66200C57BB009DE52B /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29805E65200C57BB009DE52B /* UIColor.swift */; };
@@ -33,6 +36,7 @@
 		298AFF60200DEF0F008C0229 /* DownloadCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 298AFF5E200DEF0F008C0229 /* DownloadCell.swift */; };
 		298AFF61200DEF0F008C0229 /* DownloadCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 298AFF5F200DEF0F008C0229 /* DownloadCell.xib */; };
 		298AFF63200DF728008C0229 /* DownloadDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 298AFF62200DF728008C0229 /* DownloadDetailController.swift */; };
+		299C50252015CAD60030BE70 /* MyMapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299C50242015CAD60030BE70 /* MyMapController.swift */; };
 		2A7370D8768170C43588DDD0 /* Pods_gis_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EBA9EE16F0F86FE41332501 /* Pods_gis_ios.framework */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +49,9 @@
 		295D1FE5200C4C1F00787E2C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		295D1FE8200C4C1F00787E2C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		295D1FEA200C4C1F00787E2C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		297DDB872011925F005A26BE /* XMSegmentedControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XMSegmentedControl.swift; sourceTree = "<group>"; };
+		297DDB8A201192C3005A26BE /* KnowledgeDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KnowledgeDetailController.swift; sourceTree = "<group>"; };
+		297DDB8C2011E120005A26BE /* SimpleController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleController.swift; sourceTree = "<group>"; };
 		29805E61200C56F8009DE52B /* ThaiSansNeue_Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ThaiSansNeue_Bold.ttf; sourceTree = "<group>"; };
 		29805E62200C56F9009DE52B /* ThaiSansNeue_Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ThaiSansNeue_Regular.ttf; sourceTree = "<group>"; };
 		29805E65200C57BB009DE52B /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
@@ -65,6 +72,7 @@
 		298AFF5E200DEF0F008C0229 /* DownloadCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadCell.swift; sourceTree = "<group>"; };
 		298AFF5F200DEF0F008C0229 /* DownloadCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DownloadCell.xib; sourceTree = "<group>"; };
 		298AFF62200DF728008C0229 /* DownloadDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadDetailController.swift; sourceTree = "<group>"; };
+		299C50242015CAD60030BE70 /* MyMapController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyMapController.swift; sourceTree = "<group>"; };
 		3EBA9EE16F0F86FE41332501 /* Pods_gis_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_gis_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DEF805261AC1EFDE370746D /* Pods-gis-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gis-ios.release.xcconfig"; path = "Pods/Target Support Files/Pods-gis-ios/Pods-gis-ios.release.xcconfig"; sourceTree = "<group>"; };
 		B84B3A8249ED09F0C38D8763 /* Pods-gis-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gis-ios.debug.xcconfig"; path = "Pods/Target Support Files/Pods-gis-ios/Pods-gis-ios.debug.xcconfig"; sourceTree = "<group>"; };
@@ -160,10 +168,27 @@
 		295D1FF3200C531E00787E2C /* SupportFiles */ = {
 			isa = PBXGroup;
 			children = (
+				297DDB8320119241005A26BE /* Library */,
 				29805E60200C56F8009DE52B /* Font */,
 				295D1FE5200C4C1F00787E2C /* Assets.xcassets */,
 			);
 			path = SupportFiles;
+			sourceTree = "<group>";
+		};
+		297DDB8320119241005A26BE /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				297DDB862011925F005A26BE /* XMSegmentedControl */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		297DDB862011925F005A26BE /* XMSegmentedControl */ = {
+			isa = PBXGroup;
+			children = (
+				297DDB872011925F005A26BE /* XMSegmentedControl.swift */,
+			);
+			path = XMSegmentedControl;
 			sourceTree = "<group>";
 		};
 		29805E60200C56F8009DE52B /* Font */ = {
@@ -179,6 +204,7 @@
 			isa = PBXGroup;
 			children = (
 				295D1FDD200C4C1F00787E2C /* MapViewController.swift */,
+				299C50242015CAD60030BE70 /* MyMapController.swift */,
 			);
 			path = Maps;
 			sourceTree = "<group>";
@@ -188,6 +214,8 @@
 			children = (
 				29805E7E200CA9DC009DE52B /* Item */,
 				29805E7C200C9E09009DE52B /* KnowledgeController.swift */,
+				297DDB8A201192C3005A26BE /* KnowledgeDetailController.swift */,
+				297DDB8C2011E120005A26BE /* SimpleController.swift */,
 			);
 			path = Knowledges;
 			sourceTree = "<group>";
@@ -369,11 +397,15 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-gis-ios/Pods-gis-ios-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Pageboy/Pageboy.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftHEXColors/SwiftHEXColors.framework",
+				"${BUILT_PRODUCTS_DIR}/Tabman/Tabman.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Pageboy.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftHEXColors.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Tabman.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -390,12 +422,16 @@
 				295D1FE4200C4C1F00787E2C /* gis_ios.xcdatamodeld in Sources */,
 				29805E72200C7D10009DE52B /* MenuController.swift in Sources */,
 				29805E81200CAA02009DE52B /* KnowledgeCell.swift in Sources */,
+				297DDB882011925F005A26BE /* XMSegmentedControl.swift in Sources */,
 				29805E66200C57BB009DE52B /* UIColor.swift in Sources */,
+				297DDB8B201192C3005A26BE /* KnowledgeDetailController.swift in Sources */,
 				29805E79200C7EC9009DE52B /* UICollectionView.swift in Sources */,
 				295D1FDE200C4C1F00787E2C /* MapViewController.swift in Sources */,
+				299C50252015CAD60030BE70 /* MyMapController.swift in Sources */,
 				295D1FDC200C4C1F00787E2C /* AppDelegate.swift in Sources */,
 				298AFF5C200DE59E008C0229 /* DownloadController.swift in Sources */,
 				298AFF63200DF728008C0229 /* DownloadDetailController.swift in Sources */,
+				297DDB8D2011E120005A26BE /* SimpleController.swift in Sources */,
 				298AFF60200DEF0F008C0229 /* DownloadCell.swift in Sources */,
 				29805E6D200C7B86009DE52B /* ExtensionMenu.swift in Sources */,
 				29805E84200CACF2009DE52B /* UIFont.swift in Sources */,

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DownloadController: MenuController {
+class DownloadController: UIViewController {
 
     @IBOutlet weak var tableVIEW: UITableView!
     

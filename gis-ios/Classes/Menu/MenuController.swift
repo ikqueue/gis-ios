@@ -7,19 +7,14 @@
 //
 
 import UIKit
+import GoogleMaps
 
-struct checkView {
-    static var firstView: String?
-    static var secondView: String?
-    static var thirdView: String?
-}
 
 class MenuController: UIViewController {
     
     @IBOutlet weak var menuView: UIView!
     @IBOutlet weak var menuCollection: UICollectionView!
     @IBOutlet weak var blurView: UIVisualEffectView!
-
     
     var menuTitle: [String] = [
         "แผนที่",

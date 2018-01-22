@@ -8,20 +8,46 @@
 
 import UIKit
 import GoogleMaps
+import CoreLocation
 
-class MapViewController: MenuController {
+class MapViewController: UIViewController {
 
     @IBOutlet weak var floaty: UIView!
     @IBOutlet weak var filterView: UIView!
-    @IBOutlet weak var mapView: UIView!
+    @IBOutlet weak var mapView: GMSMapView!
+    @IBOutlet weak var menuView: UIView!
+    @IBOutlet weak var menuList: UICollectionView!
+    @IBOutlet weak var blurView: UIVisualEffectView!
+    
+    var menuTitle: [String] = [
+        "แผนที่",
+        "ข้อมูลความรู้",
+        "ดาวน์โหลด"
+    ]
+    
+    var menuIogo: [UIImage] = [
+        UIImage(named: "x-map")!,
+        UIImage(named: "newspaper")!,
+        UIImage(named: "save")!
+    ]
+    
+    var locationManager = CLLocationManager()
+    var currentLocation: CLLocation?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setUpMenuCollection()
         setUpFloatyButton()
         setUpFilter()
+        setUpBarButtonMenu()
+        configureMapView()
         
-        loadView()
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(MapViewController.dismissMenu))
+        blurView.addGestureRecognizer(tap)
+        
+        menuView.isHidden = true
+        blurView.isHidden = true
         
     }
     
@@ -41,6 +67,9 @@ class MapViewController: MenuController {
         }
     }
     
+    func setUpMenuCollection() -> Void {
+        menuList.registerCollectionViewCell(nibName: "MenuCell", identifier: "MenuCell")
+    }
     
     func setUpFloatyButton() -> Void {
         floaty.layer.cornerRadius = 35.0
@@ -57,21 +86,6 @@ class MapViewController: MenuController {
     }
     
     
-    override func loadView() {
-        // Create a GMSCameraPosition that tells the map to display the
-        // coordinate -33.86,151.20 at zoom level 6.
-        let camera = GMSCameraPosition.camera(withLatitude: -33.86, longitude: 151.20, zoom: 6.0)
-        let map = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
-        mapView = map
-        
-        // Creates a marker in the center of the map.
-        let marker = GMSMarker()
-        marker.position = CLLocationCoordinate2D(latitude: -33.86, longitude: 151.20)
-        marker.title = "Sydney"
-        marker.snippet = "Australia"
-        marker.map = map
-    }
-    
     @objc func touchAction() -> Void {
 
     }
@@ -81,8 +95,100 @@ class MapViewController: MenuController {
     }
     
     @objc func touchMyLocation() -> Void {
+        performSegue(withIdentifier: "myMap", sender: nil)
+    }
+    
+    func configureMapView() -> Void {
+        
+        locationManager = CLLocationManager()
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.requestAlwaysAuthorization()
+        locationManager.distanceFilter = 50
+        locationManager.startUpdatingLocation()
+        locationManager.delegate = self
+        
+        mapView.delegate = self
+        
+        let camera = GMSCameraPosition.camera(withLatitude: 37.36, longitude: -122.0, zoom: 15.0)
+        mapView.camera = camera
+        showMarker(position: camera.target)
+
+        self.mapView?.isMyLocationEnabled = true
+        
+    }
+    
+    func showMarker(position: CLLocationCoordinate2D){
+        let marker = GMSMarker()
+        marker.position = position
+        marker.title = "Location"
+        marker.snippet = "Current"
+        marker.map = mapView
+    }
+
+}
+
+// MARK: - CLLocationManagerDelegate
+extension MapViewController: CLLocationManagerDelegate {
+    
+    private func locationManager(manager: CLLocationManager, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
+        if status == .authorizedWhenInUse {
+            locationManager.startUpdatingLocation()
+            mapView.isMyLocationEnabled = true
+            mapView.settings.myLocationButton = true
+        }
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+
+        if let location = locations.last {
+            mapView.camera = GMSCameraPosition.camera(withLatitude: (location.coordinate.latitude), longitude: (location.coordinate.longitude), zoom: 17.0)
+            locationManager.stopUpdatingLocation()
+        }
         
     }
 }
 
-
+extension MapViewController: GMSMapViewDelegate {
+    
+    /* handles Info Window tap */
+    func mapView(_ mapView: GMSMapView, didTapInfoWindowOf marker: GMSMarker) {
+        print("didTapInfoWindowOf")
+    }
+    
+    /* handles Info Window long press */
+    func mapView(_ mapView: GMSMapView, didLongPressInfoWindowOf marker: GMSMarker) {
+        print("didLongPressInfoWindowOf")
+    }
+    
+    /* set a custom Info Window */
+    func mapView(_ mapView: GMSMapView, markerInfoWindow marker: GMSMarker) -> UIView? {
+        let view = UIView(frame: CGRect.init(x: 0, y: 0, width: 200, height: 70))
+        view.backgroundColor = UIColor.white
+        view.layer.cornerRadius = 6
+        
+        let lbl1 = UILabel(frame: CGRect.init(x: 8, y: 8, width: view.frame.size.width - 16, height: 15))
+        lbl1.text = "Hi there!"
+        view.addSubview(lbl1)
+        
+        let lbl2 = UILabel(frame: CGRect.init(x: lbl1.frame.origin.x, y: lbl1.frame.origin.y + lbl1.frame.size.height + 3, width: view.frame.size.width - 16, height: 15))
+        lbl2.text = "I am a custom info window."
+        lbl2.font = UIFont.systemFont(ofSize: 14, weight: .light)
+        view.addSubview(lbl2)
+        
+        return view
+    }
+    
+    
+    //MARK - GMSMarker Dragging
+    func mapView(_ mapView: GMSMapView, didBeginDragging marker: GMSMarker) {
+        print("didBeginDragging")
+    }
+    func mapView(_ mapView: GMSMapView, didDrag marker: GMSMarker) {
+        print("didDrag")
+    }
+    func mapView(_ mapView: GMSMapView, didEndDragging marker: GMSMarker) {
+        print("didEndDragging")
+    }
+    
+    
+}

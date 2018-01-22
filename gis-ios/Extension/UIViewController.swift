@@ -24,6 +24,14 @@ extension UIViewController {
 
     }
     
+    func setUpNavigationCleanColor(isTranslucent: Bool, backgroundColor: UIColor) -> Void {
+        
+        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        navigationController?.navigationBar.shadowImage = UIImage()
+        navigationController?.navigationBar.isTranslucent = isTranslucent
+        navigationController?.view.backgroundColor = backgroundColor
+    }
+    
     func setNavigationTitle(title: String?, color: UIColor) -> Void {
         
         let navLabel = UILabel()
