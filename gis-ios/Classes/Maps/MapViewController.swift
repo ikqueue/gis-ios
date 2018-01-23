@@ -18,18 +18,7 @@ class MapViewController: UIViewController {
     @IBOutlet weak var menuView: UIView!
     @IBOutlet weak var menuList: UICollectionView!
     @IBOutlet weak var blurView: UIVisualEffectView!
-    
-    var menuTitle: [String] = [
-        "แผนที่",
-        "ข้อมูลความรู้",
-        "ดาวน์โหลด"
-    ]
-    
-    var menuIogo: [UIImage] = [
-        UIImage(named: "x-map")!,
-        UIImage(named: "newspaper")!,
-        UIImage(named: "save")!
-    ]
+    @IBOutlet weak var currentButton: UIButton!
     
     var locationManager = CLLocationManager()
     var currentLocation: CLLocation?
@@ -41,6 +30,8 @@ class MapViewController: UIViewController {
         setUpFloatyButton()
         setUpFilter()
         setUpBarButtonMenu()
+        setUpCurrentButton()
+        
         configureMapView()
         
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(MapViewController.dismissMenu))
@@ -67,6 +58,15 @@ class MapViewController: UIViewController {
         }
     }
     
+    func setUpCurrentButton() -> Void {
+        currentButton.layer.cornerRadius = 18.0
+        currentButton.layer.borderWidth = 1.0
+        currentButton.layer.borderColor = UIColor.CustomLightRed().cgColor
+        currentButton.backgroundColor = UIColor.CustomLightRed()
+        
+        currentButton.addTarget(self, action: #selector(MapViewController.touchCurrentLocation), for: UIControlEvents.touchUpInside)
+    }
+    
     func setUpMenuCollection() -> Void {
         menuList.registerCollectionViewCell(nibName: "MenuCell", identifier: "MenuCell")
     }
@@ -85,6 +85,12 @@ class MapViewController: UIViewController {
         filterView.addGestureRecognizer(tap)
     }
     
+    @objc func touchCurrentLocation() -> Void {
+        
+        if CLLocationManager.locationServicesEnabled() {
+            locationManager.startUpdatingLocation()
+        }
+    }
     
     @objc func touchAction() -> Void {
 
@@ -103,10 +109,11 @@ class MapViewController: UIViewController {
         locationManager = CLLocationManager()
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.requestAlwaysAuthorization()
+        locationManager.requestWhenInUseAuthorization()
         locationManager.distanceFilter = 50
         locationManager.startUpdatingLocation()
-        locationManager.delegate = self
         
+        locationManager.delegate = self
         mapView.delegate = self
         
         let camera = GMSCameraPosition.camera(withLatitude: 37.36, longitude: -122.0, zoom: 15.0)
@@ -124,6 +131,7 @@ class MapViewController: UIViewController {
         marker.snippet = "Current"
         marker.map = mapView
     }
+    
 
 }
 
@@ -145,6 +153,11 @@ extension MapViewController: CLLocationManagerDelegate {
             locationManager.stopUpdatingLocation()
         }
         
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error)
+    {
+        print("Error \(error)")
     }
 }
 

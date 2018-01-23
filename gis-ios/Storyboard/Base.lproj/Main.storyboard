@@ -56,6 +56,16 @@
                                 <rect key="frame" x="0.0" y="108" width="375" height="559"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wx2-w9-AL8">
+                                <rect key="frame" x="80" y="120" width="215" height="38"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="38" id="JQe-wx-pMR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ThaiSansNeue-Regular" family="ThaiSans Neue" pointSize="20"/>
+                                <state key="normal" title=" ตำแหน่งปัจจุบันของฉัน" image="gps">
+                                    <color key="titleColor" red="1" green="0.2239405263" blue="0.097317309709999994" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LuW-oa-8Hg">
                                 <rect key="frame" x="289" y="581" width="70" height="70"/>
                                 <subviews>
@@ -78,10 +88,10 @@
                                 <blurEffect style="dark"/>
                             </visualEffectView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ubh-Vf-FRZ">
-                                <rect key="frame" x="0.0" y="64" width="375" height="180"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="196"/>
                                 <subviews>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Bg2-O1-Ltl">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="180"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="196"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ZdF-PL-L3p">
                                             <size key="itemSize" width="50" height="50"/>
@@ -109,7 +119,7 @@
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="Bg2-O1-Ltl" secondAttribute="bottom" id="887-4X-jih"/>
                                     <constraint firstItem="Bg2-O1-Ltl" firstAttribute="top" secondItem="ubh-Vf-FRZ" secondAttribute="top" id="S5x-Ju-5fZ"/>
-                                    <constraint firstAttribute="height" constant="180" id="nFm-97-Odf"/>
+                                    <constraint firstAttribute="height" constant="196" id="nFm-97-Odf"/>
                                     <constraint firstAttribute="trailing" secondItem="Bg2-O1-Ltl" secondAttribute="trailing" id="nel-Qb-Qfr"/>
                                     <constraint firstItem="Bg2-O1-Ltl" firstAttribute="leading" secondItem="ubh-Vf-FRZ" secondAttribute="leading" id="no7-Gp-YjT"/>
                                 </constraints>
@@ -119,9 +129,12 @@
                         <constraints>
                             <constraint firstItem="JG9-IU-EBh" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="1aE-bw-nmI"/>
                             <constraint firstItem="02a-uB-ZVa" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="2dn-sd-K8d"/>
+                            <constraint firstItem="wx2-w9-AL8" firstAttribute="top" secondItem="02a-uB-ZVa" secondAttribute="bottom" constant="12" id="5e1-8P-VlF"/>
+                            <constraint firstItem="wx2-w9-AL8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="80" id="BTq-9S-WRp"/>
                             <constraint firstItem="ubh-Vf-FRZ" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Cox-Az-xg8"/>
                             <constraint firstItem="TaH-mL-jB6" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="DhV-gI-dyv"/>
                             <constraint firstItem="JG9-IU-EBh" firstAttribute="top" secondItem="02a-uB-ZVa" secondAttribute="bottom" id="FOz-4a-Fls"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wx2-w9-AL8" secondAttribute="trailing" constant="80" id="T2X-fH-xiq"/>
                             <constraint firstItem="ubh-Vf-FRZ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Yxt-Zw-ZNf"/>
                             <constraint firstItem="TaH-mL-jB6" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="cA5-jc-OLt"/>
                             <constraint firstItem="JG9-IU-EBh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="dFH-zh-Jj0"/>
@@ -141,6 +154,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="blurView" destination="TaH-mL-jB6" id="kZt-dE-76e"/>
+                        <outlet property="currentButton" destination="wx2-w9-AL8" id="bAV-a9-Lbu"/>
                         <outlet property="filterView" destination="02a-uB-ZVa" id="DZb-zO-nTQ"/>
                         <outlet property="floaty" destination="LuW-oa-8Hg" id="jWW-oE-Umb"/>
                         <outlet property="mapView" destination="JG9-IU-EBh" id="sna-Hv-DB1"/>
