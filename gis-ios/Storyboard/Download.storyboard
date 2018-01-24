@@ -27,18 +27,18 @@
                                 </connections>
                             </tableView>
                             <visualEffectView opaque="NO" alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MlL-7c-Z6Y">
-                                <rect key="frame" x="0.0" y="250" width="375" height="417"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="cc5-t2-Gxx">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="417"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 </view>
                                 <blurEffect style="dark"/>
                             </visualEffectView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7t0-fO-1Os">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="250"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="196"/>
                                 <subviews>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="QCN-am-k3w">
-                                        <rect key="frame" x="0.0" y="72" width="375" height="168"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="196"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="KMi-Pn-jZQ">
                                             <size key="itemSize" width="50" height="50"/>
@@ -64,27 +64,27 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="QCN-am-k3w" secondAttribute="bottom" constant="10" id="1uh-gU-VZi"/>
-                                    <constraint firstItem="QCN-am-k3w" firstAttribute="leading" secondItem="7t0-fO-1Os" secondAttribute="leading" id="3Qj-Wa-ITu"/>
-                                    <constraint firstAttribute="trailing" secondItem="QCN-am-k3w" secondAttribute="trailing" id="Krq-qn-idW"/>
-                                    <constraint firstItem="QCN-am-k3w" firstAttribute="top" secondItem="7t0-fO-1Os" secondAttribute="top" constant="72" id="Uwb-Nh-80g"/>
-                                    <constraint firstAttribute="height" constant="250" id="kFK-Ux-Kum"/>
+                                    <constraint firstAttribute="bottom" secondItem="QCN-am-k3w" secondAttribute="bottom" id="Nzo-em-i4h"/>
+                                    <constraint firstAttribute="trailing" secondItem="QCN-am-k3w" secondAttribute="trailing" id="bcv-6M-Uvu"/>
+                                    <constraint firstAttribute="height" constant="196" id="d14-l5-aHW"/>
+                                    <constraint firstItem="QCN-am-k3w" firstAttribute="leading" secondItem="7t0-fO-1Os" secondAttribute="leading" id="gqw-JW-rUo"/>
+                                    <constraint firstItem="QCN-am-k3w" firstAttribute="top" secondItem="7t0-fO-1Os" secondAttribute="top" id="vyZ-0o-rgH"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="IHA-iJ-6zY" firstAttribute="trailing" secondItem="B3m-Nl-tOr" secondAttribute="trailing" id="77w-Lm-ENL"/>
-                            <constraint firstItem="MlL-7c-Z6Y" firstAttribute="top" secondItem="7t0-fO-1Os" secondAttribute="bottom" id="CdG-Be-Wsl"/>
-                            <constraint firstItem="B3m-Nl-tOr" firstAttribute="leading" secondItem="IHA-iJ-6zY" secondAttribute="leading" id="JM4-V5-0lo"/>
-                            <constraint firstItem="IHA-iJ-6zY" firstAttribute="bottom" secondItem="B3m-Nl-tOr" secondAttribute="bottom" id="Nui-4k-kmK"/>
-                            <constraint firstItem="MlL-7c-Z6Y" firstAttribute="bottom" secondItem="IHA-iJ-6zY" secondAttribute="bottom" id="Unx-T9-vi6"/>
-                            <constraint firstItem="7t0-fO-1Os" firstAttribute="top" secondItem="Wfa-jQ-ivh" secondAttribute="top" id="bQ3-ud-uok"/>
-                            <constraint firstItem="B3m-Nl-tOr" firstAttribute="top" secondItem="IHA-iJ-6zY" secondAttribute="top" id="bbK-ml-MX3"/>
-                            <constraint firstItem="7t0-fO-1Os" firstAttribute="leading" secondItem="IHA-iJ-6zY" secondAttribute="leading" id="hoY-8C-uDR"/>
-                            <constraint firstItem="7t0-fO-1Os" firstAttribute="trailing" secondItem="IHA-iJ-6zY" secondAttribute="trailing" id="kgX-L1-uOb"/>
-                            <constraint firstItem="MlL-7c-Z6Y" firstAttribute="trailing" secondItem="IHA-iJ-6zY" secondAttribute="trailing" id="qhd-qh-6z5"/>
-                            <constraint firstItem="MlL-7c-Z6Y" firstAttribute="leading" secondItem="IHA-iJ-6zY" secondAttribute="leading" id="rbt-4i-lrB"/>
+                            <constraint firstItem="B3m-Nl-tOr" firstAttribute="top" secondItem="IHA-iJ-6zY" secondAttribute="top" id="753-Os-sln"/>
+                            <constraint firstItem="7t0-fO-1Os" firstAttribute="top" secondItem="IHA-iJ-6zY" secondAttribute="top" id="ElZ-zM-ddw"/>
+                            <constraint firstItem="7t0-fO-1Os" firstAttribute="leading" secondItem="IHA-iJ-6zY" secondAttribute="leading" id="F2n-gK-A9T"/>
+                            <constraint firstItem="7t0-fO-1Os" firstAttribute="trailing" secondItem="IHA-iJ-6zY" secondAttribute="trailing" id="HyO-g9-PJ0"/>
+                            <constraint firstItem="MlL-7c-Z6Y" firstAttribute="trailing" secondItem="IHA-iJ-6zY" secondAttribute="trailing" id="b5h-Za-mYD"/>
+                            <constraint firstItem="B3m-Nl-tOr" firstAttribute="bottom" secondItem="IHA-iJ-6zY" secondAttribute="bottom" id="eS6-r4-eJb"/>
+                            <constraint firstItem="B3m-Nl-tOr" firstAttribute="trailing" secondItem="IHA-iJ-6zY" secondAttribute="trailing" id="ivO-V5-kYa"/>
+                            <constraint firstItem="MlL-7c-Z6Y" firstAttribute="top" secondItem="IHA-iJ-6zY" secondAttribute="top" id="mw2-8b-dBH"/>
+                            <constraint firstItem="B3m-Nl-tOr" firstAttribute="leading" secondItem="IHA-iJ-6zY" secondAttribute="leading" id="nXk-st-sHn"/>
+                            <constraint firstItem="MlL-7c-Z6Y" firstAttribute="bottom" secondItem="IHA-iJ-6zY" secondAttribute="bottom" id="t7a-QC-BaR"/>
+                            <constraint firstItem="MlL-7c-Z6Y" firstAttribute="leading" secondItem="IHA-iJ-6zY" secondAttribute="leading" id="tcp-ha-pMn"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="IHA-iJ-6zY"/>
                     </view>
@@ -92,9 +92,9 @@
                         <barButtonItem key="backBarButtonItem" title=" " id="MFP-It-dUY"/>
                     </navigationItem>
                     <connections>
-                        <outlet property="blurView" destination="MlL-7c-Z6Y" id="aCS-I1-08p"/>
-                        <outlet property="menuCollection" destination="QCN-am-k3w" id="WUc-rO-diZ"/>
-                        <outlet property="menuView" destination="7t0-fO-1Os" id="feH-e4-7ZG"/>
+                        <outlet property="menuBlur" destination="MlL-7c-Z6Y" id="Lfp-BT-ulK"/>
+                        <outlet property="menuCollection" destination="QCN-am-k3w" id="E8X-pG-RbJ"/>
+                        <outlet property="menuView" destination="7t0-fO-1Os" id="WlO-AE-rsP"/>
                         <outlet property="tableVIEW" destination="B3m-Nl-tOr" id="lgC-SW-NkW"/>
                         <segue destination="KbX-KA-L5q" kind="show" identifier="detail" id="AoT-If-teK"/>
                     </connections>

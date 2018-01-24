@@ -162,7 +162,7 @@
                         <outlet property="menuView" destination="ubh-Vf-FRZ" id="PPK-Hw-hJc"/>
                         <segue destination="nW6-v3-Jay" kind="presentation" identifier="knowledge" id="FN7-i9-9Uy"/>
                         <segue destination="We3-OE-CwK" kind="presentation" id="cik-nd-2f4"/>
-                        <segue destination="xVI-oG-TCo" kind="show" identifier="myMap" id="Dvf-bl-aSt"/>
+                        <segue destination="xVI-oG-TCo" kind="push" identifier="myMap" id="Dvf-bl-aSt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -222,6 +222,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="UVX-la-hRF"/>
                     </view>
+                    <navigationItem key="navigationItem" id="PEF-kd-VGn"/>
                     <connections>
                         <outlet property="currentButton" destination="D2x-pe-neZ" id="1Pd-WN-aMy"/>
                         <outlet property="mapView" destination="8em-1y-eg2" id="gZf-G2-o5T"/>

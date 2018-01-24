@@ -19,6 +19,9 @@ class MyMapController: UIViewController {
         
         let newMarker = GMSMarker(position: mapView.projection.coordinate(for: sender.location(in: mapView)))
         self.arrayCoordinates.append(newMarker.position)
+        
+        rect.add(self.arrayCoordinates.last!)
+        
         newMarker.map = mapView
         debugPrint(self.arrayCoordinates.last!)
     }
@@ -28,13 +31,16 @@ class MyMapController: UIViewController {
     var locationManager = CLLocationManager()
     var currentLocation: CLLocation?
     
+    let rect = GMSMutablePath()
+    var polygon = GMSPolygon()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         configureNavigationBar()
         configureCurrentLocationButton()
         configureMapView()
-        
+        configureRightBarButton()
     }
     
     func configureNavigationBar() -> Void {
@@ -54,7 +60,6 @@ class MyMapController: UIViewController {
         mapView.delegate = self
         
         longPressRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.longPress))
-//        longPressRecognizer.minimumPressDuration = 0.5
         longPressRecognizer.delegate = self
         mapView.addGestureRecognizer(longPressRecognizer)
         
@@ -72,12 +77,31 @@ class MyMapController: UIViewController {
 
     }
     
+    func configureRightBarButton() -> Void {
+        
+        if let image = UIImage(named: "menu"), let selector = #selector(MyMapController.touchCalcu) as Selector?{
+            addRightBarButtonWithImage(image, selector: selector, badge: 0)
+            
+        }
+        
+    }
+    
     
     @objc func touchCurrentLocation() -> Void {
         
         if CLLocationManager.locationServicesEnabled() {
             locationManager.startUpdatingLocation()
         }
+    }
+    
+    @objc func touchCalcu() -> Void {
+
+        polygon = GMSPolygon(path: rect)
+        polygon.fillColor = UIColor.CustomLightRed()
+        polygon.strokeColor = UIColor.warning()
+        polygon.strokeWidth = 2
+        polygon.map = mapView
+        
     }
 
 }

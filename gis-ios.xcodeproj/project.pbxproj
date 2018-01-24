@@ -31,6 +31,8 @@
 		29805E82200CAA02009DE52B /* KnowledgeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 29805E80200CAA02009DE52B /* KnowledgeCell.xib */; };
 		29805E84200CACF2009DE52B /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29805E83200CACF2009DE52B /* UIFont.swift */; };
 		29805E86200CAF28009DE52B /* UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29805E85200CAF28009DE52B /* UITableView.swift */; };
+		2981E73320183D9E00E64470 /* KnowledgeSelectCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2981E73120183D9E00E64470 /* KnowledgeSelectCell.swift */; };
+		2981E73420183D9E00E64470 /* KnowledgeSelectCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2981E73220183D9E00E64470 /* KnowledgeSelectCell.xib */; };
 		298AFF5A200DDF5E008C0229 /* Download.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 298AFF59200DDF5E008C0229 /* Download.storyboard */; };
 		298AFF5C200DE59E008C0229 /* DownloadController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 298AFF5B200DE59E008C0229 /* DownloadController.swift */; };
 		298AFF60200DEF0F008C0229 /* DownloadCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 298AFF5E200DEF0F008C0229 /* DownloadCell.swift */; };
@@ -67,6 +69,8 @@
 		29805E80200CAA02009DE52B /* KnowledgeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KnowledgeCell.xib; sourceTree = "<group>"; };
 		29805E83200CACF2009DE52B /* UIFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFont.swift; sourceTree = "<group>"; };
 		29805E85200CAF28009DE52B /* UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableView.swift; sourceTree = "<group>"; };
+		2981E73120183D9E00E64470 /* KnowledgeSelectCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KnowledgeSelectCell.swift; sourceTree = "<group>"; };
+		2981E73220183D9E00E64470 /* KnowledgeSelectCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KnowledgeSelectCell.xib; sourceTree = "<group>"; };
 		298AFF59200DDF5E008C0229 /* Download.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Download.storyboard; sourceTree = "<group>"; };
 		298AFF5B200DE59E008C0229 /* DownloadController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadController.swift; sourceTree = "<group>"; };
 		298AFF5E200DEF0F008C0229 /* DownloadCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadCell.swift; sourceTree = "<group>"; };
@@ -254,6 +258,8 @@
 			children = (
 				29805E7F200CAA02009DE52B /* KnowledgeCell.swift */,
 				29805E80200CAA02009DE52B /* KnowledgeCell.xib */,
+				2981E73120183D9E00E64470 /* KnowledgeSelectCell.swift */,
+				2981E73220183D9E00E64470 /* KnowledgeSelectCell.xib */,
 			);
 			path = Item;
 			sourceTree = "<group>";
@@ -345,6 +351,7 @@
 				29805E7B200C9CD2009DE52B /* Knowledge.storyboard in Resources */,
 				29805E63200C56F9009DE52B /* ThaiSansNeue_Bold.ttf in Resources */,
 				298AFF61200DEF0F008C0229 /* DownloadCell.xib in Resources */,
+				2981E73420183D9E00E64470 /* KnowledgeSelectCell.xib in Resources */,
 				295D1FE6200C4C1F00787E2C /* Assets.xcassets in Resources */,
 				295D1FE1200C4C1F00787E2C /* Main.storyboard in Resources */,
 			);
@@ -420,6 +427,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				295D1FE4200C4C1F00787E2C /* gis_ios.xcdatamodeld in Sources */,
+				2981E73320183D9E00E64470 /* KnowledgeSelectCell.swift in Sources */,
 				29805E72200C7D10009DE52B /* MenuController.swift in Sources */,
 				29805E81200CAA02009DE52B /* KnowledgeCell.swift in Sources */,
 				297DDB882011925F005A26BE /* XMSegmentedControl.swift in Sources */,

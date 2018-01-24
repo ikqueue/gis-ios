@@ -12,15 +12,29 @@ class DownloadController: UIViewController {
 
     @IBOutlet weak var tableVIEW: UITableView!
     
+    @IBOutlet weak var menuView: UIView!
+    @IBOutlet weak var menuCollection: UICollectionView!
+    @IBOutlet weak var menuBlur: UIVisualEffectView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setUpNavigationBar(barTint: UIColor.primary3(), tint: UIColor.white, titleTextAt: UIColor.white, showTitle: true, title: "ดาวน์โหลด")
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(MapViewController.dismissMenu))
+        menuBlur.addGestureRecognizer(tap)
+        
+        menuView.isHidden = true
+        menuBlur.isHidden = true
+        
+        setUpBarButtonMenu()
+        setUpMenuCollection()
         setUpTableView()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
+        
+        setUpNavigationBar(barTint: UIColor.primary3(), tint: UIColor.white, titleTextAt: UIColor.white, showTitle: true, title: "ดาวน์โหลด")
         
         if let window = UIApplication.shared.delegate?.window {
             if var viewController = window?.rootViewController {
@@ -36,6 +50,10 @@ class DownloadController: UIViewController {
         tableVIEW.registerTableViewCell(nib: "DownloadCell", identifier: "DownloadCell")
         tableVIEW.tableFooterView = UIView(frame: .zero)
         tableVIEW.setHeightCellAutomatic(estimatedRowHeight: 90)
+    }
+    
+    func setUpMenuCollection() -> Void {
+        menuCollection.registerCollectionViewCell(nibName: "MenuCell", identifier: "MenuCell")
     }
     
 }

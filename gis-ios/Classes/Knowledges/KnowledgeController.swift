@@ -18,7 +18,8 @@ class KnowledgeController: UIViewController {
     @IBOutlet weak var selectView: UIView!
     @IBOutlet weak var selectTitle: UILabel!
     @IBOutlet weak var selectClose: UIButton!
-    
+    @IBOutlet weak var selectBlur: UIVisualEffectView!
+    @IBOutlet weak var selectTable: UITableView!
     
     
     override func viewDidLoad() {
@@ -28,13 +29,10 @@ class KnowledgeController: UIViewController {
         setUpTableView()
         setUpBarButtonMenu()
         setUpSelectView()
-        
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(KnowledgeController.dismissMenu))
-        blurView.addGestureRecognizer(tap)
-        
+        setUpTouchView()
+
         menuView.isHidden = true
         blurView.isHidden = true
-        selectView.isHidden = true
         
     }
     
@@ -42,6 +40,8 @@ class KnowledgeController: UIViewController {
         super.viewWillAppear(true)
         
         setUpNavigationCleanColor(isTranslucent: true, backgroundColor: .clear)
+        selectView.isHidden = true
+        selectBlur.isHidden = true
         
         if let window = UIApplication.shared.delegate?.window {
             if var viewController = window?.rootViewController {
@@ -62,6 +62,9 @@ class KnowledgeController: UIViewController {
         tableVIEW.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "bg"))
         tableVIEW.contentMode = .scaleAspectFill
         tableVIEW.tableFooterView = UIView(frame: .zero)
+        
+        selectTable.registerTableViewCell(nib: "KnowledgeSelectCell", identifier: "KnowledgeSelectCell")
+        selectTable.tableFooterView = UIView(frame: .zero)
     }
     
     func setUpSelectView() -> Void {
@@ -70,23 +73,56 @@ class KnowledgeController: UIViewController {
         selectClose.addTarget(self, action: #selector(KnowledgeController.touchsSelectClose), for: UIControlEvents.touchUpInside)
     }
     
+    func setUpTouchView() -> Void {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(KnowledgeController.dismissMenu))
+        blurView.addGestureRecognizer(tap)
+        
+        let tap2: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(KnowledgeController.touchsSelectClose))
+        selectBlur.addGestureRecognizer(tap2)
+        
+    }
+    
     @objc func touchsSelectClose() -> Void {
         selectView.isHidden = true
-        blurView.isHidden = true
+        selectBlur.isHidden = true
     }
     
 
 }
 
 extension KnowledgeController: UITableViewDataSource {
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        
+        var count:Int?
+        
+        if tableView == self.tableVIEW {
+            count = 1
+        }
+        
+        if tableView == self.selectTable {
+            count =  2
+        }
+        
+        return count!
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableVIEW.dequeueReusableCell(withIdentifier: "KnowledgeCell", for: indexPath) as! KnowledgeCell
         
-        return cell
+        var cell:UITableViewCell?
+        
+        if tableView == self.tableVIEW {
+            cell = tableVIEW.dequeueReusableCell(withIdentifier: "KnowledgeCell", for: indexPath) as! KnowledgeCell
+            
+        }
+        
+        if tableView == self.selectTable {
+            cell = tableView.dequeueReusableCell(withIdentifier: "KnowledgeSelectCell", for: indexPath) as! KnowledgeSelectCell
+
+        }
+
+        return cell!
+
     }
     
     
@@ -94,9 +130,17 @@ extension KnowledgeController: UITableViewDataSource {
 
 extension KnowledgeController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        performSegue(withIdentifier: "detail", sender: nil)
+        
         selectView.isHidden = false
-        blurView.isHidden = false
+        selectBlur.isHidden = false
+        
+        if tableView == self.tableVIEW {
+            
+        }
+        
+        if tableView == self.selectTable {
+            performSegue(withIdentifier: "detail", sender: nil)
+        }
         
     }
 }
