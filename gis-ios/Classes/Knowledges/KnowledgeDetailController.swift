@@ -10,15 +10,10 @@ import UIKit
 
 class KnowledgeDetailController: UIViewController {
 
-    @IBOutlet weak var segment: XMSegmentedControl!
-    
-    var indexOfSegment: Int = 0
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         
-        configureSegment()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -31,24 +26,6 @@ class KnowledgeDetailController: UIViewController {
     func configureNavigationBar() -> Void {
         
     }
-    
-    func configureSegment() -> Void {
-        segment.delegate = self
-        segment.segmentTitle = ["ระบบชลประทาน", "การจัดการดิน", "คำแนะนำการใส่ปุ๋ย"]
-        segment.selectedItemHighlightStyle = XMSelectedItemHighlightStyle.bottomEdge
-        segment.backgroundColor = UIColor.primary2()
-        segment.highlightColor = UIColor.white
-        segment.tint = UIColor.white
-        segment.highlightTint = UIColor.white
-    }
 
-}
 
-extension KnowledgeDetailController: XMSegmentedControlDelegate {
-    func xmSegmentedControl(_ xmSegmentedControl: XMSegmentedControl, selectedSegment: Int) {
-        
-        if xmSegmentedControl == segment {
-            self.indexOfSegment = selectedSegment
-        }
-    }
 }

@@ -75,7 +75,7 @@ class MapViewController: UIViewController {
         floaty.layer.cornerRadius = 35.0
         floaty.backgroundColor = UIColor.success()
         
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(MapViewController.touchAction))
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(MapViewController.touchCreateArea))
         floaty.addGestureRecognizer(tap)
     }
     
@@ -92,8 +92,11 @@ class MapViewController: UIViewController {
         }
     }
     
-    @objc func touchAction() -> Void {
-
+    @objc func touchCreateArea() -> Void {
+        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+        let viewController = storyboard.instantiateViewController(withIdentifier: "CreateAreaController") as! CreateAreaController
+        
+        navigationController?.pushViewController(viewController, animated: true)
     }
     
     @objc func touchFilter() -> Void {

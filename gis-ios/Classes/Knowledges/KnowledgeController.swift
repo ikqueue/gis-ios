@@ -31,8 +31,7 @@ class KnowledgeController: UIViewController {
         setUpSelectView()
         setUpTouchView()
 
-        menuView.isHidden = true
-        blurView.isHidden = true
+        
         
     }
     
@@ -40,6 +39,8 @@ class KnowledgeController: UIViewController {
         super.viewWillAppear(true)
         
         setUpNavigationCleanColor(isTranslucent: true, backgroundColor: .clear)
+        menuView.isHidden = true
+        blurView.isHidden = true
         selectView.isHidden = true
         selectBlur.isHidden = true
         

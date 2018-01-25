@@ -15,7 +15,7 @@
 		295D1FE9200C4C1F00787E2C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 295D1FE7200C4C1F00787E2C /* LaunchScreen.storyboard */; };
 		297DDB882011925F005A26BE /* XMSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297DDB872011925F005A26BE /* XMSegmentedControl.swift */; };
 		297DDB8B201192C3005A26BE /* KnowledgeDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297DDB8A201192C3005A26BE /* KnowledgeDetailController.swift */; };
-		297DDB8D2011E120005A26BE /* SimpleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297DDB8C2011E120005A26BE /* SimpleController.swift */; };
+		297DDB8D2011E120005A26BE /* PagingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297DDB8C2011E120005A26BE /* PagingController.swift */; };
 		29805E63200C56F9009DE52B /* ThaiSansNeue_Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 29805E61200C56F8009DE52B /* ThaiSansNeue_Bold.ttf */; };
 		29805E64200C56F9009DE52B /* ThaiSansNeue_Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 29805E62200C56F9009DE52B /* ThaiSansNeue_Regular.ttf */; };
 		29805E66200C57BB009DE52B /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29805E65200C57BB009DE52B /* UIColor.swift */; };
@@ -31,6 +31,7 @@
 		29805E82200CAA02009DE52B /* KnowledgeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 29805E80200CAA02009DE52B /* KnowledgeCell.xib */; };
 		29805E84200CACF2009DE52B /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29805E83200CACF2009DE52B /* UIFont.swift */; };
 		29805E86200CAF28009DE52B /* UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29805E85200CAF28009DE52B /* UITableView.swift */; };
+		298136C72019C94D00044998 /* CreateAreaController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 298136C62019C94D00044998 /* CreateAreaController.swift */; };
 		2981E73320183D9E00E64470 /* KnowledgeSelectCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2981E73120183D9E00E64470 /* KnowledgeSelectCell.swift */; };
 		2981E73420183D9E00E64470 /* KnowledgeSelectCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2981E73220183D9E00E64470 /* KnowledgeSelectCell.xib */; };
 		298AFF5A200DDF5E008C0229 /* Download.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 298AFF59200DDF5E008C0229 /* Download.storyboard */; };
@@ -53,7 +54,7 @@
 		295D1FEA200C4C1F00787E2C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		297DDB872011925F005A26BE /* XMSegmentedControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XMSegmentedControl.swift; sourceTree = "<group>"; };
 		297DDB8A201192C3005A26BE /* KnowledgeDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KnowledgeDetailController.swift; sourceTree = "<group>"; };
-		297DDB8C2011E120005A26BE /* SimpleController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleController.swift; sourceTree = "<group>"; };
+		297DDB8C2011E120005A26BE /* PagingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagingController.swift; sourceTree = "<group>"; };
 		29805E61200C56F8009DE52B /* ThaiSansNeue_Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ThaiSansNeue_Bold.ttf; sourceTree = "<group>"; };
 		29805E62200C56F9009DE52B /* ThaiSansNeue_Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ThaiSansNeue_Regular.ttf; sourceTree = "<group>"; };
 		29805E65200C57BB009DE52B /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
@@ -69,6 +70,7 @@
 		29805E80200CAA02009DE52B /* KnowledgeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KnowledgeCell.xib; sourceTree = "<group>"; };
 		29805E83200CACF2009DE52B /* UIFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFont.swift; sourceTree = "<group>"; };
 		29805E85200CAF28009DE52B /* UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableView.swift; sourceTree = "<group>"; };
+		298136C62019C94D00044998 /* CreateAreaController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAreaController.swift; sourceTree = "<group>"; };
 		2981E73120183D9E00E64470 /* KnowledgeSelectCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KnowledgeSelectCell.swift; sourceTree = "<group>"; };
 		2981E73220183D9E00E64470 /* KnowledgeSelectCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KnowledgeSelectCell.xib; sourceTree = "<group>"; };
 		298AFF59200DDF5E008C0229 /* Download.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Download.storyboard; sourceTree = "<group>"; };
@@ -209,6 +211,7 @@
 			children = (
 				295D1FDD200C4C1F00787E2C /* MapViewController.swift */,
 				299C50242015CAD60030BE70 /* MyMapController.swift */,
+				298136C62019C94D00044998 /* CreateAreaController.swift */,
 			);
 			path = Maps;
 			sourceTree = "<group>";
@@ -219,7 +222,7 @@
 				29805E7E200CA9DC009DE52B /* Item */,
 				29805E7C200C9E09009DE52B /* KnowledgeController.swift */,
 				297DDB8A201192C3005A26BE /* KnowledgeDetailController.swift */,
-				297DDB8C2011E120005A26BE /* SimpleController.swift */,
+				297DDB8C2011E120005A26BE /* PagingController.swift */,
 			);
 			path = Knowledges;
 			sourceTree = "<group>";
@@ -432,6 +435,7 @@
 				29805E81200CAA02009DE52B /* KnowledgeCell.swift in Sources */,
 				297DDB882011925F005A26BE /* XMSegmentedControl.swift in Sources */,
 				29805E66200C57BB009DE52B /* UIColor.swift in Sources */,
+				298136C72019C94D00044998 /* CreateAreaController.swift in Sources */,
 				297DDB8B201192C3005A26BE /* KnowledgeDetailController.swift in Sources */,
 				29805E79200C7EC9009DE52B /* UICollectionView.swift in Sources */,
 				295D1FDE200C4C1F00787E2C /* MapViewController.swift in Sources */,
@@ -439,7 +443,7 @@
 				295D1FDC200C4C1F00787E2C /* AppDelegate.swift in Sources */,
 				298AFF5C200DE59E008C0229 /* DownloadController.swift in Sources */,
 				298AFF63200DF728008C0229 /* DownloadDetailController.swift in Sources */,
-				297DDB8D2011E120005A26BE /* SimpleController.swift in Sources */,
+				297DDB8D2011E120005A26BE /* PagingController.swift in Sources */,
 				298AFF60200DEF0F008C0229 /* DownloadCell.swift in Sources */,
 				29805E6D200C7B86009DE52B /* ExtensionMenu.swift in Sources */,
 				29805E84200CACF2009DE52B /* UIFont.swift in Sources */,
