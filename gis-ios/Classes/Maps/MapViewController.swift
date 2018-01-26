@@ -96,7 +96,7 @@ class MapViewController: UIViewController {
         let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
         let viewController = storyboard.instantiateViewController(withIdentifier: "CreateAreaController") as! CreateAreaController
         
-        navigationController?.pushViewController(viewController, animated: true)
+        navigationController?.pushViewController(viewController, animated: false)
     }
     
     @objc func touchFilter() -> Void {

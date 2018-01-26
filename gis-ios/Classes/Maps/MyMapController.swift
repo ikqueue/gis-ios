@@ -10,29 +10,28 @@ import UIKit
 import GoogleMaps
 import CoreLocation
 
+struct State {
+    let name: String
+    let long: CLLocationDegrees
+    let lat: CLLocationDegrees
+}
+
 class MyMapController: UIViewController {
 
     @IBOutlet weak var mapView: GMSMapView!
     @IBOutlet weak var currentButton: UIButton!
     
-    @IBAction func longPress(_ sender: UITapGestureRecognizer) {
-        
-        let newMarker = GMSMarker(position: mapView.projection.coordinate(for: sender.location(in: mapView)))
-        self.arrayCoordinates.append(newMarker.position)
-        
-        rect.add(self.arrayCoordinates.last!)
-        
-        newMarker.map = mapView
-        debugPrint(self.arrayCoordinates.last!)
-    }
-    
     var arrayCoordinates : [CLLocationCoordinate2D] = []
-    var longPressRecognizer = UITapGestureRecognizer()
     var locationManager = CLLocationManager()
-    var currentLocation: CLLocation?
     
     let rect = GMSMutablePath()
     var polygon = GMSPolygon()
+    var markerDict: [String: GMSMarker] = [:]
+    
+    let states = [
+        State(name: "Alaska", long: -152.404419, lat: 61.370716),
+        State(name: "Alabama", long: -86.791130, lat: 32.806671),
+    ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,7 +39,14 @@ class MyMapController: UIViewController {
         configureNavigationBar()
         configureCurrentLocationButton()
         configureMapView()
-        configureRightBarButton()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "detailMyMap" {
+            let detination = segue.destination as! MyMapDetailController
+            detination.states = states
+            
+        }
     }
     
     func configureNavigationBar() -> Void {
@@ -59,10 +65,6 @@ class MyMapController: UIViewController {
     func configureMapView() -> Void {
         mapView.delegate = self
         
-        longPressRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.longPress))
-        longPressRecognizer.delegate = self
-        mapView.addGestureRecognizer(longPressRecognizer)
-        
         mapView.isMyLocationEnabled = true
         mapView.settings.compassButton = true
         
@@ -74,18 +76,21 @@ class MyMapController: UIViewController {
         locationManager.startUpdatingLocation()
         
         locationManager.delegate = self
+        
+
+        for state in states {
+            let state_marker = GMSMarker()
+            state_marker.position = CLLocationCoordinate2D(latitude: state.lat, longitude: state.long)
+            state_marker.title = state.name
+            state_marker.snippet = "Hey, this is \(state.name)"
+            state_marker.icon = UIImage(named: "mappin")
+            state_marker.map = mapView
+            markerDict[state.name] = state_marker
+            arrayCoordinates.append(state_marker.position)
+            rect.add(self.arrayCoordinates.last!)
+        }
 
     }
-    
-    func configureRightBarButton() -> Void {
-        
-        if let image = UIImage(named: "menu"), let selector = #selector(MyMapController.touchCalcu) as Selector?{
-            addRightBarButtonWithImage(image, selector: selector, badge: 0)
-            
-        }
-        
-    }
-    
     
     @objc func touchCurrentLocation() -> Void {
         
@@ -93,21 +98,15 @@ class MyMapController: UIViewController {
             locationManager.startUpdatingLocation()
         }
     }
-    
-    @objc func touchCalcu() -> Void {
-
-        polygon = GMSPolygon(path: rect)
-        polygon.fillColor = UIColor.CustomLightRed()
-        polygon.strokeColor = UIColor.warning()
-        polygon.strokeWidth = 2
-        polygon.map = mapView
-        
-    }
 
 }
 
 extension MyMapController: GMSMapViewDelegate {
-    
+    func mapView(_ mapView: GMSMapView, didTap marker: GMSMarker) -> Bool {
+        
+        performSegue(withIdentifier: "detailMyMap", sender: nil)
+        return true
+    }
 }
 
 extension MyMapController: CLLocationManagerDelegate {
@@ -135,10 +134,3 @@ extension MyMapController: CLLocationManagerDelegate {
     }
 }
 
-extension MyMapController : UIGestureRecognizerDelegate {
-    
-    public func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool
-    {
-        return true
-    }
-}
