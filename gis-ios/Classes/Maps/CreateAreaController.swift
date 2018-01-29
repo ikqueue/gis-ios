@@ -10,6 +10,7 @@ import UIKit
 import GoogleMaps
 import CoreLocation
 
+
 class CreateAreaController: UIViewController {
 
     @IBOutlet weak var dismissButton: UIButton!
@@ -33,17 +34,18 @@ class CreateAreaController: UIViewController {
     var currentLocation: CLLocation?
     var polygon = GMSPolygon()
     let rect = GMSMutablePath()
+    var marker = GMSMarker()
     
     @IBAction func longPress(_ sender: UITapGestureRecognizer) {
         
-        let newMarker = GMSMarker(position: mapView.projection.coordinate(for: sender.location(in: mapView)))
-        newMarker.icon = UIImage(named: "mappin")
-        
-        self.arrayCoordinates.append(newMarker.position)
-        rect.add(self.arrayCoordinates.last!)
-        
-        newMarker.map = mapView
-        debugPrint(self.arrayCoordinates.last!)
+//        marker = GMSMarker(position: mapView.projection.coordinate(for: sender.location(in: mapView)))
+//        marker.icon = UIImage(named: "mappin")
+//
+//        self.arrayCoordinates.append(marker.position)
+//        rect.add(self.arrayCoordinates.last!)
+//
+//        marker.map = mapView
+//        debugPrint(self.arrayCoordinates.last!)
     }
     
     
@@ -93,6 +95,8 @@ class CreateAreaController: UIViewController {
         
         locationManager.delegate = self
         
+        marker.isDraggable = true
+        
     }
     
     func setUpFloatyButton() -> Void {
@@ -108,6 +112,7 @@ class CreateAreaController: UIViewController {
         dismissProcess.addTarget(self, action: #selector(CreateAreaController.dismissProcessView), for: UIControlEvents.touchUpInside)
     }
     
+    
 
     @objc func dismissAction() -> Void {
         navigationController?.popViewController(animated: false)
@@ -119,13 +124,18 @@ class CreateAreaController: UIViewController {
     }
     
     @objc func touchProcess() -> Void {
-        processView.isHidden = false
         
-        polygon = GMSPolygon(path: rect)
-        polygon.fillColor = UIColor.CustomLightRed()
-        polygon.strokeColor = UIColor.warning()
-        polygon.strokeWidth = 2
-        polygon.map = mapView
+        if arrayCoordinates.count >= 3 {
+            processView.isHidden = false
+            polygon = GMSPolygon(path: rect)
+            polygon.fillColor = UIColor.CustomLightRed()
+            polygon.strokeColor = UIColor.warning()
+            polygon.strokeWidth = 2
+            polygon.map = mapView
+        }else {
+            
+        }
+        
     }
     
     @objc func dismissProcessView() -> Void {
@@ -136,6 +146,32 @@ class CreateAreaController: UIViewController {
 
 extension CreateAreaController: GMSMapViewDelegate {
     
+    func mapView(_ mapView: GMSMapView, didLongPressAt coordinate: CLLocationCoordinate2D) {
+        marker = GMSMarker(position: coordinate)
+        marker.icon = UIImage(named: "mappin")
+        
+        self.arrayCoordinates.append(marker.position)
+        rect.add(self.arrayCoordinates.last!)
+        
+        marker.map = mapView
+    }
+
+    func mapView(_ mapView: GMSMapView, didTap marker: GMSMarker) -> Bool {
+        
+        return true
+    }
+    
+    //MARK - GMSMarker Dragging
+    func mapView(_ mapView: GMSMapView, didBeginDragging marker: GMSMarker) {
+        print("didBeginDragging")
+    }
+    func mapView(_ mapView: GMSMapView, didDrag marker: GMSMarker) {
+        
+        print("didDrag")
+    }
+    func mapView(_ mapView: GMSMapView, didEndDragging marker: GMSMarker) {
+        print("didEndDragging")
+    }
 }
 
 extension CreateAreaController: CLLocationManagerDelegate {

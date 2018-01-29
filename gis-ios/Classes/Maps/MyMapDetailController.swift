@@ -68,13 +68,20 @@ class MyMapDetailController: UIViewController {
         dataView.layer.cornerRadius = 7.0
         dataView.layer.borderWidth = 1.0
         dataView.layer.borderColor = UIColor.clear.cgColor
+        dataView.layer.masksToBounds = true
         
         dismissData.addTarget(self, action: #selector(MyMapDetailController.dismissView), for: UIControlEvents.touchUpInside)
-        removeData.addTarget(self, action: #selector(MyMapDetailController.dismissView), for: UIControlEvents.touchUpInside)
+        removeData.addTarget(self, action: #selector(MyMapDetailController.removeMyLocation), for: UIControlEvents.touchUpInside)
     }
     
     @objc func dismissView() -> Void {
         dataView.isHidden = true
+    }
+    
+    @objc func removeMyLocation() -> Void {
+        dataView.isHidden = true
+        navigationController?.popViewController(animated: true)
+        dismiss(animated: true, completion: nil)
     }
     
     @objc func touchCurrentLocation() -> Void {

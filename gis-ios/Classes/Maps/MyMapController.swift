@@ -36,7 +36,7 @@ class MyMapController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        configureNavigationBar()
+        setUpNavigationBar(barTint: UIColor.primary1(), tint: UIColor.white, titleTextAt: UIColor.white, showTitle: true, title: "ตำแหน่งที่บันทึกไว้")
         configureCurrentLocationButton()
         configureMapView()
     }
@@ -49,9 +49,6 @@ class MyMapController: UIViewController {
         }
     }
     
-    func configureNavigationBar() -> Void {
-        navigationItem.title = "ตำแหน่งที่บันทึกไว้"
-    }
     
     func configureCurrentLocationButton() -> Void {
         currentButton.layer.cornerRadius = 18.0
@@ -122,10 +119,10 @@ extension MyMapController: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         
         if let location = locations.last {
-            mapView.camera = GMSCameraPosition.camera(withLatitude: (location.coordinate.latitude), longitude: (location.coordinate.longitude), zoom: 17.0)
+            mapView.camera = GMSCameraPosition.camera(withLatitude: (location.coordinate.latitude), longitude: (location.coordinate.longitude), zoom: 1.0)
             locationManager.stopUpdatingLocation()
         }
-        
+
     }
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error)
