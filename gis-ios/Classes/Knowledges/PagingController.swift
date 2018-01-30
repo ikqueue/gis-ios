@@ -29,10 +29,10 @@ class PagingController: TabmanViewController {
 
         self.bar.style = .scrollingButtonBar
         self.bar.appearance = TabmanBar.Appearance({ (appearance) in
-
+            appearance.style.background = .solid(color: UIColor.primary2())
             appearance.indicator.color = UIColor.white
             appearance.state.selectedColor = UIColor.white
-            appearance.state.color = UIColor.subtitle()
+            appearance.state.color = UIColor.normalText().withAlphaComponent(0.5)
             appearance.text.font = UIFont.setFont(font: "ThaiSansNeue-Regular", size: 20.0)
         })
         

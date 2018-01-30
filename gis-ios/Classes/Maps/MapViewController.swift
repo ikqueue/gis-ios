@@ -100,7 +100,7 @@ class MapViewController: UIViewController {
     }
     
     @objc func touchFilter() -> Void {
-    
+        performSegue(withIdentifier: "Filters", sender: nil)
     }
     
     @objc func touchMyLocation() -> Void {

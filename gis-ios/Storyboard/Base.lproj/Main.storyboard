@@ -384,34 +384,36 @@
             </objects>
             <point key="canvasLocation" x="440.80000000000001" y="866.71664167916049"/>
         </scene>
-        <!--View Controller-->
+        <!--Simple View Controller-->
         <scene sceneID="SS8-YC-cgx">
             <objects>
-                <viewController id="1Dm-5x-tL8" sceneMemberID="viewController">
+                <viewController id="1Dm-5x-tL8" customClass="SimpleViewController" customModule="gis_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="U0d-J2-IYr">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="v8Z-tf-H2t">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5Lr-xp-eAc">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" editingAccessoryType="checkmark" rowHeight="49" id="B6t-pq-zfT">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="49"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="B6t-pq-zfT" id="HDy-HD-bu5">
-                                            <rect key="frame" x="0.0" y="0.0" width="342" height="48.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
-                                <sections/>
+                                <connections>
+                                    <outlet property="dataSource" destination="1Dm-5x-tL8" id="rde-NP-rpz"/>
+                                    <outlet property="delegate" destination="1Dm-5x-tL8" id="Nex-ni-Xem"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="N3l-ZN-76O" firstAttribute="trailing" secondItem="5Lr-xp-eAc" secondAttribute="trailing" id="06p-9l-4Mj"/>
+                            <constraint firstItem="N3l-ZN-76O" firstAttribute="bottom" secondItem="5Lr-xp-eAc" secondAttribute="bottom" id="oW9-jG-vMX"/>
+                            <constraint firstItem="5Lr-xp-eAc" firstAttribute="leading" secondItem="N3l-ZN-76O" secondAttribute="leading" id="s71-q7-ROj"/>
+                            <constraint firstItem="5Lr-xp-eAc" firstAttribute="top" secondItem="N3l-ZN-76O" secondAttribute="top" id="xSt-Md-C8i"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="N3l-ZN-76O"/>
                     </view>
+                    <navigationItem key="navigationItem" id="pTu-JO-qDl"/>
+                    <connections>
+                        <outlet property="tableVIEW" destination="5Lr-xp-eAc" id="8Nu-Vo-LdW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wHi-sN-WLC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -477,6 +479,7 @@
                         <outlet property="currentButton" destination="D2x-pe-neZ" id="1Pd-WN-aMy"/>
                         <outlet property="mapView" destination="8em-1y-eg2" id="gZf-G2-o5T"/>
                         <segue destination="DFk-Vv-V33" kind="show" identifier="detailMyMap" id="82z-ht-o2k"/>
+                        <segue destination="1Dm-5x-tL8" kind="show" identifier="Filters" id="aNk-Zi-fwX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rbh-RA-krg" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -624,6 +627,6 @@
         <image name="ruler" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Dvf-bl-aSt"/>
+        <segue reference="kG4-E2-9Cf"/>
     </inferredMetricsTieBreakers>
 </document>

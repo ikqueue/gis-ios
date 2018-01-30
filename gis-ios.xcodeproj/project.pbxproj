@@ -21,7 +21,6 @@
 		29805E66200C57BB009DE52B /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29805E65200C57BB009DE52B /* UIColor.swift */; };
 		29805E6B200C601C009DE52B /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29805E6A200C601C009DE52B /* UIViewController.swift */; };
 		29805E6D200C7B86009DE52B /* ExtensionMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29805E6C200C7B86009DE52B /* ExtensionMenu.swift */; };
-		29805E72200C7D10009DE52B /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29805E71200C7D10009DE52B /* MenuController.swift */; };
 		29805E76200C7DA9009DE52B /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29805E74200C7DA9009DE52B /* MenuCell.swift */; };
 		29805E77200C7DA9009DE52B /* MenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 29805E75200C7DA9009DE52B /* MenuCell.xib */; };
 		29805E79200C7EC9009DE52B /* UICollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29805E78200C7EC9009DE52B /* UICollectionView.swift */; };
@@ -34,6 +33,9 @@
 		298136C72019C94D00044998 /* CreateAreaController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 298136C62019C94D00044998 /* CreateAreaController.swift */; };
 		2981E73320183D9E00E64470 /* KnowledgeSelectCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2981E73120183D9E00E64470 /* KnowledgeSelectCell.swift */; };
 		2981E73420183D9E00E64470 /* KnowledgeSelectCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2981E73220183D9E00E64470 /* KnowledgeSelectCell.xib */; };
+		2983973520205AD80072EC10 /* SimpleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2983973420205AD80072EC10 /* SimpleViewController.swift */; };
+		2983973A202064120072EC10 /* GoogleMapsCore.framework in Resources */ = {isa = PBXBuildFile; fileRef = 298397372020640C0072EC10 /* GoogleMapsCore.framework */; };
+		2983973D202064A20072EC10 /* GoogleMaps.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2983973C202064A10072EC10 /* GoogleMaps.bundle */; };
 		298AFF5A200DDF5E008C0229 /* Download.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 298AFF59200DDF5E008C0229 /* Download.storyboard */; };
 		298AFF5C200DE59E008C0229 /* DownloadController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 298AFF5B200DE59E008C0229 /* DownloadController.swift */; };
 		298AFF60200DEF0F008C0229 /* DownloadCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 298AFF5E200DEF0F008C0229 /* DownloadCell.swift */; };
@@ -41,6 +43,11 @@
 		298AFF63200DF728008C0229 /* DownloadDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 298AFF62200DF728008C0229 /* DownloadDetailController.swift */; };
 		299C50252015CAD60030BE70 /* MyMapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299C50242015CAD60030BE70 /* MyMapController.swift */; };
 		29A03859201B2E8B002C889C /* MyMapDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A03858201B2E8B002C889C /* MyMapDetailController.swift */; };
+		29E2BFC92020714D000572DB /* GoogleMapsM4B.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29E2BFC82020714D000572DB /* GoogleMapsM4B.framework */; };
+		29E2BFCE20207396000572DB /* FilterItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29E2BFCC20207396000572DB /* FilterItemCell.swift */; };
+		29E2BFCF20207396000572DB /* FilterItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 29E2BFCD20207396000572DB /* FilterItemCell.xib */; };
+		29E2BFD6202074C5000572DB /* FilterSectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29E2BFD4202074C5000572DB /* FilterSectionCell.swift */; };
+		29E2BFD7202074C5000572DB /* FilterSectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 29E2BFD5202074C5000572DB /* FilterSectionCell.xib */; };
 		2A7370D8768170C43588DDD0 /* Pods_gis_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EBA9EE16F0F86FE41332501 /* Pods_gis_ios.framework */; };
 /* End PBXBuildFile section */
 
@@ -61,7 +68,6 @@
 		29805E65200C57BB009DE52B /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		29805E6A200C601C009DE52B /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		29805E6C200C7B86009DE52B /* ExtensionMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionMenu.swift; sourceTree = "<group>"; };
-		29805E71200C7D10009DE52B /* MenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuController.swift; sourceTree = "<group>"; };
 		29805E74200C7DA9009DE52B /* MenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
 		29805E75200C7DA9009DE52B /* MenuCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuCell.xib; sourceTree = "<group>"; };
 		29805E78200C7EC9009DE52B /* UICollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionView.swift; sourceTree = "<group>"; };
@@ -74,6 +80,9 @@
 		298136C62019C94D00044998 /* CreateAreaController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAreaController.swift; sourceTree = "<group>"; };
 		2981E73120183D9E00E64470 /* KnowledgeSelectCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KnowledgeSelectCell.swift; sourceTree = "<group>"; };
 		2981E73220183D9E00E64470 /* KnowledgeSelectCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KnowledgeSelectCell.xib; sourceTree = "<group>"; };
+		2983973420205AD80072EC10 /* SimpleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleViewController.swift; sourceTree = "<group>"; };
+		298397372020640C0072EC10 /* GoogleMapsCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMapsCore.framework; sourceTree = "<group>"; };
+		2983973C202064A10072EC10 /* GoogleMaps.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = GoogleMaps.bundle; sourceTree = "<group>"; };
 		298AFF59200DDF5E008C0229 /* Download.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Download.storyboard; sourceTree = "<group>"; };
 		298AFF5B200DE59E008C0229 /* DownloadController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadController.swift; sourceTree = "<group>"; };
 		298AFF5E200DEF0F008C0229 /* DownloadCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadCell.swift; sourceTree = "<group>"; };
@@ -81,6 +90,12 @@
 		298AFF62200DF728008C0229 /* DownloadDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadDetailController.swift; sourceTree = "<group>"; };
 		299C50242015CAD60030BE70 /* MyMapController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyMapController.swift; sourceTree = "<group>"; };
 		29A03858201B2E8B002C889C /* MyMapDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyMapDetailController.swift; sourceTree = "<group>"; };
+		29DA6B8B2020702700E273D4 /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMaps.framework; sourceTree = "<group>"; };
+		29E2BFC82020714D000572DB /* GoogleMapsM4B.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMapsM4B.framework; sourceTree = "<group>"; };
+		29E2BFCC20207396000572DB /* FilterItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterItemCell.swift; sourceTree = "<group>"; };
+		29E2BFCD20207396000572DB /* FilterItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilterItemCell.xib; sourceTree = "<group>"; };
+		29E2BFD4202074C5000572DB /* FilterSectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterSectionCell.swift; sourceTree = "<group>"; };
+		29E2BFD5202074C5000572DB /* FilterSectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilterSectionCell.xib; sourceTree = "<group>"; };
 		3EBA9EE16F0F86FE41332501 /* Pods_gis_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_gis_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DEF805261AC1EFDE370746D /* Pods-gis-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gis-ios.release.xcconfig"; path = "Pods/Target Support Files/Pods-gis-ios/Pods-gis-ios.release.xcconfig"; sourceTree = "<group>"; };
 		B84B3A8249ED09F0C38D8763 /* Pods-gis-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gis-ios.debug.xcconfig"; path = "Pods/Target Support Files/Pods-gis-ios/Pods-gis-ios.debug.xcconfig"; sourceTree = "<group>"; };
@@ -91,6 +106,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				29E2BFC92020714D000572DB /* GoogleMapsM4B.framework in Frameworks */,
 				2A7370D8768170C43588DDD0 /* Pods_gis_ios.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -110,6 +126,10 @@
 		295D1FCF200C4C1F00787E2C = {
 			isa = PBXGroup;
 			children = (
+				2983973C202064A10072EC10 /* GoogleMaps.bundle */,
+				29DA6B8B2020702700E273D4 /* GoogleMaps.framework */,
+				298397372020640C0072EC10 /* GoogleMapsCore.framework */,
+				29E2BFC82020714D000572DB /* GoogleMapsM4B.framework */,
 				295D1FDA200C4C1F00787E2C /* gis-ios */,
 				295D1FD9200C4C1F00787E2C /* Products */,
 				134C4E0C034652EE6D7B4797 /* Pods */,
@@ -153,6 +173,7 @@
 			isa = PBXGroup;
 			children = (
 				29805E70200C7CE5009DE52B /* Menu */,
+				29E2BFCA2020734C000572DB /* Filter */,
 				29805E67200C5F01009DE52B /* Maps */,
 				29805E68200C5F2E009DE52B /* Knowledges */,
 				29805E69200C5F36009DE52B /* Downloads */,
@@ -186,6 +207,7 @@
 		297DDB8320119241005A26BE /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				2983973E20206E8E0072EC10 /* GoogleMap */,
 				297DDB862011925F005A26BE /* XMSegmentedControl */,
 			);
 			path = Library;
@@ -211,11 +233,11 @@
 		29805E67200C5F01009DE52B /* Maps */ = {
 			isa = PBXGroup;
 			children = (
-				29A03857201AE786002C889C /* Extension */,
 				295D1FDD200C4C1F00787E2C /* MapViewController.swift */,
 				299C50242015CAD60030BE70 /* MyMapController.swift */,
 				29A03858201B2E8B002C889C /* MyMapDetailController.swift */,
 				298136C62019C94D00044998 /* CreateAreaController.swift */,
+				2983973420205AD80072EC10 /* SimpleViewController.swift */,
 			);
 			path = Maps;
 			sourceTree = "<group>";
@@ -245,7 +267,6 @@
 			isa = PBXGroup;
 			children = (
 				29805E73200C7D82009DE52B /* Item */,
-				29805E71200C7D10009DE52B /* MenuController.swift */,
 				29805E6C200C7B86009DE52B /* ExtensionMenu.swift */,
 			);
 			path = Menu;
@@ -271,6 +292,13 @@
 			path = Item;
 			sourceTree = "<group>";
 		};
+		2983973E20206E8E0072EC10 /* GoogleMap */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = GoogleMap;
+			sourceTree = "<group>";
+		};
 		298AFF5D200DEEEE008C0229 /* Item */ = {
 			isa = PBXGroup;
 			children = (
@@ -280,11 +308,23 @@
 			path = Item;
 			sourceTree = "<group>";
 		};
-		29A03857201AE786002C889C /* Extension */ = {
+		29E2BFCA2020734C000572DB /* Filter */ = {
 			isa = PBXGroup;
 			children = (
+				29E2BFCB20207362000572DB /* Item */,
 			);
-			path = Extension;
+			path = Filter;
+			sourceTree = "<group>";
+		};
+		29E2BFCB20207362000572DB /* Item */ = {
+			isa = PBXGroup;
+			children = (
+				29E2BFCC20207396000572DB /* FilterItemCell.swift */,
+				29E2BFCD20207396000572DB /* FilterItemCell.xib */,
+				29E2BFD4202074C5000572DB /* FilterSectionCell.swift */,
+				29E2BFD5202074C5000572DB /* FilterSectionCell.xib */,
+			);
+			path = Item;
 			sourceTree = "<group>";
 		};
 		7196560DAC87AF20DF1576D2 /* Frameworks */ = {
@@ -357,16 +397,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				29E2BFCF20207396000572DB /* FilterItemCell.xib in Resources */,
+				2983973A202064120072EC10 /* GoogleMapsCore.framework in Resources */,
 				29805E77200C7DA9009DE52B /* MenuCell.xib in Resources */,
 				29805E64200C56F9009DE52B /* ThaiSansNeue_Regular.ttf in Resources */,
 				29805E82200CAA02009DE52B /* KnowledgeCell.xib in Resources */,
 				295D1FE9200C4C1F00787E2C /* LaunchScreen.storyboard in Resources */,
 				298AFF5A200DDF5E008C0229 /* Download.storyboard in Resources */,
 				29805E7B200C9CD2009DE52B /* Knowledge.storyboard in Resources */,
+				2983973D202064A20072EC10 /* GoogleMaps.bundle in Resources */,
 				29805E63200C56F9009DE52B /* ThaiSansNeue_Bold.ttf in Resources */,
 				298AFF61200DEF0F008C0229 /* DownloadCell.xib in Resources */,
 				2981E73420183D9E00E64470 /* KnowledgeSelectCell.xib in Resources */,
 				295D1FE6200C4C1F00787E2C /* Assets.xcassets in Resources */,
+				29E2BFD7202074C5000572DB /* FilterSectionCell.xib in Resources */,
 				295D1FE1200C4C1F00787E2C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -444,7 +488,6 @@
 			files = (
 				295D1FE4200C4C1F00787E2C /* gis_ios.xcdatamodeld in Sources */,
 				2981E73320183D9E00E64470 /* KnowledgeSelectCell.swift in Sources */,
-				29805E72200C7D10009DE52B /* MenuController.swift in Sources */,
 				29805E81200CAA02009DE52B /* KnowledgeCell.swift in Sources */,
 				297DDB882011925F005A26BE /* XMSegmentedControl.swift in Sources */,
 				29805E66200C57BB009DE52B /* UIColor.swift in Sources */,
@@ -455,10 +498,13 @@
 				299C50252015CAD60030BE70 /* MyMapController.swift in Sources */,
 				295D1FDC200C4C1F00787E2C /* AppDelegate.swift in Sources */,
 				298AFF5C200DE59E008C0229 /* DownloadController.swift in Sources */,
+				29E2BFCE20207396000572DB /* FilterItemCell.swift in Sources */,
 				298AFF63200DF728008C0229 /* DownloadDetailController.swift in Sources */,
+				2983973520205AD80072EC10 /* SimpleViewController.swift in Sources */,
 				297DDB8D2011E120005A26BE /* PagingController.swift in Sources */,
 				298AFF60200DEF0F008C0229 /* DownloadCell.swift in Sources */,
 				29805E6D200C7B86009DE52B /* ExtensionMenu.swift in Sources */,
+				29E2BFD6202074C5000572DB /* FilterSectionCell.swift in Sources */,
 				29A03859201B2E8B002C889C /* MyMapDetailController.swift in Sources */,
 				29805E84200CACF2009DE52B /* UIFont.swift in Sources */,
 				29805E76200C7DA9009DE52B /* MenuCell.swift in Sources */,
@@ -604,6 +650,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4PW9TJ8V43;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "gis-ios/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "tech.riseplus.gis-ios";
@@ -620,6 +670,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4PW9TJ8V43;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "gis-ios/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "tech.riseplus.gis-ios";

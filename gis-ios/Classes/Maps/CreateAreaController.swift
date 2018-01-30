@@ -9,7 +9,7 @@
 import UIKit
 import GoogleMaps
 import CoreLocation
-
+import SwiftMessages
 
 class CreateAreaController: UIViewController {
 
@@ -27,7 +27,6 @@ class CreateAreaController: UIViewController {
     @IBOutlet weak var floaty: UIView!
     @IBOutlet weak var mapView: GMSMapView!
     
-    
     var arrayCoordinates : [CLLocationCoordinate2D] = []
     var longPressRecognizer = UITapGestureRecognizer()
     var locationManager = CLLocationManager()
@@ -38,14 +37,12 @@ class CreateAreaController: UIViewController {
     
     @IBAction func longPress(_ sender: UITapGestureRecognizer) {
         
-//        marker = GMSMarker(position: mapView.projection.coordinate(for: sender.location(in: mapView)))
+        marker = GMSMarker(position: mapView.projection.coordinate(for: sender.location(in: mapView)))
 //        marker.icon = UIImage(named: "mappin")
-//
-//        self.arrayCoordinates.append(marker.position)
-//        rect.add(self.arrayCoordinates.last!)
-//
-//        marker.map = mapView
-//        debugPrint(self.arrayCoordinates.last!)
+
+        self.arrayCoordinates.append(marker.position)
+        rect.add(self.arrayCoordinates.last!)
+        marker.map = mapView
     }
     
     
@@ -67,6 +64,8 @@ class CreateAreaController: UIViewController {
         menuView.isHidden = true
         menuBlur.isHidden = true
         processView.isHidden = true
+        
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -94,8 +93,6 @@ class CreateAreaController: UIViewController {
         locationManager.startUpdatingLocation()
         
         locationManager.delegate = self
-        
-        marker.isDraggable = true
         
     }
     
@@ -133,6 +130,13 @@ class CreateAreaController: UIViewController {
             polygon.strokeWidth = 2
             polygon.map = mapView
         }else {
+            let error = MessageView.viewFromNib(layout: .tabView)
+            error.configureTheme(.error)
+            error.configureContent(title: "ล้มเหลว", body: "กรุณาปักจุดเพื่อระบุพื้นที่")
+            error.button?.setTitle("ปิด", for: .normal)
+            error.buttonTapHandler = { _ in SwiftMessages.hide() }
+
+            SwiftMessages.show(view: error)
             
         }
         
@@ -147,30 +151,30 @@ class CreateAreaController: UIViewController {
 extension CreateAreaController: GMSMapViewDelegate {
     
     func mapView(_ mapView: GMSMapView, didLongPressAt coordinate: CLLocationCoordinate2D) {
-        marker = GMSMarker(position: coordinate)
-        marker.icon = UIImage(named: "mappin")
         
-        self.arrayCoordinates.append(marker.position)
-        rect.add(self.arrayCoordinates.last!)
-        
-        marker.map = mapView
+        marker.isDraggable = true
+    
     }
-
+    
     func mapView(_ mapView: GMSMapView, didTap marker: GMSMarker) -> Bool {
         
         return true
     }
-    
+
     //MARK - GMSMarker Dragging
     func mapView(_ mapView: GMSMapView, didBeginDragging marker: GMSMarker) {
-        print("didBeginDragging")
+        
+        marker.isDraggable = true
+
     }
     func mapView(_ mapView: GMSMapView, didDrag marker: GMSMarker) {
         
         print("didDrag")
     }
     func mapView(_ mapView: GMSMapView, didEndDragging marker: GMSMarker) {
-        print("didEndDragging")
+        
+        marker.isDraggable = false
+
     }
 }
 
