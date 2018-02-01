@@ -21,7 +21,9 @@ class MapViewController: UIViewController {
     @IBOutlet weak var currentButton: UIButton!
     
     var locationManager = CLLocationManager()
-    var currentLocation: CLLocation?
+    
+    private var renderer: GMUGeometryRenderer!
+    private var geoJsonParser: GMUGeoJSONParser!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,6 +41,7 @@ class MapViewController: UIViewController {
         
         menuView.isHidden = true
         blurView.isHidden = true
+        
         
     }
     
@@ -100,7 +103,7 @@ class MapViewController: UIViewController {
     }
     
     @objc func touchFilter() -> Void {
-        performSegue(withIdentifier: "Filters", sender: nil)
+//        performSegue(withIdentifier: "goTofiler", sender: nil)
     }
     
     @objc func touchMyLocation() -> Void {
@@ -115,27 +118,24 @@ class MapViewController: UIViewController {
         locationManager.requestWhenInUseAuthorization()
         locationManager.distanceFilter = 50
         locationManager.startUpdatingLocation()
-        
         locationManager.delegate = self
         mapView.delegate = self
+        mapView?.isMyLocationEnabled = true
         
-        let camera = GMSCameraPosition.camera(withLatitude: 37.36, longitude: -122.0, zoom: 15.0)
-        mapView.camera = camera
-        showMarker(position: camera.target)
-
-        self.mapView?.isMyLocationEnabled = true
+        self.loadGeoView()
         
     }
     
-    func showMarker(position: CLLocationCoordinate2D){
-        let marker = GMSMarker()
-        marker.position = position
-        marker.title = "Location"
-        marker.snippet = "Current"
-        marker.map = mapView
+    func loadGeoView() {
+        
+        let path = Bundle.main.path(forResource: "ตำแหน่งโรงงาน", ofType: "geojson")
+        let url = URL(fileURLWithPath: path!)
+        geoJsonParser = GMUGeoJSONParser(url: url)
+        geoJsonParser.parse()
+        
+        renderer = GMUGeometryRenderer(map: mapView, geometries: geoJsonParser.features)
+        renderer.render()
     }
-    
-
 }
 
 // MARK: - CLLocationManagerDelegate
@@ -152,7 +152,7 @@ extension MapViewController: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
 
         if let location = locations.last {
-            mapView.camera = GMSCameraPosition.camera(withLatitude: (location.coordinate.latitude), longitude: (location.coordinate.longitude), zoom: 17.0)
+            mapView.camera = GMSCameraPosition.camera(withLatitude: (location.coordinate.latitude), longitude: (location.coordinate.longitude), zoom: 4.0)
             locationManager.stopUpdatingLocation()
         }
         
@@ -176,35 +176,35 @@ extension MapViewController: GMSMapViewDelegate {
         print("didLongPressInfoWindowOf")
     }
     
-    /* set a custom Info Window */
-    func mapView(_ mapView: GMSMapView, markerInfoWindow marker: GMSMarker) -> UIView? {
-        let view = UIView(frame: CGRect.init(x: 0, y: 0, width: 200, height: 70))
-        view.backgroundColor = UIColor.white
-        view.layer.cornerRadius = 6
-        
-        let lbl1 = UILabel(frame: CGRect.init(x: 8, y: 8, width: view.frame.size.width - 16, height: 15))
-        lbl1.text = "Hi there!"
-        view.addSubview(lbl1)
-        
-        let lbl2 = UILabel(frame: CGRect.init(x: lbl1.frame.origin.x, y: lbl1.frame.origin.y + lbl1.frame.size.height + 3, width: view.frame.size.width - 16, height: 15))
-        lbl2.text = "I am a custom info window."
-        lbl2.font = UIFont.systemFont(ofSize: 14, weight: .light)
-        view.addSubview(lbl2)
-        
-        return view
-    }
-    
-    
-    //MARK - GMSMarker Dragging
-    func mapView(_ mapView: GMSMapView, didBeginDragging marker: GMSMarker) {
-        print("didBeginDragging")
-    }
-    func mapView(_ mapView: GMSMapView, didDrag marker: GMSMarker) {
-        print("didDrag")
-    }
-    func mapView(_ mapView: GMSMapView, didEndDragging marker: GMSMarker) {
-        print("didEndDragging")
-    }
+//    /* set a custom Info Window */
+//    func mapView(_ mapView: GMSMapView, markerInfoWindow marker: GMSMarker) -> UIView? {
+//        let view = UIView(frame: CGRect.init(x: 0, y: 0, width: 200, height: 70))
+//        view.backgroundColor = UIColor.white
+//        view.layer.cornerRadius = 6
+//
+//        let lbl1 = UILabel(frame: CGRect.init(x: 8, y: 8, width: view.frame.size.width - 16, height: 15))
+//        lbl1.text = "Hi there!"
+//        view.addSubview(lbl1)
+//
+//        let lbl2 = UILabel(frame: CGRect.init(x: lbl1.frame.origin.x, y: lbl1.frame.origin.y + lbl1.frame.size.height + 3, width: view.frame.size.width - 16, height: 15))
+//        lbl2.text = "I am a custom info window."
+//        lbl2.font = UIFont.systemFont(ofSize: 14, weight: .light)
+//        view.addSubview(lbl2)
+//
+//        return view
+//    }
+//
+//
+//    //MARK - GMSMarker Dragging
+//    func mapView(_ mapView: GMSMapView, didBeginDragging marker: GMSMarker) {
+//        print("didBeginDragging")
+//    }
+//    func mapView(_ mapView: GMSMapView, didDrag marker: GMSMarker) {
+//        print("didDrag")
+//    }
+//    func mapView(_ mapView: GMSMapView, didEndDragging marker: GMSMarker) {
+//        print("didEndDragging")
+//    }
     
     
 }

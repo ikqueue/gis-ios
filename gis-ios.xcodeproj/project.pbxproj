@@ -34,8 +34,6 @@
 		2981E73320183D9E00E64470 /* KnowledgeSelectCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2981E73120183D9E00E64470 /* KnowledgeSelectCell.swift */; };
 		2981E73420183D9E00E64470 /* KnowledgeSelectCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2981E73220183D9E00E64470 /* KnowledgeSelectCell.xib */; };
 		2983973520205AD80072EC10 /* SimpleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2983973420205AD80072EC10 /* SimpleViewController.swift */; };
-		2983973A202064120072EC10 /* GoogleMapsCore.framework in Resources */ = {isa = PBXBuildFile; fileRef = 298397372020640C0072EC10 /* GoogleMapsCore.framework */; };
-		2983973D202064A20072EC10 /* GoogleMaps.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2983973C202064A10072EC10 /* GoogleMaps.bundle */; };
 		298AFF5A200DDF5E008C0229 /* Download.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 298AFF59200DDF5E008C0229 /* Download.storyboard */; };
 		298AFF5C200DE59E008C0229 /* DownloadController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 298AFF5B200DE59E008C0229 /* DownloadController.swift */; };
 		298AFF60200DEF0F008C0229 /* DownloadCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 298AFF5E200DEF0F008C0229 /* DownloadCell.swift */; };
@@ -43,11 +41,41 @@
 		298AFF63200DF728008C0229 /* DownloadDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 298AFF62200DF728008C0229 /* DownloadDetailController.swift */; };
 		299C50252015CAD60030BE70 /* MyMapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299C50242015CAD60030BE70 /* MyMapController.swift */; };
 		29A03859201B2E8B002C889C /* MyMapDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A03858201B2E8B002C889C /* MyMapDetailController.swift */; };
-		29E2BFC92020714D000572DB /* GoogleMapsM4B.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29E2BFC82020714D000572DB /* GoogleMapsM4B.framework */; };
 		29E2BFCE20207396000572DB /* FilterItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29E2BFCC20207396000572DB /* FilterItemCell.swift */; };
 		29E2BFCF20207396000572DB /* FilterItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 29E2BFCD20207396000572DB /* FilterItemCell.xib */; };
 		29E2BFD6202074C5000572DB /* FilterSectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29E2BFD4202074C5000572DB /* FilterSectionCell.swift */; };
 		29E2BFD7202074C5000572DB /* FilterSectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 29E2BFD5202074C5000572DB /* FilterSectionCell.xib */; };
+		29ECFBAF2022FAE50016187C /* GQTPointQuadTree.m in Sources */ = {isa = PBXBuildFile; fileRef = 29ECFB6D2022FAE20016187C /* GQTPointQuadTree.m */; };
+		29ECFBB02022FAE50016187C /* GQTPointQuadTreeChild.m in Sources */ = {isa = PBXBuildFile; fileRef = 29ECFB6F2022FAE20016187C /* GQTPointQuadTreeChild.m */; };
+		29ECFBB12022FAE50016187C /* GMUGeoJSONParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 29ECFB732022FAE30016187C /* GMUGeoJSONParser.m */; };
+		29ECFBB22022FAE50016187C /* GMUGeometryRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 29ECFB762022FAE30016187C /* GMUGeometryRenderer.m */; };
+		29ECFBB32022FAE50016187C /* GMUKMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 29ECFB782022FAE30016187C /* GMUKMLParser.m */; };
+		29ECFBB42022FAE60016187C /* GMUFeature.m in Sources */ = {isa = PBXBuildFile; fileRef = 29ECFB7B2022FAE30016187C /* GMUFeature.m */; };
+		29ECFBB52022FAE60016187C /* GMUGeometryCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 29ECFB7E2022FAE30016187C /* GMUGeometryCollection.m */; };
+		29ECFBB62022FAE60016187C /* GMUGroundOverlay.m in Sources */ = {isa = PBXBuildFile; fileRef = 29ECFB812022FAE30016187C /* GMUGroundOverlay.m */; };
+		29ECFBB72022FAE60016187C /* GMULineString.m in Sources */ = {isa = PBXBuildFile; fileRef = 29ECFB832022FAE30016187C /* GMULineString.m */; };
+		29ECFBB82022FAE60016187C /* GMUPlacemark.m in Sources */ = {isa = PBXBuildFile; fileRef = 29ECFB852022FAE30016187C /* GMUPlacemark.m */; };
+		29ECFBB92022FAE60016187C /* GMUPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 29ECFB872022FAE30016187C /* GMUPoint.m */; };
+		29ECFBBA2022FAE60016187C /* GMUPolygon.m in Sources */ = {isa = PBXBuildFile; fileRef = 29ECFB892022FAE30016187C /* GMUPolygon.m */; };
+		29ECFBBB2022FAE60016187C /* GMUStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 29ECFB8B2022FAE30016187C /* GMUStyle.m */; };
+		29ECFBBC2022FAE60016187C /* GMUGridBasedClusterAlgorithm.m in Sources */ = {isa = PBXBuildFile; fileRef = 29ECFB902022FAE40016187C /* GMUGridBasedClusterAlgorithm.m */; };
+		29ECFBBD2022FAE60016187C /* GMUNonHierarchicalDistanceBasedAlgorithm.m in Sources */ = {isa = PBXBuildFile; fileRef = 29ECFB922022FAE40016187C /* GMUNonHierarchicalDistanceBasedAlgorithm.m */; };
+		29ECFBBE2022FAE60016187C /* GMUSimpleClusterAlgorithm.m in Sources */ = {isa = PBXBuildFile; fileRef = 29ECFB942022FAE40016187C /* GMUSimpleClusterAlgorithm.m */; };
+		29ECFBBF2022FAE60016187C /* GMUWrappingDictionaryKey.m in Sources */ = {isa = PBXBuildFile; fileRef = 29ECFB962022FAE40016187C /* GMUWrappingDictionaryKey.m */; };
+		29ECFBC02022FAE60016187C /* GMUClusterManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 29ECFB9B2022FAE40016187C /* GMUClusterManager.m */; };
+		29ECFBC12022FAE60016187C /* GMUStaticCluster.m in Sources */ = {isa = PBXBuildFile; fileRef = 29ECFB9E2022FAE40016187C /* GMUStaticCluster.m */; };
+		29ECFBC22022FAE60016187C /* GMUDefaultClusterIconGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 29ECFBA42022FAE40016187C /* GMUDefaultClusterIconGenerator.m */; };
+		29ECFBC32022FAE60016187C /* GMUDefaultClusterRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 29ECFBA72022FAE40016187C /* GMUDefaultClusterRenderer.m */; };
+		29ECFBC42022FAE60016187C /* GMUGradient.m in Sources */ = {isa = PBXBuildFile; fileRef = 29ECFBAA2022FAE50016187C /* GMUGradient.m */; };
+		29ECFBC52022FAE60016187C /* GMUHeatmapTileLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 29ECFBAC2022FAE50016187C /* GMUHeatmapTileLayer.m */; };
+		29ECFBC62022FAE60016187C /* GMUWeightedLatLng.m in Sources */ = {isa = PBXBuildFile; fileRef = 29ECFBAE2022FAE50016187C /* GMUWeightedLatLng.m */; };
+		29ECFBCC20230D330016187C /* GeoJSON_sample.json in Resources */ = {isa = PBXBuildFile; fileRef = 29ECFBCB20230D330016187C /* GeoJSON_sample.json */; };
+		29ECFBCE2023102F0016187C /* GoogleMaps.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 29ECFBCD2023102F0016187C /* GoogleMaps.bundle */; };
+		29ECFBD920231D330016187C /* ความเหมาะสมด้านน้ำใต้ดิน.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 29ECFBD420231D210016187C /* ความเหมาะสมด้านน้ำใต้ดิน.geojson */; };
+		29ECFBDA20231D330016187C /* ตำแหน่งโรงงาน.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 29ECFBD520231D230016187C /* ตำแหน่งโรงงาน.geojson */; };
+		29ECFBDB20231D330016187C /* พื้นที่ความเหมาะสมปลูกอ้อย.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 29ECFBD620231D290016187C /* พื้นที่ความเหมาะสมปลูกอ้อย.geojson */; };
+		29ECFBDC20231D330016187C /* ความเหมาะสมด้านดิน.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 29ECFBD720231D310016187C /* ความเหมาะสมด้านดิน.geojson */; };
+		29ECFBDD20231D330016187C /* ความเหมาะสมด้านชลประทาน.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 29ECFBD820231D320016187C /* ความเหมาะสมด้านชลประทาน.geojson */; };
 		2A7370D8768170C43588DDD0 /* Pods_gis_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EBA9EE16F0F86FE41332501 /* Pods_gis_ios.framework */; };
 /* End PBXBuildFile section */
 
@@ -81,8 +109,6 @@
 		2981E73120183D9E00E64470 /* KnowledgeSelectCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KnowledgeSelectCell.swift; sourceTree = "<group>"; };
 		2981E73220183D9E00E64470 /* KnowledgeSelectCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KnowledgeSelectCell.xib; sourceTree = "<group>"; };
 		2983973420205AD80072EC10 /* SimpleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleViewController.swift; sourceTree = "<group>"; };
-		298397372020640C0072EC10 /* GoogleMapsCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMapsCore.framework; sourceTree = "<group>"; };
-		2983973C202064A10072EC10 /* GoogleMaps.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = GoogleMaps.bundle; sourceTree = "<group>"; };
 		298AFF59200DDF5E008C0229 /* Download.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Download.storyboard; sourceTree = "<group>"; };
 		298AFF5B200DE59E008C0229 /* DownloadController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadController.swift; sourceTree = "<group>"; };
 		298AFF5E200DEF0F008C0229 /* DownloadCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadCell.swift; sourceTree = "<group>"; };
@@ -90,12 +116,81 @@
 		298AFF62200DF728008C0229 /* DownloadDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadDetailController.swift; sourceTree = "<group>"; };
 		299C50242015CAD60030BE70 /* MyMapController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyMapController.swift; sourceTree = "<group>"; };
 		29A03858201B2E8B002C889C /* MyMapDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyMapDetailController.swift; sourceTree = "<group>"; };
-		29DA6B8B2020702700E273D4 /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMaps.framework; sourceTree = "<group>"; };
-		29E2BFC82020714D000572DB /* GoogleMapsM4B.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMapsM4B.framework; sourceTree = "<group>"; };
 		29E2BFCC20207396000572DB /* FilterItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterItemCell.swift; sourceTree = "<group>"; };
 		29E2BFCD20207396000572DB /* FilterItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilterItemCell.xib; sourceTree = "<group>"; };
 		29E2BFD4202074C5000572DB /* FilterSectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterSectionCell.swift; sourceTree = "<group>"; };
 		29E2BFD5202074C5000572DB /* FilterSectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilterSectionCell.xib; sourceTree = "<group>"; };
+		29ECFB662022FA560016187C /* gis-ios-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "gis-ios-Bridging-Header.h"; sourceTree = "<group>"; };
+		29ECFB6A2022FAE20016187C /* GQTBounds.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GQTBounds.h; sourceTree = "<group>"; };
+		29ECFB6B2022FAE20016187C /* GQTPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GQTPoint.h; sourceTree = "<group>"; };
+		29ECFB6C2022FAE20016187C /* GQTPointQuadTree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GQTPointQuadTree.h; sourceTree = "<group>"; };
+		29ECFB6D2022FAE20016187C /* GQTPointQuadTree.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GQTPointQuadTree.m; sourceTree = "<group>"; };
+		29ECFB6E2022FAE20016187C /* GQTPointQuadTreeChild.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GQTPointQuadTreeChild.h; sourceTree = "<group>"; };
+		29ECFB6F2022FAE20016187C /* GQTPointQuadTreeChild.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GQTPointQuadTreeChild.m; sourceTree = "<group>"; };
+		29ECFB702022FAE20016187C /* GQTPointQuadTreeItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GQTPointQuadTreeItem.h; sourceTree = "<group>"; };
+		29ECFB722022FAE30016187C /* GMUGeoJSONParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMUGeoJSONParser.h; sourceTree = "<group>"; };
+		29ECFB732022FAE30016187C /* GMUGeoJSONParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMUGeoJSONParser.m; sourceTree = "<group>"; };
+		29ECFB742022FAE30016187C /* GMUGeometryRenderer+Testing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GMUGeometryRenderer+Testing.h"; sourceTree = "<group>"; };
+		29ECFB752022FAE30016187C /* GMUGeometryRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMUGeometryRenderer.h; sourceTree = "<group>"; };
+		29ECFB762022FAE30016187C /* GMUGeometryRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMUGeometryRenderer.m; sourceTree = "<group>"; };
+		29ECFB772022FAE30016187C /* GMUKMLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMUKMLParser.h; sourceTree = "<group>"; };
+		29ECFB782022FAE30016187C /* GMUKMLParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMUKMLParser.m; sourceTree = "<group>"; };
+		29ECFB7A2022FAE30016187C /* GMUFeature.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMUFeature.h; sourceTree = "<group>"; };
+		29ECFB7B2022FAE30016187C /* GMUFeature.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMUFeature.m; sourceTree = "<group>"; };
+		29ECFB7C2022FAE30016187C /* GMUGeometry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMUGeometry.h; sourceTree = "<group>"; };
+		29ECFB7D2022FAE30016187C /* GMUGeometryCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMUGeometryCollection.h; sourceTree = "<group>"; };
+		29ECFB7E2022FAE30016187C /* GMUGeometryCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMUGeometryCollection.m; sourceTree = "<group>"; };
+		29ECFB7F2022FAE30016187C /* GMUGeometryContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMUGeometryContainer.h; sourceTree = "<group>"; };
+		29ECFB802022FAE30016187C /* GMUGroundOverlay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMUGroundOverlay.h; sourceTree = "<group>"; };
+		29ECFB812022FAE30016187C /* GMUGroundOverlay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMUGroundOverlay.m; sourceTree = "<group>"; };
+		29ECFB822022FAE30016187C /* GMULineString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMULineString.h; sourceTree = "<group>"; };
+		29ECFB832022FAE30016187C /* GMULineString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMULineString.m; sourceTree = "<group>"; };
+		29ECFB842022FAE30016187C /* GMUPlacemark.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMUPlacemark.h; sourceTree = "<group>"; };
+		29ECFB852022FAE30016187C /* GMUPlacemark.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMUPlacemark.m; sourceTree = "<group>"; };
+		29ECFB862022FAE30016187C /* GMUPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMUPoint.h; sourceTree = "<group>"; };
+		29ECFB872022FAE30016187C /* GMUPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMUPoint.m; sourceTree = "<group>"; };
+		29ECFB882022FAE30016187C /* GMUPolygon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMUPolygon.h; sourceTree = "<group>"; };
+		29ECFB892022FAE30016187C /* GMUPolygon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMUPolygon.m; sourceTree = "<group>"; };
+		29ECFB8A2022FAE30016187C /* GMUStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMUStyle.h; sourceTree = "<group>"; };
+		29ECFB8B2022FAE30016187C /* GMUStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMUStyle.m; sourceTree = "<group>"; };
+		29ECFB8E2022FAE40016187C /* GMUClusterAlgorithm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMUClusterAlgorithm.h; sourceTree = "<group>"; };
+		29ECFB8F2022FAE40016187C /* GMUGridBasedClusterAlgorithm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMUGridBasedClusterAlgorithm.h; sourceTree = "<group>"; };
+		29ECFB902022FAE40016187C /* GMUGridBasedClusterAlgorithm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMUGridBasedClusterAlgorithm.m; sourceTree = "<group>"; };
+		29ECFB912022FAE40016187C /* GMUNonHierarchicalDistanceBasedAlgorithm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMUNonHierarchicalDistanceBasedAlgorithm.h; sourceTree = "<group>"; };
+		29ECFB922022FAE40016187C /* GMUNonHierarchicalDistanceBasedAlgorithm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMUNonHierarchicalDistanceBasedAlgorithm.m; sourceTree = "<group>"; };
+		29ECFB932022FAE40016187C /* GMUSimpleClusterAlgorithm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMUSimpleClusterAlgorithm.h; sourceTree = "<group>"; };
+		29ECFB942022FAE40016187C /* GMUSimpleClusterAlgorithm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMUSimpleClusterAlgorithm.m; sourceTree = "<group>"; };
+		29ECFB952022FAE40016187C /* GMUWrappingDictionaryKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMUWrappingDictionaryKey.h; sourceTree = "<group>"; };
+		29ECFB962022FAE40016187C /* GMUWrappingDictionaryKey.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMUWrappingDictionaryKey.m; sourceTree = "<group>"; };
+		29ECFB972022FAE40016187C /* GMUCluster.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMUCluster.h; sourceTree = "<group>"; };
+		29ECFB982022FAE40016187C /* GMUClusterItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMUClusterItem.h; sourceTree = "<group>"; };
+		29ECFB992022FAE40016187C /* GMUClusterManager+Testing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GMUClusterManager+Testing.h"; sourceTree = "<group>"; };
+		29ECFB9A2022FAE40016187C /* GMUClusterManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMUClusterManager.h; sourceTree = "<group>"; };
+		29ECFB9B2022FAE40016187C /* GMUClusterManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMUClusterManager.m; sourceTree = "<group>"; };
+		29ECFB9C2022FAE40016187C /* GMUMarkerClustering.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMUMarkerClustering.h; sourceTree = "<group>"; };
+		29ECFB9D2022FAE40016187C /* GMUStaticCluster.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMUStaticCluster.h; sourceTree = "<group>"; };
+		29ECFB9E2022FAE40016187C /* GMUStaticCluster.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMUStaticCluster.m; sourceTree = "<group>"; };
+		29ECFBA02022FAE40016187C /* GMUClusterIconGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMUClusterIconGenerator.h; sourceTree = "<group>"; };
+		29ECFBA12022FAE40016187C /* GMUClusterRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMUClusterRenderer.h; sourceTree = "<group>"; };
+		29ECFBA22022FAE40016187C /* GMUDefaultClusterIconGenerator+Testing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GMUDefaultClusterIconGenerator+Testing.h"; sourceTree = "<group>"; };
+		29ECFBA32022FAE40016187C /* GMUDefaultClusterIconGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMUDefaultClusterIconGenerator.h; sourceTree = "<group>"; };
+		29ECFBA42022FAE40016187C /* GMUDefaultClusterIconGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMUDefaultClusterIconGenerator.m; sourceTree = "<group>"; };
+		29ECFBA52022FAE40016187C /* GMUDefaultClusterRenderer+Testing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GMUDefaultClusterRenderer+Testing.h"; sourceTree = "<group>"; };
+		29ECFBA62022FAE40016187C /* GMUDefaultClusterRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMUDefaultClusterRenderer.h; sourceTree = "<group>"; };
+		29ECFBA72022FAE40016187C /* GMUDefaultClusterRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMUDefaultClusterRenderer.m; sourceTree = "<group>"; };
+		29ECFBA92022FAE50016187C /* GMUGradient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMUGradient.h; sourceTree = "<group>"; };
+		29ECFBAA2022FAE50016187C /* GMUGradient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMUGradient.m; sourceTree = "<group>"; };
+		29ECFBAB2022FAE50016187C /* GMUHeatmapTileLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMUHeatmapTileLayer.h; sourceTree = "<group>"; };
+		29ECFBAC2022FAE50016187C /* GMUHeatmapTileLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMUHeatmapTileLayer.m; sourceTree = "<group>"; };
+		29ECFBAD2022FAE50016187C /* GMUWeightedLatLng.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMUWeightedLatLng.h; sourceTree = "<group>"; };
+		29ECFBAE2022FAE50016187C /* GMUWeightedLatLng.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMUWeightedLatLng.m; sourceTree = "<group>"; };
+		29ECFBCB20230D330016187C /* GeoJSON_sample.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = GeoJSON_sample.json; sourceTree = "<group>"; };
+		29ECFBCD2023102F0016187C /* GoogleMaps.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = GoogleMaps.bundle; sourceTree = "<group>"; };
+		29ECFBD420231D210016187C /* ความเหมาะสมด้านน้ำใต้ดิน.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "ความเหมาะสมด้านน้ำใต้ดิน.geojson"; sourceTree = "<group>"; };
+		29ECFBD520231D230016187C /* ตำแหน่งโรงงาน.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "ตำแหน่งโรงงาน.geojson"; sourceTree = "<group>"; };
+		29ECFBD620231D290016187C /* พื้นที่ความเหมาะสมปลูกอ้อย.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "พื้นที่ความเหมาะสมปลูกอ้อย.geojson"; sourceTree = "<group>"; };
+		29ECFBD720231D310016187C /* ความเหมาะสมด้านดิน.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "ความเหมาะสมด้านดิน.geojson"; sourceTree = "<group>"; };
+		29ECFBD820231D320016187C /* ความเหมาะสมด้านชลประทาน.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "ความเหมาะสมด้านชลประทาน.geojson"; sourceTree = "<group>"; };
 		3EBA9EE16F0F86FE41332501 /* Pods_gis_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_gis_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DEF805261AC1EFDE370746D /* Pods-gis-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gis-ios.release.xcconfig"; path = "Pods/Target Support Files/Pods-gis-ios/Pods-gis-ios.release.xcconfig"; sourceTree = "<group>"; };
 		B84B3A8249ED09F0C38D8763 /* Pods-gis-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gis-ios.debug.xcconfig"; path = "Pods/Target Support Files/Pods-gis-ios/Pods-gis-ios.debug.xcconfig"; sourceTree = "<group>"; };
@@ -106,7 +201,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				29E2BFC92020714D000572DB /* GoogleMapsM4B.framework in Frameworks */,
 				2A7370D8768170C43588DDD0 /* Pods_gis_ios.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -126,10 +220,6 @@
 		295D1FCF200C4C1F00787E2C = {
 			isa = PBXGroup;
 			children = (
-				2983973C202064A10072EC10 /* GoogleMaps.bundle */,
-				29DA6B8B2020702700E273D4 /* GoogleMaps.framework */,
-				298397372020640C0072EC10 /* GoogleMapsCore.framework */,
-				29E2BFC82020714D000572DB /* GoogleMapsM4B.framework */,
 				295D1FDA200C4C1F00787E2C /* gis-ios */,
 				295D1FD9200C4C1F00787E2C /* Products */,
 				134C4E0C034652EE6D7B4797 /* Pods */,
@@ -197,6 +287,7 @@
 		295D1FF3200C531E00787E2C /* SupportFiles */ = {
 			isa = PBXGroup;
 			children = (
+				2984C7272022B9A4006A62DF /* Resource */,
 				297DDB8320119241005A26BE /* Library */,
 				29805E60200C56F8009DE52B /* Font */,
 				295D1FE5200C4C1F00787E2C /* Assets.xcassets */,
@@ -207,6 +298,7 @@
 		297DDB8320119241005A26BE /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				29A31A952022D45900D02275 /* Google-Maps-iOS-Utils */,
 				2983973E20206E8E0072EC10 /* GoogleMap */,
 				297DDB862011925F005A26BE /* XMSegmentedControl */,
 			);
@@ -295,8 +387,22 @@
 		2983973E20206E8E0072EC10 /* GoogleMap */ = {
 			isa = PBXGroup;
 			children = (
+				29ECFBCD2023102F0016187C /* GoogleMaps.bundle */,
 			);
 			path = GoogleMap;
+			sourceTree = "<group>";
+		};
+		2984C7272022B9A4006A62DF /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				29ECFBD820231D320016187C /* ความเหมาะสมด้านชลประทาน.geojson */,
+				29ECFBD720231D310016187C /* ความเหมาะสมด้านดิน.geojson */,
+				29ECFBD420231D210016187C /* ความเหมาะสมด้านน้ำใต้ดิน.geojson */,
+				29ECFBD520231D230016187C /* ตำแหน่งโรงงาน.geojson */,
+				29ECFBD620231D290016187C /* พื้นที่ความเหมาะสมปลูกอ้อย.geojson */,
+				29ECFBCB20230D330016187C /* GeoJSON_sample.json */,
+			);
+			path = Resource;
 			sourceTree = "<group>";
 		};
 		298AFF5D200DEEEE008C0229 /* Item */ = {
@@ -306,6 +412,18 @@
 				298AFF5F200DEF0F008C0229 /* DownloadCell.xib */,
 			);
 			path = Item;
+			sourceTree = "<group>";
+		};
+		29A31A952022D45900D02275 /* Google-Maps-iOS-Utils */ = {
+			isa = PBXGroup;
+			children = (
+				29ECFB662022FA560016187C /* gis-ios-Bridging-Header.h */,
+				29ECFB8C2022FAE40016187C /* Clustering */,
+				29ECFB712022FAE30016187C /* Geometry */,
+				29ECFBA82022FAE50016187C /* Heatmap */,
+				29ECFB692022FAE20016187C /* QuadTree */,
+			);
+			path = "Google-Maps-iOS-Utils";
 			sourceTree = "<group>";
 		};
 		29E2BFCA2020734C000572DB /* Filter */ = {
@@ -325,6 +443,121 @@
 				29E2BFD5202074C5000572DB /* FilterSectionCell.xib */,
 			);
 			path = Item;
+			sourceTree = "<group>";
+		};
+		29ECFB692022FAE20016187C /* QuadTree */ = {
+			isa = PBXGroup;
+			children = (
+				29ECFB6A2022FAE20016187C /* GQTBounds.h */,
+				29ECFB6B2022FAE20016187C /* GQTPoint.h */,
+				29ECFB6C2022FAE20016187C /* GQTPointQuadTree.h */,
+				29ECFB6D2022FAE20016187C /* GQTPointQuadTree.m */,
+				29ECFB6E2022FAE20016187C /* GQTPointQuadTreeChild.h */,
+				29ECFB6F2022FAE20016187C /* GQTPointQuadTreeChild.m */,
+				29ECFB702022FAE20016187C /* GQTPointQuadTreeItem.h */,
+			);
+			path = QuadTree;
+			sourceTree = "<group>";
+		};
+		29ECFB712022FAE30016187C /* Geometry */ = {
+			isa = PBXGroup;
+			children = (
+				29ECFB722022FAE30016187C /* GMUGeoJSONParser.h */,
+				29ECFB732022FAE30016187C /* GMUGeoJSONParser.m */,
+				29ECFB742022FAE30016187C /* GMUGeometryRenderer+Testing.h */,
+				29ECFB752022FAE30016187C /* GMUGeometryRenderer.h */,
+				29ECFB762022FAE30016187C /* GMUGeometryRenderer.m */,
+				29ECFB772022FAE30016187C /* GMUKMLParser.h */,
+				29ECFB782022FAE30016187C /* GMUKMLParser.m */,
+				29ECFB792022FAE30016187C /* Model */,
+			);
+			path = Geometry;
+			sourceTree = "<group>";
+		};
+		29ECFB792022FAE30016187C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				29ECFB7A2022FAE30016187C /* GMUFeature.h */,
+				29ECFB7B2022FAE30016187C /* GMUFeature.m */,
+				29ECFB7C2022FAE30016187C /* GMUGeometry.h */,
+				29ECFB7D2022FAE30016187C /* GMUGeometryCollection.h */,
+				29ECFB7E2022FAE30016187C /* GMUGeometryCollection.m */,
+				29ECFB7F2022FAE30016187C /* GMUGeometryContainer.h */,
+				29ECFB802022FAE30016187C /* GMUGroundOverlay.h */,
+				29ECFB812022FAE30016187C /* GMUGroundOverlay.m */,
+				29ECFB822022FAE30016187C /* GMULineString.h */,
+				29ECFB832022FAE30016187C /* GMULineString.m */,
+				29ECFB842022FAE30016187C /* GMUPlacemark.h */,
+				29ECFB852022FAE30016187C /* GMUPlacemark.m */,
+				29ECFB862022FAE30016187C /* GMUPoint.h */,
+				29ECFB872022FAE30016187C /* GMUPoint.m */,
+				29ECFB882022FAE30016187C /* GMUPolygon.h */,
+				29ECFB892022FAE30016187C /* GMUPolygon.m */,
+				29ECFB8A2022FAE30016187C /* GMUStyle.h */,
+				29ECFB8B2022FAE30016187C /* GMUStyle.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		29ECFB8C2022FAE40016187C /* Clustering */ = {
+			isa = PBXGroup;
+			children = (
+				29ECFB8D2022FAE40016187C /* Algo */,
+				29ECFB972022FAE40016187C /* GMUCluster.h */,
+				29ECFB982022FAE40016187C /* GMUClusterItem.h */,
+				29ECFB992022FAE40016187C /* GMUClusterManager+Testing.h */,
+				29ECFB9A2022FAE40016187C /* GMUClusterManager.h */,
+				29ECFB9B2022FAE40016187C /* GMUClusterManager.m */,
+				29ECFB9C2022FAE40016187C /* GMUMarkerClustering.h */,
+				29ECFB9D2022FAE40016187C /* GMUStaticCluster.h */,
+				29ECFB9E2022FAE40016187C /* GMUStaticCluster.m */,
+				29ECFB9F2022FAE40016187C /* View */,
+			);
+			path = Clustering;
+			sourceTree = "<group>";
+		};
+		29ECFB8D2022FAE40016187C /* Algo */ = {
+			isa = PBXGroup;
+			children = (
+				29ECFB8E2022FAE40016187C /* GMUClusterAlgorithm.h */,
+				29ECFB8F2022FAE40016187C /* GMUGridBasedClusterAlgorithm.h */,
+				29ECFB902022FAE40016187C /* GMUGridBasedClusterAlgorithm.m */,
+				29ECFB912022FAE40016187C /* GMUNonHierarchicalDistanceBasedAlgorithm.h */,
+				29ECFB922022FAE40016187C /* GMUNonHierarchicalDistanceBasedAlgorithm.m */,
+				29ECFB932022FAE40016187C /* GMUSimpleClusterAlgorithm.h */,
+				29ECFB942022FAE40016187C /* GMUSimpleClusterAlgorithm.m */,
+				29ECFB952022FAE40016187C /* GMUWrappingDictionaryKey.h */,
+				29ECFB962022FAE40016187C /* GMUWrappingDictionaryKey.m */,
+			);
+			path = Algo;
+			sourceTree = "<group>";
+		};
+		29ECFB9F2022FAE40016187C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				29ECFBA02022FAE40016187C /* GMUClusterIconGenerator.h */,
+				29ECFBA12022FAE40016187C /* GMUClusterRenderer.h */,
+				29ECFBA22022FAE40016187C /* GMUDefaultClusterIconGenerator+Testing.h */,
+				29ECFBA32022FAE40016187C /* GMUDefaultClusterIconGenerator.h */,
+				29ECFBA42022FAE40016187C /* GMUDefaultClusterIconGenerator.m */,
+				29ECFBA52022FAE40016187C /* GMUDefaultClusterRenderer+Testing.h */,
+				29ECFBA62022FAE40016187C /* GMUDefaultClusterRenderer.h */,
+				29ECFBA72022FAE40016187C /* GMUDefaultClusterRenderer.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		29ECFBA82022FAE50016187C /* Heatmap */ = {
+			isa = PBXGroup;
+			children = (
+				29ECFBA92022FAE50016187C /* GMUGradient.h */,
+				29ECFBAA2022FAE50016187C /* GMUGradient.m */,
+				29ECFBAB2022FAE50016187C /* GMUHeatmapTileLayer.h */,
+				29ECFBAC2022FAE50016187C /* GMUHeatmapTileLayer.m */,
+				29ECFBAD2022FAE50016187C /* GMUWeightedLatLng.h */,
+				29ECFBAE2022FAE50016187C /* GMUWeightedLatLng.m */,
+			);
+			path = Heatmap;
 			sourceTree = "<group>";
 		};
 		7196560DAC87AF20DF1576D2 /* Frameworks */ = {
@@ -370,6 +603,7 @@
 				TargetAttributes = {
 					295D1FD7200C4C1F00787E2C = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -397,19 +631,24 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				29ECFBDD20231D330016187C /* ความเหมาะสมด้านชลประทาน.geojson in Resources */,
+				29ECFBDA20231D330016187C /* ตำแหน่งโรงงาน.geojson in Resources */,
 				29E2BFCF20207396000572DB /* FilterItemCell.xib in Resources */,
-				2983973A202064120072EC10 /* GoogleMapsCore.framework in Resources */,
+				29ECFBDB20231D330016187C /* พื้นที่ความเหมาะสมปลูกอ้อย.geojson in Resources */,
 				29805E77200C7DA9009DE52B /* MenuCell.xib in Resources */,
+				29ECFBD920231D330016187C /* ความเหมาะสมด้านน้ำใต้ดิน.geojson in Resources */,
 				29805E64200C56F9009DE52B /* ThaiSansNeue_Regular.ttf in Resources */,
 				29805E82200CAA02009DE52B /* KnowledgeCell.xib in Resources */,
 				295D1FE9200C4C1F00787E2C /* LaunchScreen.storyboard in Resources */,
 				298AFF5A200DDF5E008C0229 /* Download.storyboard in Resources */,
 				29805E7B200C9CD2009DE52B /* Knowledge.storyboard in Resources */,
-				2983973D202064A20072EC10 /* GoogleMaps.bundle in Resources */,
+				29ECFBCE2023102F0016187C /* GoogleMaps.bundle in Resources */,
 				29805E63200C56F9009DE52B /* ThaiSansNeue_Bold.ttf in Resources */,
 				298AFF61200DEF0F008C0229 /* DownloadCell.xib in Resources */,
+				29ECFBCC20230D330016187C /* GeoJSON_sample.json in Resources */,
 				2981E73420183D9E00E64470 /* KnowledgeSelectCell.xib in Resources */,
 				295D1FE6200C4C1F00787E2C /* Assets.xcassets in Resources */,
+				29ECFBDC20231D330016187C /* ความเหมาะสมด้านดิน.geojson in Resources */,
 				29E2BFD7202074C5000572DB /* FilterSectionCell.xib in Resources */,
 				295D1FE1200C4C1F00787E2C /* Main.storyboard in Resources */,
 			);
@@ -444,7 +683,6 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-gis-ios/Pods-gis-ios-resources.sh",
 				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
-				"${PODS_ROOT}/GooglePlaces/Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
@@ -462,6 +700,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-gis-ios/Pods-gis-ios-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AutoInsetter/AutoInsetter.framework",
 				"${BUILT_PRODUCTS_DIR}/Pageboy/Pageboy.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftHEXColors/SwiftHEXColors.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftMessages/SwiftMessages.framework",
@@ -469,6 +708,7 @@
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AutoInsetter.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Pageboy.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftHEXColors.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftMessages.framework",
@@ -486,31 +726,55 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				29ECFBBE2022FAE60016187C /* GMUSimpleClusterAlgorithm.m in Sources */,
 				295D1FE4200C4C1F00787E2C /* gis_ios.xcdatamodeld in Sources */,
+				29ECFBBD2022FAE60016187C /* GMUNonHierarchicalDistanceBasedAlgorithm.m in Sources */,
 				2981E73320183D9E00E64470 /* KnowledgeSelectCell.swift in Sources */,
 				29805E81200CAA02009DE52B /* KnowledgeCell.swift in Sources */,
 				297DDB882011925F005A26BE /* XMSegmentedControl.swift in Sources */,
 				29805E66200C57BB009DE52B /* UIColor.swift in Sources */,
+				29ECFBB82022FAE60016187C /* GMUPlacemark.m in Sources */,
 				298136C72019C94D00044998 /* CreateAreaController.swift in Sources */,
+				29ECFBBC2022FAE60016187C /* GMUGridBasedClusterAlgorithm.m in Sources */,
+				29ECFBBB2022FAE60016187C /* GMUStyle.m in Sources */,
+				29ECFBC32022FAE60016187C /* GMUDefaultClusterRenderer.m in Sources */,
 				297DDB8B201192C3005A26BE /* KnowledgeDetailController.swift in Sources */,
+				29ECFBC12022FAE60016187C /* GMUStaticCluster.m in Sources */,
 				29805E79200C7EC9009DE52B /* UICollectionView.swift in Sources */,
+				29ECFBBA2022FAE60016187C /* GMUPolygon.m in Sources */,
 				295D1FDE200C4C1F00787E2C /* MapViewController.swift in Sources */,
 				299C50252015CAD60030BE70 /* MyMapController.swift in Sources */,
+				29ECFBB62022FAE60016187C /* GMUGroundOverlay.m in Sources */,
+				29ECFBB02022FAE50016187C /* GQTPointQuadTreeChild.m in Sources */,
 				295D1FDC200C4C1F00787E2C /* AppDelegate.swift in Sources */,
 				298AFF5C200DE59E008C0229 /* DownloadController.swift in Sources */,
+				29ECFBB22022FAE50016187C /* GMUGeometryRenderer.m in Sources */,
+				29ECFBC52022FAE60016187C /* GMUHeatmapTileLayer.m in Sources */,
 				29E2BFCE20207396000572DB /* FilterItemCell.swift in Sources */,
+				29ECFBC62022FAE60016187C /* GMUWeightedLatLng.m in Sources */,
 				298AFF63200DF728008C0229 /* DownloadDetailController.swift in Sources */,
 				2983973520205AD80072EC10 /* SimpleViewController.swift in Sources */,
 				297DDB8D2011E120005A26BE /* PagingController.swift in Sources */,
+				29ECFBBF2022FAE60016187C /* GMUWrappingDictionaryKey.m in Sources */,
 				298AFF60200DEF0F008C0229 /* DownloadCell.swift in Sources */,
+				29ECFBB52022FAE60016187C /* GMUGeometryCollection.m in Sources */,
+				29ECFBAF2022FAE50016187C /* GQTPointQuadTree.m in Sources */,
+				29ECFBB72022FAE60016187C /* GMULineString.m in Sources */,
 				29805E6D200C7B86009DE52B /* ExtensionMenu.swift in Sources */,
+				29ECFBC02022FAE60016187C /* GMUClusterManager.m in Sources */,
+				29ECFBB92022FAE60016187C /* GMUPoint.m in Sources */,
 				29E2BFD6202074C5000572DB /* FilterSectionCell.swift in Sources */,
 				29A03859201B2E8B002C889C /* MyMapDetailController.swift in Sources */,
 				29805E84200CACF2009DE52B /* UIFont.swift in Sources */,
 				29805E76200C7DA9009DE52B /* MenuCell.swift in Sources */,
+				29ECFBB12022FAE50016187C /* GMUGeoJSONParser.m in Sources */,
 				29805E86200CAF28009DE52B /* UITableView.swift in Sources */,
+				29ECFBB42022FAE60016187C /* GMUFeature.m in Sources */,
+				29ECFBB32022FAE50016187C /* GMUKMLParser.m in Sources */,
 				29805E7D200C9E09009DE52B /* KnowledgeController.swift in Sources */,
+				29ECFBC22022FAE60016187C /* GMUDefaultClusterIconGenerator.m in Sources */,
 				29805E6B200C601C009DE52B /* UIViewController.swift in Sources */,
+				29ECFBC42022FAE60016187C /* GMUGradient.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -648,16 +912,24 @@
 			baseConfigurationReference = B84B3A8249ED09F0C38D8763 /* Pods-gis-ios.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4PW9TJ8V43;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/GoogleMaps\"",
+				);
 				INFOPLIST_FILE = "gis-ios/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "tech.riseplus.gis-ios";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "gis-ios/SupportFiles/Library/Google-Maps-iOS-Utils/gis-ios-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -668,16 +940,23 @@
 			baseConfigurationReference = 6DEF805261AC1EFDE370746D /* Pods-gis-ios.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4PW9TJ8V43;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/GoogleMaps\"",
+				);
 				INFOPLIST_FILE = "gis-ios/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "tech.riseplus.gis-ios";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "gis-ios/SupportFiles/Library/Google-Maps-iOS-Utils/gis-ios-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

@@ -25,7 +25,7 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dGy-zU-SOV">
+                    <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dGy-zU-SOV">
                         <rect key="frame" x="275" y="0.0" width="45" height="44"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="45" id="ago-Fd-wRg"/>
@@ -51,6 +51,6 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="arrow-down" width="25" height="25"/>
+        <image name="arrow-down" width="20" height="20"/>
     </resources>
 </document>
