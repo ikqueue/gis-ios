@@ -12,14 +12,36 @@ class SimpleViewController: UIViewController {
 
     @IBOutlet weak var tableVIEW: UITableView!
     
+    var cellDescriptors = [String]()
+    var visibleRowsPerSection = [[Int]]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        tableVIEW.registerTableViewCell(nib: "FilterSectionCell", identifier: "FilterSectionCell")
-        tableVIEW.registerTableViewCell(nib: "FilterItemCell", identifier: "FilterItemCell")
+        configureCell()
+        setUpDeta()
     }
 
-
+    
+    func configureCell() -> Void {
+        tableVIEW.registerTableViewCell(nib: "FilterSectionCell", identifier: "FilterSectionCell")
+        tableVIEW.registerTableViewCell(nib: "FilterItemCell", identifier: "FilterItemCell")
+        tableVIEW.tableFooterView = UIView(frame: .zero)
+        tableVIEW.separatorStyle = .none
+        tableVIEW?.sectionHeaderHeight = 44
+        tableVIEW?.estimatedRowHeight = 44
+        tableVIEW?.rowHeight = UITableViewAutomaticDimension
+    }
+    
+    func setUpDeta() -> Void {
+        
+        for _ in 0...3 {
+            cellDescriptors.append("Hello")
+        }
+        
+        tableVIEW.reloadData()
+    }
+    
 }
 
 extension SimpleViewController: UITableViewDataSource {
@@ -29,12 +51,17 @@ extension SimpleViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return cellDescriptors.count
     }
     
+//    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+//        return 44
+//    }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let header = tableVIEW.dequeueReusableCell(withIdentifier: "FilterSectionCell") as! FilterSectionCell
+        
+        header.delegate = self
         
         return header
     }
@@ -49,5 +76,16 @@ extension SimpleViewController: UITableViewDataSource {
 }
 
 extension SimpleViewController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    
+    }
+}
+
+extension SimpleViewController: HeaderViewDelegate {
+    
+    func toggleSection(header: FilterSectionCell, section: Int) {
+        
+    }
     
 }

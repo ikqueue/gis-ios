@@ -16,10 +16,55 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                 <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wZE-x4-PXi">
+                        <rect key="frame" x="38" y="0.0" width="282" height="44"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZdO-vR-3aS" customClass="BEMCheckBox">
+                        <rect key="frame" x="8" y="11" width="22" height="22"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="22" id="YaL-nE-Wlb"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="onTintColor">
+                                <color key="value" red="0.38823529410000002" green="0.78823529410000004" blue="0.3803921569" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="onFillColor">
+                                <color key="value" red="0.38823529410000002" green="0.78823529410000004" blue="0.3803921569" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="onCheckColor">
+                                <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="offFillColor">
+                                <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="wZE-x4-PXi" secondAttribute="trailing" id="3Tb-bK-mrB"/>
+                    <constraint firstItem="wZE-x4-PXi" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="8Jm-40-UKC"/>
+                    <constraint firstItem="ZdO-vR-3aS" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="11" id="H2w-wp-QtS"/>
+                    <constraint firstItem="wZE-x4-PXi" firstAttribute="leading" secondItem="ZdO-vR-3aS" secondAttribute="trailing" constant="8" id="SDQ-sY-LOk"/>
+                    <constraint firstAttribute="bottom" secondItem="wZE-x4-PXi" secondAttribute="bottom" id="b2c-ZT-Bgf"/>
+                    <constraint firstAttribute="bottom" secondItem="ZdO-vR-3aS" secondAttribute="bottom" constant="10.5" id="sSr-r2-7R6"/>
+                    <constraint firstItem="ZdO-vR-3aS" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="xCQ-qx-UbE"/>
+                </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="checkBox" destination="ZdO-vR-3aS" id="oql-K8-6P7"/>
+                <outlet property="message" destination="wZE-x4-PXi" id="k00-AB-KS5"/>
+            </connections>
         </tableViewCell>
     </objects>
 </document>

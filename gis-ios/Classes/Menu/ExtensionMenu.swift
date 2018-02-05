@@ -103,10 +103,7 @@ extension MapViewController {
             self.addRightBarButtonWithImage(UIImage(), selector: nil, badge: 0)
             self.setUpNavigationBar(barTint: UIColor.white, tint: UIColor.titleText(), titleTextAt: UIColor.titleText(), showTitle: true, title: "GIS ONLINE")
             self.blurView.isHidden = false
-        }, completion: {_ in
-            
-            
-        })
+        }, completion: nil )
         
     }
     
@@ -136,15 +133,35 @@ extension MapViewController {
                         self.setUpNavigationBar(barTint: UIColor.primary1(), tint: UIColor.white, titleTextAt: UIColor.white, showTitle: true, title: "GIS ONLINE")
                         self.setUpBarButtonMenu()
                         self.setUpBarButtonMyLocation()
+                        self.view.endEditing(true)
                     }
                 }
             }
             
+            self.filterViewTab.isHidden = true
             self.blurView.isHidden = true
             
-        }, completion: {_ in
+        }, completion: nil)
+    }
+    
+    
+    func didTabFilterAction() -> Void {
+        
+        UIView.animate(withDuration: 0.1, delay: 0.0, options: .curveEaseInOut, animations: { () -> Void in
+            var frame: CGRect = self.filterViewTab.frame
+            frame.origin.y = ((self.navigationController?.navigationBar.frame.height)!+UIApplication.shared.statusBarFrame.height)
+            self.filterViewTab.frame = frame
             
-        } )
+            var blurFrame: CGRect = self.blurView.frame
+            blurFrame.origin.y = self.filterViewTab.frame.height //self.menuView.frame.height
+            self.blurView.frame = blurFrame
+            
+            self.filterViewTab.isHidden = false
+            self.addLeftBarButtonWithImage(UIImage(named: "filters")!, selector: nil)
+            self.addRightBarButtonWithImage(UIImage(named: "close")!, selector: #selector(MapViewController.dismissMenu) as Selector?, badge: 0)
+            self.setUpNavigationBar(barTint: UIColor.white, tint: UIColor.titleText(), titleTextAt: UIColor.titleText(), showTitle: true, title: "Shape Filters")
+            self.blurView.isHidden = false
+        }, completion: nil )
     }
     
 }
@@ -206,6 +223,48 @@ extension MapViewController: UICollectionViewDelegate {
             print(indexPath)
         }
     }
+}
+
+extension MapViewController: UITableViewDataSource {
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return cellDescriptors.count
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 0
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let header = filterTableView.dequeueReusableCell(withIdentifier: "FilterSectionCell") as! FilterSectionCell
+        header.header.text = cellDescriptors[section]
+        header.delegate = self
+        
+        return header
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = filterTableView.dequeueReusableCell(withIdentifier: "FilterItemCell", for: indexPath) as! FilterItemCell
+        
+        return cell
+    }
+    
+    
+}
+
+extension MapViewController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+    }
+}
+
+extension MapViewController: HeaderViewDelegate {
+    
+    func toggleSection(header: FilterSectionCell, section: Int) {
+        
+    }
+    
 }
 
 extension CreateAreaController {

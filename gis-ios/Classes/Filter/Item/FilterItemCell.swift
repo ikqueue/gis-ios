@@ -7,18 +7,52 @@
 //
 
 import UIKit
+import BEMCheckBox
+
+protocol DetailViewDelegate: class {
+    func toggleSection(header: FilterItemCell, section: Int)
+}
 
 class FilterItemCell: UITableViewCell {
 
+    @IBOutlet weak var checkBox: BEMCheckBox!
+    @IBOutlet weak var message: UILabel!
+    
+    var delegate: DetailViewDelegate?
+    var section: Int = 0
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
+        configureCheckBox()
+        message.font = UIFont.setFont(font: "ThaiSansNeue-Regular", size: 25.0)
+    }
+    
+    func configureCheckBox() -> Void {
+        
+        checkBox.delegate = self
+        checkBox.boxType = .square
+        checkBox.onAnimationType = .bounce
+        checkBox.offAnimationType = .bounce
+        
+        checkBox.tintColor = UIColor.black
+        checkBox.offFillColor = UIColor.white
+        
+        checkBox.onTintColor = UIColor.success()
+        checkBox.onFillColor = UIColor.success()
+        checkBox.onCheckColor = UIColor.white
+        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
-        // Configure the view for the selected state
     }
+    
+}
+
+extension FilterItemCell: BEMCheckBoxDelegate {
+    
+    
     
 }

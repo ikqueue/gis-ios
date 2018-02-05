@@ -20,10 +20,24 @@ class MapViewController: UIViewController {
     @IBOutlet weak var blurView: UIVisualEffectView!
     @IBOutlet weak var currentButton: UIButton!
     
+    @IBOutlet weak var filterViewTab: UIView!
+    @IBOutlet weak var filterTableView: UITableView!
+    @IBOutlet weak var searchBar: UISearchBar!
+    
     var locationManager = CLLocationManager()
     
     private var renderer: GMUGeometryRenderer!
     private var geoJsonParser: GMUGeoJSONParser!
+    
+    var cellDescriptors: [String] = [
+        
+        "แหล่งน้ำ",
+        "ตำแหน่งโรงงาน",
+        "เส้นชั้นน้ำฝน",
+        "ความเหมาะสมด้านดิน",
+        "ความเหมาะสมด้านชลประทาน",
+        "ความเหมาะสมด้านน้ำใต้ดิน"
+    ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,14 +48,12 @@ class MapViewController: UIViewController {
         setUpBarButtonMenu()
         setUpCurrentButton()
         
+        configureSearchBar()
+        configureFilterCell()
         configureMapView()
         
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(MapViewController.dismissMenu))
         blurView.addGestureRecognizer(tap)
-        
-        menuView.isHidden = true
-        blurView.isHidden = true
-        
         
     }
     
@@ -50,6 +62,10 @@ class MapViewController: UIViewController {
         
         setUpNavigationBar(barTint: UIColor.primary1(), tint: UIColor.white, titleTextAt: UIColor.white, showTitle: true, title: "GIS ONLINE")
         setUpBarButtonMyLocation()
+        
+        menuView.isHidden = true
+        blurView.isHidden = true
+        filterViewTab.isHidden = true
         
         if let window = UIApplication.shared.delegate?.window {
             if var viewController = window?.rootViewController {
@@ -88,26 +104,21 @@ class MapViewController: UIViewController {
         filterView.addGestureRecognizer(tap)
     }
     
-    @objc func touchCurrentLocation() -> Void {
+    func configureSearchBar() -> Void {
+        searchBar.backgroundColor = UIColor.white
+        searchBar.barTintColor = UIColor.white
+        searchBar.tintColor = UIColor.white
+    }
+    
+    func configureFilterCell() -> Void {
         
-        if CLLocationManager.locationServicesEnabled() {
-            locationManager.startUpdatingLocation()
-        }
-    }
-    
-    @objc func touchCreateArea() -> Void {
-        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
-        let viewController = storyboard.instantiateViewController(withIdentifier: "CreateAreaController") as! CreateAreaController
-        
-        navigationController?.pushViewController(viewController, animated: false)
-    }
-    
-    @objc func touchFilter() -> Void {
-//        performSegue(withIdentifier: "goTofiler", sender: nil)
-    }
-    
-    @objc func touchMyLocation() -> Void {
-        performSegue(withIdentifier: "myMap", sender: nil)
+        filterTableView.registerTableViewCell(nib: "FilterSectionCell", identifier: "FilterSectionCell")
+        filterTableView.registerTableViewCell(nib: "FilterItemCell", identifier: "FilterItemCell")
+        filterTableView.tableFooterView = UIView(frame: .zero)
+        filterTableView.separatorStyle = .none
+        filterTableView?.sectionHeaderHeight = filterTableView.frame.height/6
+        filterTableView?.estimatedRowHeight = 44
+        filterTableView?.rowHeight = UITableViewAutomaticDimension
     }
     
     func configureMapView() -> Void {
@@ -128,7 +139,7 @@ class MapViewController: UIViewController {
     
     func loadGeoView() {
         
-        let path = Bundle.main.path(forResource: "ตำแหน่งโรงงาน", ofType: "geojson")
+        let path = Bundle.main.path(forResource: "irrigation_out", ofType: "geojson")
         let url = URL(fileURLWithPath: path!)
         geoJsonParser = GMUGeoJSONParser(url: url)
         geoJsonParser.parse()
@@ -136,6 +147,30 @@ class MapViewController: UIViewController {
         renderer = GMUGeometryRenderer(map: mapView, geometries: geoJsonParser.features)
         renderer.render()
     }
+    
+    
+    @objc func touchCurrentLocation() -> Void {
+        
+        if CLLocationManager.locationServicesEnabled() {
+            locationManager.startUpdatingLocation()
+        }
+    }
+    
+    @objc func touchCreateArea() -> Void {
+        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+        let viewController = storyboard.instantiateViewController(withIdentifier: "CreateAreaController") as! CreateAreaController
+        
+        navigationController?.pushViewController(viewController, animated: false)
+    }
+    
+    @objc func touchFilter() -> Void {
+        didTabFilterAction()
+    }
+    
+    @objc func touchMyLocation() -> Void {
+        performSegue(withIdentifier: "myMap", sender: nil)
+    }
+    
 }
 
 // MARK: - CLLocationManagerDelegate
@@ -155,7 +190,6 @@ extension MapViewController: CLLocationManagerDelegate {
             mapView.camera = GMSCameraPosition.camera(withLatitude: (location.coordinate.latitude), longitude: (location.coordinate.longitude), zoom: 4.0)
             locationManager.stopUpdatingLocation()
         }
-        
     }
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error)
@@ -175,36 +209,5 @@ extension MapViewController: GMSMapViewDelegate {
     func mapView(_ mapView: GMSMapView, didLongPressInfoWindowOf marker: GMSMarker) {
         print("didLongPressInfoWindowOf")
     }
-    
-//    /* set a custom Info Window */
-//    func mapView(_ mapView: GMSMapView, markerInfoWindow marker: GMSMarker) -> UIView? {
-//        let view = UIView(frame: CGRect.init(x: 0, y: 0, width: 200, height: 70))
-//        view.backgroundColor = UIColor.white
-//        view.layer.cornerRadius = 6
-//
-//        let lbl1 = UILabel(frame: CGRect.init(x: 8, y: 8, width: view.frame.size.width - 16, height: 15))
-//        lbl1.text = "Hi there!"
-//        view.addSubview(lbl1)
-//
-//        let lbl2 = UILabel(frame: CGRect.init(x: lbl1.frame.origin.x, y: lbl1.frame.origin.y + lbl1.frame.size.height + 3, width: view.frame.size.width - 16, height: 15))
-//        lbl2.text = "I am a custom info window."
-//        lbl2.font = UIFont.systemFont(ofSize: 14, weight: .light)
-//        view.addSubview(lbl2)
-//
-//        return view
-//    }
-//
-//
-//    //MARK - GMSMarker Dragging
-//    func mapView(_ mapView: GMSMapView, didBeginDragging marker: GMSMarker) {
-//        print("didBeginDragging")
-//    }
-//    func mapView(_ mapView: GMSMapView, didDrag marker: GMSMarker) {
-//        print("didDrag")
-//    }
-//    func mapView(_ mapView: GMSMapView, didEndDragging marker: GMSMarker) {
-//        print("didEndDragging")
-//    }
-    
-    
+  
 }

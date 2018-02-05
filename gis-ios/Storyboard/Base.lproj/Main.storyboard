@@ -85,6 +85,37 @@
                                 </view>
                                 <blurEffect style="dark"/>
                             </visualEffectView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KWe-Yi-i0P">
+                                <rect key="frame" x="0.0" y="64" width="375" height="450"/>
+                                <subviews>
+                                    <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="vAS-67-kAr">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="56" id="aer-Oe-wX6"/>
+                                        </constraints>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </searchBar>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="LcI-oI-trb">
+                                        <rect key="frame" x="0.0" y="56" width="375" height="394"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <outlet property="dataSource" destination="BYZ-38-t0r" id="ef6-QL-L37"/>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="VPT-vY-53x"/>
+                                        </connections>
+                                    </tableView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="vAS-67-kAr" secondAttribute="trailing" id="2uj-zf-eWI"/>
+                                    <constraint firstItem="LcI-oI-trb" firstAttribute="top" secondItem="vAS-67-kAr" secondAttribute="bottom" id="DZc-Bk-j85"/>
+                                    <constraint firstAttribute="height" constant="450" id="LdY-WE-fNb"/>
+                                    <constraint firstItem="LcI-oI-trb" firstAttribute="leading" secondItem="KWe-Yi-i0P" secondAttribute="leading" id="PaG-JH-m7t"/>
+                                    <constraint firstItem="vAS-67-kAr" firstAttribute="leading" secondItem="KWe-Yi-i0P" secondAttribute="leading" id="VDa-Lg-ef0"/>
+                                    <constraint firstItem="vAS-67-kAr" firstAttribute="top" secondItem="KWe-Yi-i0P" secondAttribute="top" id="XF6-T9-Mqb"/>
+                                    <constraint firstAttribute="trailing" secondItem="LcI-oI-trb" secondAttribute="trailing" id="fEe-fO-feL"/>
+                                    <constraint firstAttribute="bottom" secondItem="LcI-oI-trb" secondAttribute="bottom" id="oa3-18-UKT"/>
+                                </constraints>
+                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ubh-Vf-FRZ">
                                 <rect key="frame" x="0.0" y="64" width="375" height="196"/>
                                 <subviews>
@@ -133,9 +164,12 @@
                             <constraint firstItem="TaH-mL-jB6" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="DhV-gI-dyv"/>
                             <constraint firstItem="JG9-IU-EBh" firstAttribute="top" secondItem="02a-uB-ZVa" secondAttribute="bottom" id="FOz-4a-Fls"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wx2-w9-AL8" secondAttribute="trailing" constant="80" id="T2X-fH-xiq"/>
+                            <constraint firstItem="KWe-Yi-i0P" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Uw3-7b-5et"/>
                             <constraint firstItem="ubh-Vf-FRZ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Yxt-Zw-ZNf"/>
                             <constraint firstItem="TaH-mL-jB6" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="cA5-jc-OLt"/>
                             <constraint firstItem="JG9-IU-EBh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="dFH-zh-Jj0"/>
+                            <constraint firstItem="KWe-Yi-i0P" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="fkr-eS-Ott"/>
+                            <constraint firstItem="KWe-Yi-i0P" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="g6w-4i-QIl"/>
                             <constraint firstItem="02a-uB-ZVa" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="m22-PG-pOJ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="LuW-oa-8Hg" secondAttribute="bottom" constant="16" id="nDZ-Fn-voq"/>
                             <constraint firstItem="TaH-mL-jB6" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="nLw-dy-OxC"/>
@@ -153,11 +187,14 @@
                     <connections>
                         <outlet property="blurView" destination="TaH-mL-jB6" id="kZt-dE-76e"/>
                         <outlet property="currentButton" destination="wx2-w9-AL8" id="bAV-a9-Lbu"/>
+                        <outlet property="filterTableView" destination="LcI-oI-trb" id="10k-Oq-D65"/>
                         <outlet property="filterView" destination="02a-uB-ZVa" id="DZb-zO-nTQ"/>
+                        <outlet property="filterViewTab" destination="KWe-Yi-i0P" id="rfC-sd-VF2"/>
                         <outlet property="floaty" destination="LuW-oa-8Hg" id="jWW-oE-Umb"/>
                         <outlet property="mapView" destination="JG9-IU-EBh" id="sna-Hv-DB1"/>
                         <outlet property="menuList" destination="Bg2-O1-Ltl" id="DWz-ze-CPu"/>
                         <outlet property="menuView" destination="ubh-Vf-FRZ" id="PPK-Hw-hJc"/>
+                        <outlet property="searchBar" destination="vAS-67-kAr" id="ohd-te-JfP"/>
                         <segue destination="nW6-v3-Jay" kind="presentation" identifier="knowledge" id="FN7-i9-9Uy"/>
                         <segue destination="We3-OE-CwK" kind="presentation" id="cik-nd-2f4"/>
                         <segue destination="xVI-oG-TCo" kind="push" identifier="myMap" id="Dvf-bl-aSt"/>
@@ -165,6 +202,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <customObject id="IDW-Kq-b6W" customClass="KeyboardHideManager" customModule="KeyboardHideManager">
+                    <connections>
+                        <outletCollection property="targets" destination="8bC-Xf-vdC" collectionClass="NSMutableArray" id="CXR-Cz-T5a"/>
+                    </connections>
+                </customObject>
             </objects>
             <point key="canvasLocation" x="440.80000000000001" y="117.39130434782609"/>
         </scene>
@@ -626,6 +668,6 @@
         <image name="ruler" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="kG4-E2-9Cf"/>
+        <segue reference="Dvf-bl-aSt"/>
     </inferredMetricsTieBreakers>
 </document>
