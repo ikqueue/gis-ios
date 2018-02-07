@@ -15,6 +15,8 @@ class KnowledgeSelectCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
 
+        message.font = UIFont.setFont(font: "ThaiSansNeue-Regular", size: 20.0)
+        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

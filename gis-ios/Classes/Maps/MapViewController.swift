@@ -31,12 +31,24 @@ class MapViewController: UIViewController {
     
     var cellDescriptors: [String] = [
         
-        "แหล่งน้ำ",
-        "ตำแหน่งโรงงาน",
-        "เส้นชั้นน้ำฝน",
-        "ความเหมาะสมด้านดิน",
-        "ความเหมาะสมด้านชลประทาน",
-        "ความเหมาะสมด้านน้ำใต้ดิน"
+        "พื้นที่ความเหมาะสมปลูกอ้อย_n",
+        "พื้นที่ความเหมาะสมปลูกอ้อย_s1",
+        "พื้นที่ความเหมาะสมปลูกอ้อย_s2",
+        "พื้นที่ความเหมาะสมปลูกอ้อย_s3",
+        "พื้นที่ความเหมาะสมปลูกอ้อย_s4",
+        "พื้นที่ความเหมาะสมปลูกอ้อย_s5",
+        "พื้นที่ความเหมาะสมปลูกอ้อย_a1",
+        "พื้นที่ความเหมาะสมปลูกอ้อย_a2",
+        "พื้นที่ความเหมาะสมปลูกอ้อย_a3",
+        "ความเหมาะสมด้านน้ำใต้ดิน_a1",
+        "ความเหมาะสมด้านน้ำใต้ดิน_a2",
+        "ความเหมาะสมด้านน้ำใต้ดิน_a3",
+        "ในเขตความเหมาะสมด้านชลประทาน",
+        "นอกเขตความเหมาะสมด้านชลประทาน",
+        "ความเหมาะสมด้านดิน_1",
+        "ความเหมาะสมด้านดิน_2",
+        "ความเหมาะสมด้านดิน_3",
+        "ความเหมาะสมด้านดิน_n"
     ]
     
     override func viewDidLoad() {
@@ -108,6 +120,7 @@ class MapViewController: UIViewController {
         searchBar.backgroundColor = UIColor.white
         searchBar.barTintColor = UIColor.white
         searchBar.tintColor = UIColor.white
+        searchBar.placeholder = "Search"
     }
     
     func configureFilterCell() -> Void {
@@ -116,7 +129,7 @@ class MapViewController: UIViewController {
         filterTableView.registerTableViewCell(nib: "FilterItemCell", identifier: "FilterItemCell")
         filterTableView.tableFooterView = UIView(frame: .zero)
         filterTableView.separatorStyle = .none
-        filterTableView?.sectionHeaderHeight = filterTableView.frame.height/6
+        filterTableView?.sectionHeaderHeight = filterTableView.frame.height/5
         filterTableView?.estimatedRowHeight = 44
         filterTableView?.rowHeight = UITableViewAutomaticDimension
     }
@@ -133,19 +146,27 @@ class MapViewController: UIViewController {
         mapView.delegate = self
         mapView?.isMyLocationEnabled = true
         
-        self.loadGeoView()
+        self.loadGeoView(fileName: nil)
         
     }
     
-    func loadGeoView() {
+    func loadGeoView(fileName: String?) {
         
-        let path = Bundle.main.path(forResource: "irrigation_out", ofType: "geojson")
-        let url = URL(fileURLWithPath: path!)
-        geoJsonParser = GMUGeoJSONParser(url: url)
-        geoJsonParser.parse()
+        if let resourse = fileName {
+            
+            if renderer != nil {
+                renderer.clear()
+            }
+            
+            let path = Bundle.main.path(forResource: resourse, ofType: "geojson")
+            let url = URL(fileURLWithPath: path!)
+            geoJsonParser = GMUGeoJSONParser(url: url)
+            geoJsonParser.parse()
+            
+            renderer = GMUGeometryRenderer(map: mapView, geometries: geoJsonParser.features)
+            renderer.render()
+        }
         
-        renderer = GMUGeometryRenderer(map: mapView, geometries: geoJsonParser.features)
-        renderer.render()
     }
     
     
@@ -187,7 +208,7 @@ extension MapViewController: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
 
         if let location = locations.last {
-            mapView.camera = GMSCameraPosition.camera(withLatitude: (location.coordinate.latitude), longitude: (location.coordinate.longitude), zoom: 4.0)
+            mapView.camera = GMSCameraPosition.camera(withLatitude: (location.coordinate.latitude), longitude: (location.coordinate.longitude), zoom: 8.0)
             locationManager.stopUpdatingLocation()
         }
     }

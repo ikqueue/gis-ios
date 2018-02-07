@@ -339,6 +339,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="01d-VE-EV9"/>
                     </view>
+                    <connections>
+                        <outlet property="firstSectionText" destination="5c9-cB-Dhk" id="z6c-aC-WHm"/>
+                        <outlet property="footerText" destination="pyS-vO-zzx" id="9py-Lx-2mp"/>
+                        <outlet property="headText" destination="IKQ-G6-C6R" id="MJM-BQ-gdR"/>
+                        <outlet property="secondSectionText" destination="vYe-eT-p0t" id="Wd4-dM-RN6"/>
+                        <outlet property="tableView" destination="XXP-eT-Nz7" id="xn2-58-vX7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V0e-Q6-bXU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

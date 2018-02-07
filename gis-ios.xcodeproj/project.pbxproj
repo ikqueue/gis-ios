@@ -56,6 +56,8 @@
 		2990DF6820285E7200391153 /* irrigation_in.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 2990DF5920285E7100391153 /* irrigation_in.geojson */; };
 		299C50252015CAD60030BE70 /* MyMapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299C50242015CAD60030BE70 /* MyMapController.swift */; };
 		29A03859201B2E8B002C889C /* MyMapDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A03858201B2E8B002C889C /* MyMapDetailController.swift */; };
+		29DB85E520298B76004B80C1 /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29DB85E320298B76004B80C1 /* ImageCell.swift */; };
+		29DB85E620298B76004B80C1 /* ImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 29DB85E420298B76004B80C1 /* ImageCell.xib */; };
 		29E2BFCE20207396000572DB /* FilterItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29E2BFCC20207396000572DB /* FilterItemCell.swift */; };
 		29E2BFCF20207396000572DB /* FilterItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 29E2BFCD20207396000572DB /* FilterItemCell.xib */; };
 		29E2BFD6202074C5000572DB /* FilterSectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29E2BFD4202074C5000572DB /* FilterSectionCell.swift */; };
@@ -141,6 +143,8 @@
 		2990DF5920285E7100391153 /* irrigation_in.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = irrigation_in.geojson; sourceTree = "<group>"; };
 		299C50242015CAD60030BE70 /* MyMapController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyMapController.swift; sourceTree = "<group>"; };
 		29A03858201B2E8B002C889C /* MyMapDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyMapDetailController.swift; sourceTree = "<group>"; };
+		29DB85E320298B76004B80C1 /* ImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
+		29DB85E420298B76004B80C1 /* ImageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageCell.xib; sourceTree = "<group>"; };
 		29E2BFCC20207396000572DB /* FilterItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterItemCell.swift; sourceTree = "<group>"; };
 		29E2BFCD20207396000572DB /* FilterItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilterItemCell.xib; sourceTree = "<group>"; };
 		29E2BFD4202074C5000572DB /* FilterSectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterSectionCell.swift; sourceTree = "<group>"; };
@@ -400,6 +404,8 @@
 				29805E80200CAA02009DE52B /* KnowledgeCell.xib */,
 				2981E73120183D9E00E64470 /* KnowledgeSelectCell.swift */,
 				2981E73220183D9E00E64470 /* KnowledgeSelectCell.xib */,
+				29DB85E320298B76004B80C1 /* ImageCell.swift */,
+				29DB85E420298B76004B80C1 /* ImageCell.xib */,
 			);
 			path = Item;
 			sourceTree = "<group>";
@@ -686,6 +692,7 @@
 				29ECFBCC20230D330016187C /* GeoJSON_sample.json in Resources */,
 				2990DF6020285E7200391153 /* soil_3.geojson in Resources */,
 				2981E73420183D9E00E64470 /* KnowledgeSelectCell.xib in Resources */,
+				29DB85E620298B76004B80C1 /* ImageCell.xib in Resources */,
 				295D1FE6200C4C1F00787E2C /* Assets.xcassets in Resources */,
 				29E2BFD7202074C5000572DB /* FilterSectionCell.xib in Resources */,
 				2990DF5B20285E7200391153 /* groundwater_a3.geojson in Resources */,
@@ -779,6 +786,7 @@
 				29805E66200C57BB009DE52B /* UIColor.swift in Sources */,
 				29ECFBB82022FAE60016187C /* GMUPlacemark.m in Sources */,
 				298136C72019C94D00044998 /* CreateAreaController.swift in Sources */,
+				29DB85E520298B76004B80C1 /* ImageCell.swift in Sources */,
 				29ECFBBC2022FAE60016187C /* GMUGridBasedClusterAlgorithm.m in Sources */,
 				29ECFBBB2022FAE60016187C /* GMUStyle.m in Sources */,
 				29ECFBC32022FAE60016187C /* GMUDefaultClusterRenderer.m in Sources */,

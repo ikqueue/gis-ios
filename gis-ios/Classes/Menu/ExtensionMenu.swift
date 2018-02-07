@@ -149,7 +149,7 @@ extension MapViewController {
         
         UIView.animate(withDuration: 0.1, delay: 0.0, options: .curveEaseInOut, animations: { () -> Void in
             var frame: CGRect = self.filterViewTab.frame
-            frame.origin.y = ((self.navigationController?.navigationBar.frame.height)!+UIApplication.shared.statusBarFrame.height)
+            frame.origin.y = ((self.navigationController?.navigationBar.frame.height)!+UIApplication.shared.statusBarFrame.height                                                  )
             self.filterViewTab.frame = frame
             
             var blurFrame: CGRect = self.blurView.frame
@@ -161,6 +161,7 @@ extension MapViewController {
             self.addRightBarButtonWithImage(UIImage(named: "close")!, selector: #selector(MapViewController.dismissMenu) as Selector?, badge: 0)
             self.setUpNavigationBar(barTint: UIColor.white, tint: UIColor.titleText(), titleTextAt: UIColor.titleText(), showTitle: true, title: "Shape Filters")
             self.blurView.isHidden = false
+            self.menuView.isHidden = true
         }, completion: nil )
     }
     
@@ -239,7 +240,8 @@ extension MapViewController: UITableViewDataSource {
         let header = filterTableView.dequeueReusableCell(withIdentifier: "FilterSectionCell") as! FilterSectionCell
         header.header.text = cellDescriptors[section]
         header.delegate = self
-        
+        header.delegateCheckBox = self
+        header.checkBox.tag = section
         return header
     }
     
@@ -263,6 +265,17 @@ extension MapViewController: HeaderViewDelegate {
     
     func toggleSection(header: FilterSectionCell, section: Int) {
         
+    }
+    
+}
+
+extension MapViewController: CheckBoxDelegate {
+    func didTabCheckBox(tag: Int) {
+        if tag == 0 {
+            self.loadGeoView(fileName: "areas_for_sc_n")
+        }else if tag == 1 {
+            self.loadGeoView(fileName: "areas_for_sc_s1")
+        }
     }
     
 }

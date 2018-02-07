@@ -22,6 +22,12 @@ class KnowledgeController: UIViewController {
     @IBOutlet weak var selectTable: UITableView!
     
     
+    var items: [String] = [
+        "ความเหมาะสมด้านดินมาก (Soil-1)",
+        "ความเหมาะสมด้านดินปานกลาง (Soil-2)",
+        "ความเหมาะสมด้านดินน้อย (Soil-3)"
+    ]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -31,7 +37,7 @@ class KnowledgeController: UIViewController {
         setUpSelectView()
         setUpTouchView()
 
-        
+        selectTitle.text = "เหมาะสมมากที่สุด (S1)"
         
     }
     
@@ -102,7 +108,7 @@ extension KnowledgeController: UITableViewDataSource {
         }
         
         if tableView == self.selectTable {
-            count =  2
+            count = items.count
         }
         
         return count!
@@ -110,19 +116,21 @@ extension KnowledgeController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        var cell:UITableViewCell?
-        
         if tableView == self.tableVIEW {
-            cell = tableVIEW.dequeueReusableCell(withIdentifier: "KnowledgeCell", for: indexPath) as! KnowledgeCell
+            let cell = tableVIEW.dequeueReusableCell(withIdentifier: "KnowledgeCell", for: indexPath) as! KnowledgeCell
             
+            return cell
+        }else {
+            
+            let cell = tableView.dequeueReusableCell(withIdentifier: "KnowledgeSelectCell", for: indexPath) as! KnowledgeSelectCell
+            cell.message.text = items[indexPath.row]
+            return cell
         }
         
-        if tableView == self.selectTable {
-            cell = tableView.dequeueReusableCell(withIdentifier: "KnowledgeSelectCell", for: indexPath) as! KnowledgeSelectCell
-
-        }
-
-        return cell!
+//        if tableView == self.selectTable {
+//
+//        }
+        
 
     }
     

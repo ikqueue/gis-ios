@@ -10,9 +10,21 @@ import UIKit
 
 class KnowledgeDetailController: UIViewController {
 
+    @IBOutlet weak var headText: UILabel!
+    @IBOutlet weak var firstSectionText: UILabel!
+    @IBOutlet weak var secondSectionText: UILabel!
+    @IBOutlet weak var footerText: UILabel!
+    
+    @IBOutlet weak var tableView: UIView!
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        headText.text = "พื้นที่ที่อยู่ในเขตชลประทาน"
+        firstSectionText.text = "การออกแบบชลประทาน"
+        secondSectionText.text = "รูปภาพ"
+        footerText.text = "พื้นที่ที่อยู่ในเขตชลประทาน"
         
     }
     
@@ -21,10 +33,6 @@ class KnowledgeDetailController: UIViewController {
         
         setUpNavigationCleanColor(isTranslucent: false, backgroundColor: UIColor.primary2())
         setUpNavigationBar(barTint: UIColor.primary2(), tint: UIColor.white, titleTextAt: UIColor.white, showTitle: true, title: "GIS ONLINE")
-    }
-    
-    func configureNavigationBar() -> Void {
-        
     }
 
 

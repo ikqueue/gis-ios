@@ -14,7 +14,7 @@ protocol HeaderViewDelegate: class {
 }
 
 protocol CheckBoxDelegate {
-    func didTabCheckBox(checkbox: BEMCheckBox)
+    func didTabCheckBox(tag: Int)
 }
 
 class FilterSectionCell: UITableViewCell {
@@ -25,7 +25,6 @@ class FilterSectionCell: UITableViewCell {
     
     var delegate: HeaderViewDelegate?
     var delegateCheckBox: CheckBoxDelegate?
-    
     var section: Int = 0
     
     override func awakeFromNib() {
@@ -37,6 +36,7 @@ class FilterSectionCell: UITableViewCell {
         header.font = UIFont.setFont(font: "ThaiSansNeue-Regular", size: 22.0)
         header.textColor = UIColor.normalText()
         button.addTarget(self, action: #selector(FilterSectionCell.touchSection), for: UIControlEvents.touchUpInside)
+
         
     }
     
@@ -60,10 +60,8 @@ class FilterSectionCell: UITableViewCell {
         delegate?.toggleSection(header: self, section: section)
     }
     
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
+    @objc func touchCheckBox(sender: BEMCheckBox) -> Void {
+        print("checkbox value change: \(sender.isSelected)")
     }
     
 }
@@ -71,6 +69,12 @@ class FilterSectionCell: UITableViewCell {
 extension FilterSectionCell: BEMCheckBoxDelegate {
     
     func animationDidStop(for checkBox: BEMCheckBox) {
-        delegateCheckBox?.didTabCheckBox(checkbox: checkBox)
     }
+    
+    func didTap(_ checkBox: BEMCheckBox) {
+
+//        delegateCheckBox?.didTabCheckBox(tag: checkBox.tag)
+    }
+    
+    
 }

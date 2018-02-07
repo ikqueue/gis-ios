@@ -86,7 +86,7 @@
                                 <blurEffect style="dark"/>
                             </visualEffectView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KWe-Yi-i0P">
-                                <rect key="frame" x="0.0" y="64" width="375" height="450"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="350"/>
                                 <subviews>
                                     <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="vAS-67-kAr">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
@@ -96,7 +96,7 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </searchBar>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="LcI-oI-trb">
-                                        <rect key="frame" x="0.0" y="56" width="375" height="394"/>
+                                        <rect key="frame" x="0.0" y="56" width="375" height="294"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <connections>
                                             <outlet property="dataSource" destination="BYZ-38-t0r" id="ef6-QL-L37"/>
@@ -108,7 +108,7 @@
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="vAS-67-kAr" secondAttribute="trailing" id="2uj-zf-eWI"/>
                                     <constraint firstItem="LcI-oI-trb" firstAttribute="top" secondItem="vAS-67-kAr" secondAttribute="bottom" id="DZc-Bk-j85"/>
-                                    <constraint firstAttribute="height" constant="450" id="LdY-WE-fNb"/>
+                                    <constraint firstAttribute="height" constant="350" id="LdY-WE-fNb"/>
                                     <constraint firstItem="LcI-oI-trb" firstAttribute="leading" secondItem="KWe-Yi-i0P" secondAttribute="leading" id="PaG-JH-m7t"/>
                                     <constraint firstItem="vAS-67-kAr" firstAttribute="leading" secondItem="KWe-Yi-i0P" secondAttribute="leading" id="VDa-Lg-ef0"/>
                                     <constraint firstItem="vAS-67-kAr" firstAttribute="top" secondItem="KWe-Yi-i0P" secondAttribute="top" id="XF6-T9-Mqb"/>
@@ -280,10 +280,10 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ohl-cd-bBf">
-                                <rect key="frame" x="23" y="504" width="329" height="140"/>
+                                <rect key="frame" x="8" y="519" width="359" height="140"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H9z-qH-HdY">
-                                        <rect key="frame" x="295" y="14" width="20" height="20"/>
+                                        <rect key="frame" x="325" y="14" width="20" height="20"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="20" id="FnF-7K-eRx"/>
                                             <constraint firstAttribute="width" constant="20" id="dLS-Mn-dnH"/>
@@ -291,13 +291,13 @@
                                         <state key="normal" image="close"/>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10.4 กิโลเมตร" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wqm-fZ-pDU">
-                                        <rect key="frame" x="14" y="95.5" width="301" height="32.5"/>
+                                        <rect key="frame" x="14" y="95.5" width="331" height="32.5"/>
                                         <fontDescription key="fontDescription" name="ThaiSansNeue-Regular" family="ThaiSans Neue" pointSize="25"/>
                                         <color key="textColor" red="0.38823529410000002" green="0.78823529410000004" blue="0.3803921569" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="748" text="การวัดพื้นที่" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vnv-US-ujM">
-                                        <rect key="frame" x="42" y="11" width="239" height="27.5"/>
+                                        <rect key="frame" x="42" y="11" width="269" height="27.5"/>
                                         <fontDescription key="fontDescription" name="ThaiSansNeue-Regular" family="ThaiSans Neue" pointSize="21"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -310,7 +310,7 @@
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="256,021 ตารางเมตร" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SmP-1K-eSm">
-                                        <rect key="frame" x="14" y="57" width="301" height="32.5"/>
+                                        <rect key="frame" x="14" y="57" width="331" height="32.5"/>
                                         <fontDescription key="fontDescription" name="ThaiSansNeue-Regular" family="ThaiSans Neue" pointSize="25"/>
                                         <color key="textColor" red="0.38823529410000002" green="0.78823529410000004" blue="0.3803921569" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -385,7 +385,7 @@
                         <constraints>
                             <constraint firstItem="4X5-vN-27v" firstAttribute="trailing" secondItem="JnO-88-bfi" secondAttribute="trailing" id="Dxk-DG-ku1"/>
                             <constraint firstItem="4X5-vN-27v" firstAttribute="leading" secondItem="JnO-88-bfi" secondAttribute="leading" id="FTv-cz-rST"/>
-                            <constraint firstItem="JnO-88-bfi" firstAttribute="bottom" secondItem="Ohl-cd-bBf" secondAttribute="bottom" constant="23" id="Iow-Gg-qvc"/>
+                            <constraint firstItem="JnO-88-bfi" firstAttribute="bottom" secondItem="Ohl-cd-bBf" secondAttribute="bottom" constant="8" id="Iow-Gg-qvc"/>
                             <constraint firstItem="FuN-P1-Maw" firstAttribute="top" secondItem="JnO-88-bfi" secondAttribute="top" id="NRB-xU-OUs"/>
                             <constraint firstItem="FuN-P1-Maw" firstAttribute="leading" secondItem="JnO-88-bfi" secondAttribute="leading" id="Pwd-8Y-c4N"/>
                             <constraint firstItem="Rcd-gT-ZAV" firstAttribute="leading" secondItem="JnO-88-bfi" secondAttribute="leading" id="QGe-Wd-T3V"/>
@@ -395,12 +395,12 @@
                             <constraint firstItem="Rcd-gT-ZAV" firstAttribute="bottom" secondItem="JnO-88-bfi" secondAttribute="bottom" id="bGB-3y-jyI"/>
                             <constraint firstItem="Rcd-gT-ZAV" firstAttribute="top" secondItem="FuN-P1-Maw" secondAttribute="bottom" id="cgZ-43-RWH"/>
                             <constraint firstItem="FuN-P1-Maw" firstAttribute="trailing" secondItem="JnO-88-bfi" secondAttribute="trailing" id="dUn-nf-QWa"/>
-                            <constraint firstItem="JnO-88-bfi" firstAttribute="trailing" secondItem="Ohl-cd-bBf" secondAttribute="trailing" constant="23" id="eYH-qq-SDB"/>
+                            <constraint firstItem="JnO-88-bfi" firstAttribute="trailing" secondItem="Ohl-cd-bBf" secondAttribute="trailing" constant="8" id="eYH-qq-SDB"/>
                             <constraint firstItem="4X5-vN-27v" firstAttribute="top" secondItem="JnO-88-bfi" secondAttribute="top" id="hMx-ug-oOd"/>
                             <constraint firstItem="JnO-88-bfi" firstAttribute="trailing" secondItem="hfE-bL-BG8" secondAttribute="trailing" constant="16" id="jsM-Mj-nlA"/>
                             <constraint firstItem="4X5-vN-27v" firstAttribute="bottom" secondItem="JnO-88-bfi" secondAttribute="bottom" id="mvZ-nU-Igs"/>
                             <constraint firstItem="o9Q-7g-Uad" firstAttribute="trailing" secondItem="JnO-88-bfi" secondAttribute="trailing" id="n3x-q2-j2v"/>
-                            <constraint firstItem="Ohl-cd-bBf" firstAttribute="leading" secondItem="JnO-88-bfi" secondAttribute="leading" constant="23" id="rYM-9c-FyH"/>
+                            <constraint firstItem="Ohl-cd-bBf" firstAttribute="leading" secondItem="JnO-88-bfi" secondAttribute="leading" constant="8" id="rYM-9c-FyH"/>
                             <constraint firstItem="Rcd-gT-ZAV" firstAttribute="trailing" secondItem="JnO-88-bfi" secondAttribute="trailing" id="s6u-Gk-1qB"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="JnO-88-bfi"/>
